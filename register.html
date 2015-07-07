@@ -1,0 +1,27 @@
+<div class="container-fluid" ng-controller ="registerCtrl as thisCtrl">
+	<div class="row row-center">
+		<div class="col col-30 col-offset-20"><button class="button button-clear button-positive" ng-click="go('/login')">Login</button></div>
+		<div class="col col-30"><button class="button button-clear button-stable" ng-click="go('/register')">Register</button></div>
+		<div class="col col-20"></div>
+	</div>
+	
+	
+	<div class="list">
+	  <label class="item item-input item-stacked-label">
+		<span class="input-label">Name</span>
+		<input type="text" name="fName" id="fName" tabindex="1" placeholder="Name" value="" ng-model="user.fName">
+	  </label>
+	  <label class="item item-input item-stacked-label">
+		<span class="input-label">Email</span>
+		<input type="text" name="uEmail" id="uEmail" tabindex="1" placeholder="name@email.com" value="" ng-model="user.uEmail">
+	  </label>
+	  <label class="item item-input item-stacked-label">
+		<span class="input-label">Password</span>
+		<input type="password" name="password" id="password" tabindex="1" placeholder="password" value="" ng-model="user.password">
+	  </label>
+	</div>
+	<button class="button button-block button-outline button-balanced" ng-click="register()">
+		Create Account
+	</button>
+</div>
+
