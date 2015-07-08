@@ -114,7 +114,7 @@ $scope.login = function(email, password){
 		} else {
 		console.log("Authenticated successfully with payload:", authData);
 		$scope.isLogin = true;
-		console.log("isLogin=true")
+		/* console.log("isLogin=true") */
 		window.location.href = '#menu/tab/buttons';
 		
 		}
