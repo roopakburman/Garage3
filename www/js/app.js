@@ -72,11 +72,12 @@ angular.module('ionicApp', ['ionic'])
         }
       }
     })
-    .state('menu.keyboard', {
-      url: "/keyboard",
+    .state('menu.login', {
+      url: "/login",
       views: {
         'menuContent': {
-          templateUrl: "keyboard.html"
+          templateUrl: "login.html",
+		  controller: "loginCtrl"
         }
       }
     })
@@ -88,36 +89,33 @@ angular.module('ionicApp', ['ionic'])
         }
       }
     });
-/* 	.state('login', {
-      url: "login",
-      views: {
-        'loginContent': {
-          templateUrl: "login.html"
-        }
-      }
-    }) */
 
-  $urlRouterProvider.otherwise("menu/tab/buttons");  
-/* $urlRouterProvider.otherwise("/login"); */
+  /* $urlRouterProvider.otherwise("menu/tab/buttons");   */
+	$urlRouterProvider.otherwise("/menu/login");
 
 })
-/* 
+
 .controller('loginCtrl', function($scope, $window, $location){
-$scope.go = function ( path ) {
+/* $scope.go = function ( path ) {
   $location.path( path );
-};
-$scope.login = function(){		
+}; */
+$scope.login = function(email, password){		
 		var ref = new Firebase("https://glowing-fire-7224.firebaseio.com/");
-		
+		var isLogin = false;
 		ref.authWithPassword({
-		email : $scope.user.uName,
-		password : $scope.user.password
+			email,
+			password
+/* 		email : $scope.user.uName,
+		password : $scope.user.password */
 		}, function(error, authData) {
 		if (error) {
+		$scope.isLogin = false;
 		console.log("Login Failed!", error);
 		} else {
 		console.log("Authenticated successfully with payload:", authData);
-		window.location.href = '#/memberHome';
+		$scope.isLogin = true;
+		console.log("isLogin=true")
+		window.location.href = '#menu/tab/buttons';
 		
 		}
 		},{
@@ -126,7 +124,7 @@ $scope.login = function(){
 
 		}
 	
-}) */
+})
 .controller('ListCtrl', function ($scope) {
 
   $scope.data = {
