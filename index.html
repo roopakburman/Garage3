@@ -79,7 +79,7 @@
         <ion-nav-view name="buttons-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="My Insights" icon="ion-lightbulb" href="#/menu/tab/list">
+      <ion-tab title="My Insights" icon="ion-ios-lightbulb" href="#/menu/tab/list">
         <ion-nav-view name="list-tab"></ion-nav-view>
       </ion-tab>
 
@@ -340,25 +340,31 @@
 
   <script id="slidebox.html" type="text/ng-template">
     <ion-view view-title="Meetings & Webinars">
-      <ion-content class="padding">
+      <ion-content>
         <ion-slide-box>
           <ion-slide>
+		  <div class="card">
             <div class="box">
                 <h2>Meeting #1</h2>
-                <p>Content goes here</p>
+                <p>Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here </p>
+				</div>
             </div>
           </ion-slide>
           <ion-slide>
-            <div class="box">
+            <div class="card">
+			<div class="box">
                 <h2>Webinar #2</h2>
                 <p>Content goes here</p>
             </div>
+			</div>
           </ion-slide>
           <ion-slide>
+		  <div class="card">
             <div class="box">
                 <h2>Meeting #3</h2>
                 <p>Content goes here</p>
             </div>
+			</div>
           </ion-slide>
         </ion-slide-box>
        </ion-content>    
@@ -401,7 +407,7 @@
             <textarea rows="4"></textarea>
           </label>
         </div>
-        <button class="button icon icon-right ion-arrow-right-c button-balanced button-block">Send</button>
+        <button class="button icon icon-right ion-arrow-right-c button-positive button-block">Send</button>
       </ion-content>
     </div>
   </script>  
