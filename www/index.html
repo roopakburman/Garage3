@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html ng-app="ionicApp">
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-
   <title>CEB Mobile App - Prototype</title>
-
   <link href="http://code.ionicframework.com/1.0.0-rc.4/css/ionic.min.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
   <script src="http://code.ionicframework.com/1.0.0-rc.4/js/ionic.bundle.min.js"></script>
@@ -34,7 +31,7 @@
         <ion-header-bar class="bar-positive">
           <h1 class="title">My CEB</h1>
         </ion-header-bar>
-        <ion-content>
+        <ion-content class="card-bk1">
           <ul class="list">
             <a href="#/menu/tab/buttons" class="item" menu-close>What's New</a>
             <a href="#/menu/tab/list" class="item" menu-close>My Insights</a>
@@ -96,22 +93,22 @@
       
 		<div class="item item-divider item-dark card-bk2">HBR: How to Live with Risks</div>    
 
-			<div class="item item-text-wrap card-bk1">
+			<div class="item item-text-wrap">
 				Following a crisis, regulators and managers naturally take steps to prevent a recurrence. In 2002, after Enron and WorldCom succumbed to massive accounting fraud, U.S. legislators passed the Sarbanes-Oxley Act, which gave directors and executives new oversight responsibilities. In the wake of the 2008 financial crisis many large banks changed their business models, and other companies implemented systems to better manage credit risks or eliminate overreliance on mathematical models.
 			</div>        
 		<div class="item item-divider item-dark card-bk2">HBR: Best Way to Hire</div>    
 
-			<div class="item item-text-wrap card-bk1">
+			<div class="item item-text-wrap">
 				A study by CEB found that 40% of internal moves involving high-potential employees end in failure. And these are presumably the employees whom the organizations should have the most detailed information about.
 			</div>   
 		<div class="item item-divider item-dark card-bk2">Moody's upgrades CEB Inc.'s CFR to Ba2</div>    
 
-			<div class="item item-text-wrap card-bk1">
+			<div class="item item-text-wrap">
 				New York, May 29, 2015 -- Moody's Investors Service upgraded CEB Inc.'s ("CEB") Corporate Family Rating (CFR) to Ba2, from Ba3, Probability of Default rating to Ba3-PD, from B1-PD, and the rating for its senior secured credit facilities to Ba2, from Ba3. Moody's also affirmed CEB's SGL-1 speculative grade liquidity rating. The ratings have a stable outlook.
 			</div> 
 		<div class="item item-divider item-dark card-bk2">HBR: Why Self Image Matters in B2B Sales</div>    
 
-			<div class="item item-text-wrap card-bk1">
+			<div class="item item-text-wrap">
 				B2C marketers have long known that the key to a customers’ hearts and minds is to make the connection between the brand and customers’ sense of self. Powerful brands (think Apple and Nike) reinforce customers’ positive self-image. B2B marketers, on the other hand, have shied away from the idea, instead approaching selling as a rational, numbers-driven process where the best value proposition wins. Consequently, until recently they’ve paid little attention to the psychological needs of individual stakeholders in a purchasing organization. But that’s changing as suppliers have come to appreciate that companies don’t buy things, people do.
 				<br /><br />Our research shows that understanding the personal motivations – particularly around identity — of key people in a buyer organization are every bit as important to a sale as convincing them of the superiority of your solution.
 			</div> 
@@ -130,8 +127,15 @@
     <ion-view title="Item">
       <ion-content class="padding">
 		<div class="card">
-        <p>Details of Item</p>
-		</div>
+        <p>Finance</p>
+		
+		<ion-item>
+			<div class="video-container">
+<iframe src="https://www.youtube.com/embed/GHwAPI5vhRs" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </ion-item>
+<!-- 		<iframe src="http://cdn.sublimevideo.net/e/gg7odx5u/exbd-FIN-360-FinanceTalentVideo.html" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div> -->
+
       </ion-content>
     </ion-view>
   </script>
@@ -221,9 +225,7 @@
         </div>         
 
         </ion-list>
-      
 
-	  
 	  </ion-content>
     </ion-view>
   </script>
@@ -347,11 +349,24 @@
           <ion-slide>
 		  <div class="card">
             <div class="box">
-				<div class="item item-divider card-bk2">
+				<div class="item item-divider item-text-wrap">
           
-                <h1>Meeting #1</h1>
+                <h2 class="card-bk2"> Workshop: Accelerating Commercial Contracting</h2> 
+				<h4>Executive Retreat<br />22 Jul 2015 (Chicago, IL)</h4>
+
                 </div>
-				<p>Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here </p>
+				<div class="item item-divider item-text-wrap cText">
+				<p>Legal departments spend too much time managing low-value contracts, crowding out higher-value work. Learn to:
+				<ul>
+					<li>Allocate resources to the riskiest, highest-value contracts;</li>
+					<li>Increase the efficiency of contracting processes to accelerate growth; and</li>
+					<li>Minimize risk by organizing contract records and tracking contract milestones.</li>
+				</ul>
+<!-- 					Meeting Timings:
+						Tuesday, 23 June 2015 | London, UK | 08:30 a.m.—04:30 p.m. (GMT)
+						Wednesday, 22 July 2015 | Chicago, IL | 08:00 a.m.—04:00 p.m. (CST)
+ -->				</div>
+	</p>
 				</div>
             </div>
           </ion-slide>
