@@ -20,7 +20,7 @@
 
 <body ng-controller="AppCtrl">
 
-  <ion-nav-bar class="nav-title-slide-ios7 bar-calm">
+  <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
     <ion-nav-back-button class="button-icon ion-arrow-left-c">
     </ion-nav-back-button>
   </ion-nav-bar>
@@ -31,7 +31,7 @@
     <ion-side-menus>
 
       <ion-side-menu side="left">
-        <ion-header-bar class="bar-calm">
+        <ion-header-bar class="bar-positive">
           <h1 class="title">My CEB</h1>
         </ion-header-bar>
         <ion-content>
@@ -45,7 +45,7 @@
       </ion-side-menu>
 
       <ion-side-menu-content> 
-        <ion-nav-bar class="bar-calm">
+        <ion-nav-bar class="bar-positive">
             <ion-nav-back-button>
             </ion-nav-back-button>
             <ion-nav-buttons side="left">
@@ -60,7 +60,7 @@
   </script>    
     
   <script id="tabs.html" type="text/ng-template">
-    <ion-nav-bar class="bar-calm">
+    <ion-nav-bar class="bar-positive">
         <ion-nav-back-button class="button-icon ion-arrow-left-c">
         </ion-nav-back-button>
 
@@ -73,7 +73,7 @@
         </ion-nav-buttons>
     </ion-nav-bar>
         
-    <ion-tabs class="tabs-icon-top tabs-calm">
+    <ion-tabs class="tabs-icon-top tabs-positive">
 
       <ion-tab title="What's New" icon="ion-ios-star" href="#/menu/tab/buttons">
         <ion-nav-view name="buttons-tab"></ion-nav-view>
@@ -94,17 +94,28 @@
     <ion-view view-title="What's new in your network">
       <ion-content class="padding">
       
-		<div class="item item-divider">News 1</div>    
+		<div class="item item-divider item-dark">HBR: How to Live with Risks</div>    
 
 			<div class="item item-text-wrap">
-				CEB is the world’s leading member-based advisory company. We have a unique view into what matters—and what works—when capitalizing on drivers of business performance. With more than 30 years of experience working with top companies to share, analyze, and apply proven practices, we begin with great outcomes and reverse engineer to help you unlock your full potential.
+				Following a crisis, regulators and managers naturally take steps to prevent a recurrence. In 2002, after Enron and WorldCom succumbed to massive accounting fraud, U.S. legislators passed the Sarbanes-Oxley Act, which gave directors and executives new oversight responsibilities. In the wake of the 2008 financial crisis many large banks changed their business models, and other companies implemented systems to better manage credit risks or eliminate overreliance on mathematical models.
 			</div>        
-		<div class="item item-divider">News 2</div>    
+		<div class="item item-divider item-dark">HBR: Best Way to Hire</div>    
 
 			<div class="item item-text-wrap">
-				CEB is the world’s leading member-based advisory company. We have a unique view into what matters—and what works—when capitalizing on drivers of business performance. With more than 30 years of experience working with top companies to share, analyze, and apply proven practices, we begin with great outcomes and reverse engineer to help you unlock your full potential.
+				A study by CEB found that 40% of internal moves involving high-potential employees end in failure. And these are presumably the employees whom the organizations should have the most detailed information about.
 			</div>   
-      <!-- <p>
+		<div class="item item-divider item-dark">Moody's upgrades CEB Inc.'s CFR to Ba2</div>    
+
+			<div class="item item-text-wrap">
+				New York, May 29, 2015 -- Moody's Investors Service upgraded CEB Inc.'s ("CEB") Corporate Family Rating (CFR) to Ba2, from Ba3, Probability of Default rating to Ba3-PD, from B1-PD, and the rating for its senior secured credit facilities to Ba2, from Ba3. Moody's also affirmed CEB's SGL-1 speculative grade liquidity rating. The ratings have a stable outlook.
+			</div> 
+		<div class="item item-divider item-dark">HBR: Why Self Image Matters in B2B Sales</div>    
+
+			<div class="item item-text-wrap">
+				B2C marketers have long known that the key to a customers’ hearts and minds is to make the connection between the brand and customers’ sense of self. Powerful brands (think Apple and Nike) reinforce customers’ positive self-image. B2B marketers, on the other hand, have shied away from the idea, instead approaching selling as a rational, numbers-driven process where the best value proposition wins. Consequently, until recently they’ve paid little attention to the psychological needs of individual stakeholders in a purchasing organization. But that’s changing as suppliers have come to appreciate that companies don’t buy things, people do.
+				<br /><br />Our research shows that understanding the personal motivations – particularly around identity — of key people in a buyer organization are every bit as important to a sale as convincing them of the superiority of your solution.
+			</div> 
+			<!-- <p>
           <a class="button icon icon-left button-assertive" ng-click="showPopup()">Popup</a>
           <a class="button icon icon-left button-energized" ng-click="showActionsheet()">Action Sheet</a>
           <a class="button icon icon-left button-balanced" ng-click="modal.show()">Modal</a>
@@ -265,7 +276,7 @@
              </label>
           </li>
         
-          <div class="item range range-calm">
+          <div class="item range range-positive">
             <i class="icon ion-ios7-sunny-outline"></i>
             <input type="range" name="volume" min="0" max="100" value="33">
             <i class="icon ion-ios7-sunny"></i>
@@ -374,7 +385,7 @@
 
   <script id="modal.html" type="text/ng-template">
     <div class="modal">
-      <ion-header-bar class="bar bar-header bar-calm">
+      <ion-header-bar class="bar bar-header bar-positive">
         <h1 class="title">Submit your query and someone will get back in a couple of hours</h1>
         <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
       </ion-header-bar>
