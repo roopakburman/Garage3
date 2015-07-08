@@ -38,7 +38,7 @@
           <ul class="list">
             <a href="#/menu/tab/buttons" class="item" menu-close>What's New</a>
             <a href="#/menu/tab/list" class="item" menu-close>My Insights</a>
-            <a href="#/menu/slidebox" class="item" menu-close>My Meetings & Webinars</a>
+            <a href="#/menu/tab/slidebox" class="item" menu-close>My Meetings & Webinars</a>
             <a href="#/menu/about" class="item" menu-close>About</a>
           </ul>
         </ion-content>
@@ -83,8 +83,8 @@
         <ion-nav-view name="list-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="My Meetings" icon="ion-person-stalker" href="#/menu/slidebox">
-        <ion-nav-view name="form-tab"></ion-nav-view>
+      <ion-tab title="My Meetings" icon="ion-person-stalker" href="#/menu/tab/slidebox">
+        <ion-nav-view name="slide-tab"></ion-nav-view>
       </ion-tab>
 
     </ion-tabs>
@@ -94,24 +94,24 @@
     <ion-view view-title="What's new in your network">
       <ion-content class="padding">
       
-		<div class="item item-divider item-dark">HBR: How to Live with Risks</div>    
+		<div class="item item-divider item-dark card-bk2">HBR: How to Live with Risks</div>    
 
-			<div class="item item-text-wrap">
+			<div class="item item-text-wrap card-bk1">
 				Following a crisis, regulators and managers naturally take steps to prevent a recurrence. In 2002, after Enron and WorldCom succumbed to massive accounting fraud, U.S. legislators passed the Sarbanes-Oxley Act, which gave directors and executives new oversight responsibilities. In the wake of the 2008 financial crisis many large banks changed their business models, and other companies implemented systems to better manage credit risks or eliminate overreliance on mathematical models.
 			</div>        
-		<div class="item item-divider item-dark">HBR: Best Way to Hire</div>    
+		<div class="item item-divider item-dark card-bk2">HBR: Best Way to Hire</div>    
 
-			<div class="item item-text-wrap">
+			<div class="item item-text-wrap card-bk1">
 				A study by CEB found that 40% of internal moves involving high-potential employees end in failure. And these are presumably the employees whom the organizations should have the most detailed information about.
 			</div>   
-		<div class="item item-divider item-dark">Moody's upgrades CEB Inc.'s CFR to Ba2</div>    
+		<div class="item item-divider item-dark card-bk2">Moody's upgrades CEB Inc.'s CFR to Ba2</div>    
 
-			<div class="item item-text-wrap">
+			<div class="item item-text-wrap card-bk1">
 				New York, May 29, 2015 -- Moody's Investors Service upgraded CEB Inc.'s ("CEB") Corporate Family Rating (CFR) to Ba2, from Ba3, Probability of Default rating to Ba3-PD, from B1-PD, and the rating for its senior secured credit facilities to Ba2, from Ba3. Moody's also affirmed CEB's SGL-1 speculative grade liquidity rating. The ratings have a stable outlook.
 			</div> 
-		<div class="item item-divider item-dark">HBR: Why Self Image Matters in B2B Sales</div>    
+		<div class="item item-divider item-dark card-bk2">HBR: Why Self Image Matters in B2B Sales</div>    
 
-			<div class="item item-text-wrap">
+			<div class="item item-text-wrap card-bk1">
 				B2C marketers have long known that the key to a customers’ hearts and minds is to make the connection between the brand and customers’ sense of self. Powerful brands (think Apple and Nike) reinforce customers’ positive self-image. B2B marketers, on the other hand, have shied away from the idea, instead approaching selling as a rational, numbers-driven process where the best value proposition wins. Consequently, until recently they’ve paid little attention to the psychological needs of individual stakeholders in a purchasing organization. But that’s changing as suppliers have come to appreciate that companies don’t buy things, people do.
 				<br /><br />Our research shows that understanding the personal motivations – particularly around identity — of key people in a buyer organization are every bit as important to a sale as convincing them of the superiority of your solution.
 			</div> 
@@ -129,7 +129,9 @@
   <script id="item.html" type="text/ng-template">
     <ion-view title="Item">
       <ion-content class="padding">
+		<div class="card">
         <p>Details of Item</p>
+		</div>
       </ion-content>
     </ion-view>
   </script>
@@ -140,7 +142,7 @@
         <ion-list show-delete="data.showDelete" on-delete="onItemDelete(item)" option-buttons="itemButtons">
 
         <div class="list">
-          <div class="item item-divider">
+          <div class="item item-divider card-bk2">
             Finance
           </div>  
           
@@ -148,7 +150,7 @@
             <i class="icon ion-cash"></i>
             87% of CFOs are unhappy with the talent mix of their teams. Learn why.
           </a>
-          <div class="item item-divider">
+          <div class="item item-divider card-bk2">
             Financial Services
           </div>  
           
@@ -156,7 +158,7 @@
             <i class="icon ion-ios-pulse-strong"></i>
             Generate the next level of breakthrough performance in the financial services industry.
           </a>
-          <div class="item item-divider">
+          <div class="item item-divider card-bk2">
             Government
           </div>  
           
@@ -164,7 +166,7 @@
             <i class="icon ion-ios-people"></i>
             The Future of Government IT: Establishing IT as a Broker, Not a Builder.
           </a>          
-        <div class="item item-divider">
+        <div class="item item-divider card-bk2">
             Human Resources
           </div>  
           
@@ -172,7 +174,7 @@
             <i class="icon icon ion-happy"></i>
             Employees are 2X more likely to stay with their organization compared to five years ago. Access Q2 workforce trends.
           </a>
-          <div class="item item-divider">
+          <div class="item item-divider card-bk2">
             Information Technology
           </div>  
           
@@ -180,7 +182,7 @@
             <i class="icon ion-wand"></i>
             5 Principles of Adaptive IT Organizations Must Adopt to Meet Growing Business Demand
           </a>
-          <div class="item item-divider">
+          <div class="item item-divider card-bk2">
             Innovation & Strategy
           </div>  
           
@@ -345,23 +347,32 @@
           <ion-slide>
 		  <div class="card">
             <div class="box">
-                <h2>Meeting #1</h2>
-                <p>Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here </p>
+				<div class="item item-divider card-bk2">
+          
+                <h1>Meeting #1</h1>
+                </div>
+				<p>Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here Content goes here </p>
 				</div>
             </div>
           </ion-slide>
           <ion-slide>
             <div class="card">
 			<div class="box">
-                <h2>Webinar #2</h2>
-                <p>Content goes here</p>
+				<div class="item item-divider card-bk2">
+          
+                <h1>Webinar #2</h1>
+                </div>
+				<p>Content goes here</p>
             </div>
 			</div>
           </ion-slide>
           <ion-slide>
 		  <div class="card">
             <div class="box">
-                <h2>Meeting #3</h2>
+				<div class="item item-divider card-bk2">
+          
+                <h1>Meeting #3</h1>
+                </div>
                 <p>Content goes here</p>
             </div>
 			</div>
@@ -392,21 +403,22 @@
   <script id="modal.html" type="text/ng-template">
     <div class="modal">
       <ion-header-bar class="bar bar-header bar-positive">
-        <h1 class="title">Submit your query and someone will get back in a couple of hours</h1>
+        <h1 class="title">We are all ears!</h1>
         <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
       </ion-header-bar>
       
-      <ion-content class="padding">
-        <div class="list">
+      <ion-content class="padding card-listen">
+		<div class="card">
+			<div class="item">
 <!--           <label class="item item-input">
             <span class="input-label">To</span>
             <input type="text">
           </label>
- -->          <label class="item item-input">
-            <span class="input-label">Message</span>
-            <textarea rows="4"></textarea>
-          </label>
-        </div>
+ -->
+            
+            <textarea rows="8" cols="50" placeholder="Your question"></textarea>
+    	  </div>
+		</div>
         <button class="button icon icon-right ion-arrow-right-c button-positive button-block">Send</button>
       </ion-content>
     </div>

@@ -51,20 +51,20 @@ angular.module('ionicApp', ['ionic'])
         }
       }
     })
+	.state('menu.tabs.slidebox', {
+      url: "/slidebox",
+      views: {
+        'slide-tab': {
+          templateUrl: "slidebox.html",
+          controller: 'SlideboxCtrl'
+        }
+      }
+    })
     .state('menu.keyboard', {
       url: "/keyboard",
       views: {
         'menuContent': {
           templateUrl: "keyboard.html"
-        }
-      }
-    })
-    .state('menu.slidebox', {
-      url: "/slidebox",
-      views: {
-        'menuContent': {
-          templateUrl: "slidebox.html",
-          controller: 'SlideboxCtrl'
         }
       }
     })
