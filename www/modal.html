@@ -1,0 +1,35 @@
+   <div class="modal">
+      <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">We are all ears!</h1>
+        <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+      </ion-header-bar>
+      
+      <ion-content class="padding card-listen">
+		<div class="card">
+		<div class="item item-divider item-dark item-text-wrap card-bk1">Submit your query & someone will get back to you in the next couple of hours.</div>
+			<div class="item">
+<!--           <label class="item item-input">
+            <span class="input-label">To</span>
+            <input type="text">
+          </label>
+ -->
+            
+            <textarea rows="8" cols="50" placeholder="Your question"></textarea>
+    	  </div>
+		</div>
+        <button class="button icon icon-right ion-arrow-right-c button-positive button-block">Send</button>
+		<div class="card">
+		<div class="item item-divider item-dark item-text-wrap card-bk1">Want to talk to your Account Manager?</div>
+			<div class="item">
+
+				<button class="button button-icon ion-ios-telephone" ng-click="showPopup1()"> Click to connect!</button>
+
+
+				
+			</div>
+		</div>
+  
+		
+		
+      </ion-content>
+    </div>
