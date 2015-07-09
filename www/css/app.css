@@ -30,6 +30,7 @@ background:url("../img/listen.jpg");
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
+		background-repeat: no-repeat;
 
 }
 .video-container {
