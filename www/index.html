@@ -32,7 +32,7 @@
           <ul class="list">
             <a href="#/menu/tab/buttons" class="item" menu-close>What's New</a>
             <a href="#/menu/tab/list" class="item" menu-close>My Insights</a>
-            <a href="#/menu/tab/slidebox" class="item" menu-close>My Meetings & Webinars</a>
+            <a href="#/menu/tab/slidebox" class="item" menu-close>My Events</a>
             <a href="#/menu/about" class="item" menu-close>About</a>
           </ul>
         </ion-content>
@@ -73,7 +73,7 @@
         <ion-nav-view name="list-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="My Meetings" icon="ion-person-stalker" href="#/menu/tab/slidebox">
+      <ion-tab title="My Events" icon="ion-person-stalker" href="#/menu/tab/slidebox">
         <ion-nav-view name="slide-tab"></ion-nav-view>
       </ion-tab>
 
@@ -187,7 +187,7 @@
             <i class="icon ion-paintbucket"></i>
             Companies whose R&D workforces have high innovation potential see 75% greater new product sales than other companies.
           </a>
-          <div class="item item-divider">
+          <!-- <div class="item item-divider">
             Angularjs list
           </div>
                
@@ -213,7 +213,7 @@
             <img src="http://ionicframework.com/img/docs/blue-album.jpg">
             <h2>Title</h2>
             <p>Some detailed text</p>
-          </a>
+          </a> -->
 
         </div>         
         </ion-list>
@@ -317,7 +317,7 @@
   </script>     
 
   <script id="slidebox.html" type="text/ng-template">
-    <ion-view view-title="Meetings & Webinars">
+    <ion-view view-title="My Events">
       <ion-content>
         <ion-slide-box>
           <ion-slide>
@@ -379,7 +379,7 @@
     <ion-view view-title="About Us">
 
       <ion-nav-buttons side="right">
-        <button class="button button-icon button-clear ion-ios-telephone"></button>
+        <button class="button button-icon button-clear ion-ios-telephone" ng-click="showPopup()"></button>
       </ion-nav-buttons>
       
 	  
@@ -435,6 +435,7 @@ Every year we equip over 20,000 senior leaders from more than 10,000 organizatio
       </ion-content>
     </div>
   </script>  
-      
+  
+     
 </body>
 </html>

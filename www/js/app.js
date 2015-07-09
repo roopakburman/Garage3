@@ -21,6 +21,7 @@ angular.module('ionicApp', ['ionic'])
       templateUrl: "menu.html",
       controller: 'MenuCtrl'
     })
+	
     .state('menu.tabs', {
       url: "/tab",
       views: {
@@ -85,7 +86,8 @@ angular.module('ionicApp', ['ionic'])
       url: "/about",
       views: {
         'menuContent': {
-          templateUrl: "about.html"
+          templateUrl: "about.html",
+		  controller: "ButtonsTabCtrl"
         }
       }
     });
@@ -183,8 +185,9 @@ $scope.login = function(email, password){
 .controller('ButtonsTabCtrl', function ($scope, $ionicPopup, $ionicActionSheet, $ionicModal) {
     $scope.showPopup = function () {
      $ionicPopup.alert({
-       title: 'How may I help you today?',
-       content: 'This is ionic popup alert!'
+       title: 'Calling your Account Manager!',
+       content: 'Please wait for a moment while I connect the call for you.',
+	   button: 'Cancel'
      });
     };
     $scope.showActionsheet = function () {
@@ -228,7 +231,7 @@ $scope.login = function(email, password){
     animation: 'slide-in-up'
   });
  })
-  
+
  .controller('AppCtrl', function() {
 
   ionic.Platform.ready(function() {
