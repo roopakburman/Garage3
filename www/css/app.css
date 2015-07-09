@@ -8,6 +8,9 @@ background:url("../img/1.jpg") no-repeat center center fixed;
         -moz-background-size: cover;
         background-size: cover;
 }
+.modal{
+padding: 10px;
+}
 .card-bk1{
 color: #000000;
 background:url("../img/2.jpg") center center;
