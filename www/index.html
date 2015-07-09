@@ -59,7 +59,8 @@
         </ion-nav-buttons>
 
         <ion-nav-buttons side="right">
-          <button class="button button-icon button-clear ion-compose" ng-click="modal.show()"></button>
+			<a href="#" ng-click="modal.show()"><ion-spinner icon="ripple"></ion-spinner></a>
+<!--           <button class="button button-icon button-clear ion-compose" ng-click="modal.show()"></button> -->
         </ion-nav-buttons>
     </ion-nav-bar>
         
@@ -435,15 +436,13 @@ Every year we equip over 20,000 senior leaders from more than 10,000 organizatio
 		<div class="item item-divider item-dark item-text-wrap card-bk1">Want to talk to your Account Manager?</div>
 			<div class="item">
 
-				<i class="icon ion-ios-person"></i>
-				<ion-spinner icon="ripple"></ion-spinner>
-				<button class="button button-icon ion-ios-telephone" ng-click="showPopup()"></button>
+				<button class="button button-icon ion-ios-telephone" ng-click="showPopup1()"> Click to connect!</button>
 
 
 				
 			</div>
 		</div>
-<!--    
+  
 		
 		
       </ion-content>

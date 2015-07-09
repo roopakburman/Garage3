@@ -184,8 +184,7 @@ $scope.login = function(email, password){
     $scope.showPopup = function () {
      $ionicPopup.alert({
        title: 'Calling your Account Manager!',
-       content: 'Please wait for a moment while I connect the call for you.',
-	   button: 'Cancel'
+       content: 'Please wait for a moment while I connect the call for you.'
      });
     };
     $scope.showActionsheet = function () {
@@ -222,12 +221,19 @@ $scope.login = function(email, password){
   }             
 })              
 
-.controller('MenuCtrl', function($scope, $ionicSideMenuDelegate, $ionicModal) {              
+.controller('MenuCtrl', function($scope, $ionicSideMenuDelegate, $ionicPopup, $ionicModal) {              
   $ionicModal.fromTemplateUrl('modal.html', function (modal) {
     $scope.modal = modal;
   }, {
     animation: 'slide-in-up'
   });
+  
+    $scope.showPopup1 = function ($scope) {
+     $ionicPopup.alert({
+       title: 'Connecting to Account Manager!',
+       content: 'Please wait for a moment while I connect the call for you.'
+     });
+    };
  })
 
  .controller('AppCtrl', function() {
