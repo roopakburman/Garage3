@@ -11,6 +11,8 @@
 <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 <!-- AngularFire -->
 <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+    <!-- google maps javascript -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
   <script src="js/app.js"></script> 
 </head>
 <body ng-controller="AppCtrl">
@@ -293,7 +295,7 @@
 
   <script id="login.html" type="text/ng-template">
     <ion-view view-title="Enter your credentials">
-      <ion-content class="padding">
+      <ion-content class="padding card-bk1">
 
 		<div class="card">
 			<label class="item item-input item-stacked-label">
@@ -338,8 +340,11 @@
 					<li>Tuesday, 23 June 2015 | London, UK | 08:30 a.m.—04:30 p.m. (GMT)</li>
 					<li>Wednesday, 22 July 2015 | Chicago, IL | 08:00 a.m.—04:00 p.m. (CST)</li>
 				</ul>
+				<img src="img/chicago.png" width="98%"></img>
 				</div>
-	</p>
+				</p>
+				
+				<!-- <div id="map" data-tap-disabled="true"></div> -->
 				</div>
             </div>
           </ion-slide>
