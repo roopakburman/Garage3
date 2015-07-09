@@ -227,13 +227,6 @@ $scope.login = function(email, password){
   }, {
     animation: 'slide-in-up'
   });
-  
-    $scope.showPopup1 = function ($scope) {
-     $ionicPopup.alert({
-       title: 'Connecting to Account Manager!',
-       content: 'Please wait for a moment while I connect the call for you.'
-     });
-    };
  })
 
  .controller('AppCtrl', function() {
