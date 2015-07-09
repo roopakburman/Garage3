@@ -55,6 +55,12 @@ background:url("../img/listen.jpg");
 .cText {
 font-size: 10px;
 }
+.spinner svg {
+  width: 28px;
+  height: 28px;
+  stroke: #ff0077;
+  fill: #ff0077;
+}
 
 
 /* #map {

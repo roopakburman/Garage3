@@ -86,8 +86,7 @@ angular.module('ionicApp', ['ionic'])
       url: "/about",
       views: {
         'menuContent': {
-          templateUrl: "about.html",
-		  controller: "ButtonsTabCtrl"
+          templateUrl: "about.html"
         }
       }
     });
@@ -181,7 +180,6 @@ $scope.login = function(email, password){
   ];
 
 })
-
 .controller('ButtonsTabCtrl', function ($scope, $ionicPopup, $ionicActionSheet, $ionicModal) {
     $scope.showPopup = function () {
      $ionicPopup.alert({
