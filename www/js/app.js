@@ -73,6 +73,15 @@ angular.module('ionicApp', ['ionic'])
         }
       }
     })
+	.state('menu.tabs.search', {
+      url: "/search",
+      views: {
+        'search-tab': {
+          templateUrl: "search.html",
+          controller: 'searchCtrl'
+        }
+      }
+    })
     .state('menu.login', {
       url: "/login",
       views: {
@@ -125,6 +134,52 @@ $scope.login = function(email, password){
 
 		}
 	
+})
+.controller('searchCtrl', function($scope) {
+	$scope.myData = {
+		"SerialNumbers": {
+			"451651": [
+				{
+					"Owner": "Mr Happy"
+				}
+			],
+			"5464565": [
+				{
+					"Owner": "Mr Red"
+				}
+			],
+			"45165": [
+				{
+					"Owner": "Mr Sad"
+				}
+			],
+			"4692": [
+				{
+					"Owner": "Mr Green"
+				}
+			],
+			"541": [
+				{
+					"Owner": "Mr Blue"
+				}
+			],
+			"D4554160N": [
+				{
+					"Owner": "Mr Loud"
+				}
+			]
+		}
+	  };
+	$scope.results = [];
+  
+  $scope.findValue = function(searchTerm) {     
+    angular.forEach($scope.myData.SerialNumbers, function(value, key) {
+      if (key === searchTerm) {
+        $scope.results.push({serial: key, owner: value[0].Owner});
+      }
+    });
+  };
+
 })
 .controller('ListCtrl', function ($scope) {
 

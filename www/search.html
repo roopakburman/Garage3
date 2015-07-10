@@ -1,0 +1,20 @@
+   <ion-view view-title="Search">
+
+      <ion-content class="padding">
+	<div class="card">
+	    
+    <div class="item item-divider item-dark card-bk2">Search</div>
+		
+          <div class="item item-text-wrap">
+			<input type="text" ng-model="searchTerm">
+			<br>
+			<button type="button" ng-Click="findValue(searchTerm)">Search</button>
+			<h3>Results</h3>
+			<ul>
+			  <li ng-repeat="result in results">Serial number: {{result.serial}} | Owner: {{result.owner}}</li>
+			</ul>
+            
+          </div>    
+
+	  </ion-content>
+    </ion-view>
