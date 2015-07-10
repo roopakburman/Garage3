@@ -171,11 +171,10 @@ $scope.login = function(email, password){
 		}
 	  };
 	$scope.results = [];
-  
   $scope.findValue = function(searchTerm) {     
     angular.forEach($scope.myData.SerialNumbers, function(value, key) {
       if (key === searchTerm) {
-        $scope.results.push({serial: key, owner: value[0].Owner});
+        $scope.results.push({serial: key, owner: value[0].owner});
       }
     });
   };
