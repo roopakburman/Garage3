@@ -1,23 +1,38 @@
    <ion-view view-title="Search">
 
-      <ion-content class="padding">
+    <ion-content class="padding">
 	<div class="card">
 	    
     <div class="item item-divider item-dark card-bk2">Search</div>
 
-          <div class="item item-text-wrap">
+		<div class="item item-text-wrap">
 			<div ng-controller="CountryController">
 				Filter: <input ng-model="nameFilter" />
 						<hr></hr>
-						<h1>Search Results</h1>
-				<ul>
+						<h1>Knowledge base</h1>
+				<!-- <ul>
 					<li ng-repeat="datum in data | filter: nameFilter">
 						{{datum | json}}
 					</li>
-				</ul>      
+				</ul>   -->
+
+				<table>
+					<tr>
+						<th>Topic Name</th>
+						<th>Description</th>
+						<th>Infographic</th>
+					</tr>
+					<tr ng-repeat="datum in data | filter: nameFilter">
+						<td>{{datum.clauseName | json}}</td>
+						<td>{{datum.details | json}}</td>
+						<td>{{datum.infoGraphic | json}}</td>
+					</tr>
+				</table>
+				
 			</div>
             
           </div>    
 
-	  </ion-content>
+
+	</ion-content>
     </ion-view>
