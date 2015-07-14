@@ -1,42 +1,39 @@
    <ion-view view-title="Search">
 
-      <ion-content class="padding">
+    <ion-content class="padding">
 	<div class="card">
 	    
     <div class="item item-divider item-dark card-bk2">Search</div>
-		
-          <div class="item item-text-wrap">
-			<label class="item-input-wrapper" id="search-input">
-            <i class="icon ion-search placeholder-icon"></i>
-            <input type="text" placeholder="Search" ng-model="searchTerm">
-          </label>
-			<br>
-			<button class="button button-icon ion-power" ng-click="findValue(searchTerm)"></button>
-			<div class="item item-divider"></div>
 
-			<ul>
-			  <li ng-repeat="result in results">Serial number: {{result.serial}} | Owner: {{result.owner}}</li>
-			</ul>
+		<div class="item item-text-wrap">
+			<div ng-controller="CountryController">
+				Filter: <input ng-model="nameFilter" />
+						<hr></hr>
+						<h1>Knowledge base</h1>
+				<!-- <ul>
+					<li ng-repeat="datum in data | filter: nameFilter">
+						{{datum | json}}
+					</li>
+				</ul>   -->
+
+				<table>
+					<tr>
+						<th>Topic Name</th>
+						<th>Description</th>
+						<th>Infographic</th>
+					</tr>
+					<tr ng-repeat="datum in data | filter: nameFilter">
+						<td>{{datum.clauseName | json}}</td>
+						<td>{{datum.details | json}}</td>
+						<td>{{datum.infoGraphic | json}}</td>
+					</tr>
+				</table>
+				
+			</div>
             
           </div>  
-		<div class="item item-text-wrap">
-<!--                     <script type="text/javascript">
-		var headID = document.getElementsByTagName("head")[0];
-		var newCss = document.createElement('link');
-		newCss.rel = 'stylesheet';
-		newCss.type = 'text/css';
-		window._botUsername = '20386';
-		window._botName = 'Roopak Burman';
-		newCss.href = "http://rebot.me/assets/css/bot.css";
-		var newScript = document.createElement('script');
-		newScript.src = "http://rebot.me/assets/js/bot.js";
-		newScript.type = 'text/javascript';
-		headID.appendChild(newScript);
-		headID.appendChild(newCss);
-		</script> -->
-                
-                
-		</div>
 
-	  </ion-content>
+
+
+	</ion-content>
     </ion-view>
