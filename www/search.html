@@ -4,19 +4,18 @@
 	<div class="card">
 	    
     <div class="item item-divider item-dark card-bk2">Search</div>
-		
-          <div class="item item-text-wrap">
-			<label class="item-input-wrapper" id="search-input">
-            <i class="icon ion-search placeholder-icon"></i>
-            <input type="text" placeholder="Search" ng-model="searchTerm">
-          </label>
-			<br>
-			<button class="button button-icon ion-power" ng-click="findValue(searchTerm)"></button>
-			<div class="item item-divider"></div>
 
-			<ul>
-			  <li ng-repeat="result in results">Serial number: {{result.serial}} | Owner: {{result.owner}}</li>
-			</ul>
+          <div class="item item-text-wrap">
+			<div ng-controller="CountryController">
+				Filter: <input ng-model="nameFilter" />
+						<hr></hr>
+						<h1>Search Results</h1>
+				<ul>
+					<li ng-repeat="datum in data | filter: nameFilter">
+						{{datum | json}}
+					</li>
+				</ul>      
+			</div>
             
           </div>    
 
