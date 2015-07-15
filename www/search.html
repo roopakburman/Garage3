@@ -28,6 +28,10 @@
 						<td>{{datum.infoGraphic | json}}</td>
 					</tr>
 				</table>
+				<p></p>
+				<div class="container" ng-repeat="datum in data | filter:nameFilter">
+					<img src="{{datum.infoGraphic}}"></img>
+				</div>
 				
 			</div>
             

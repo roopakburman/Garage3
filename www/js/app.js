@@ -180,7 +180,7 @@ $scope.login = function(email, password){
 "infoGraphic" : "img/info8.png"
 },
 {
-  "clauseName" : "Building Stronger Relationships",
+  "clauseName" : "Retirement Services",
   	"details" :"Google News Alerts can tell you when your members are in the news.You can set the search terms for your organization or names of particular members. Congratulate them with a handwritten note or even a framed copy of the article.",
 	"infoGraphic" : "img/info9.png"
 }
