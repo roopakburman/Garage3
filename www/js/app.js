@@ -78,7 +78,8 @@ angular.module('ionicApp', ['ionic'])
       views: {
         'search-tab': {
           templateUrl: "search.html",
-          controller: 'CountryController'
+          controller: 'dataCtrl'
+		  
         }
       }
     })
@@ -136,8 +137,9 @@ $scope.login = function(email, password){
 		}
 	
 })
-.controller('CountryController', function($scope){
-    $scope.nameFilter = '';
+.controller('dataCtrl', function($scope){
+
+	$scope.nameFilter = '';
     $scope.data = [
     {
   "clauseName" : "Critical capabilities",
@@ -205,9 +207,19 @@ function PeopleCtrl($scope, $http) {
     };
 
 }
-	
-})
 
+})
+.controller('MyCtrl', function ($scope) {
+	function MyCtrl() {
+    
+    $scope.thisIsMe = false;
+    
+    $scope.showMe = function(){
+      $scope.thisIsMe = true;  
+    };
+}
+})
+	
 .controller('ListCtrl', function ($scope) {
 
   $scope.data = {
