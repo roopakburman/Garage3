@@ -109,6 +109,7 @@ angular.module('ionicApp', ['ionic'])
 /* $scope.go = function ( path ) {
   $location.path( path );
 }; */
+$scope.navTitle = '<img class="logo title" src="img/logo-white-sm.png" />'; 
 $scope.login = function(email, password){		
 		var ref = new Firebase("https://glowing-fire-7224.firebaseio.com/");
 		var isLogin = false;
@@ -328,6 +329,8 @@ function PeopleCtrl($scope, $http) {
 })              
 
 .controller('MenuCtrl', function($scope, $ionicSideMenuDelegate, $ionicPopup, $ionicModal) {              
+  
+  $scope.navTitle = '<img class="logo title" src="img/logo-white-sm.png" />'; 
   $ionicModal.fromTemplateUrl('modal.html', function (modal) {
     $scope.modal = modal;
   }, {

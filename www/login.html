@@ -1,4 +1,4 @@
-    <ion-view view-title="Enter your credentials">
+    <ion-view view-title="{{navTitle}} Login">
       <ion-content class="padding card-bk1">
 
 		<div class="card">
@@ -15,5 +15,14 @@
 		<button class="button button-block button button-positive" ng-if="user.uName != '' || user.password != '' " ng-click="login('s@s.com','1234')">
 			Login
 		</button>
+		
+		<hr></hr>
+		<div class="card">
+		    <marquee behavior="scroll" direction="left" 
+        onmouseover="this.stop();" 
+        onmouseout="this.start();">
+            <i class="icon ion-ios-pulse-strong"></i> <strong>Finance:</strong> 75% of CxOs are unhappy with the talent mix of their teams. | <i class="icon ion-ios-pulse-strong"></i> <strong>Financial Services:</strong> Generate the next level of breakthrough performance in the financial services industry
+    </marquee>
+		</div>
       </ion-content>
     </ion-view>

@@ -42,7 +42,11 @@ background:url("../img/listen.jpg");
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
 }
+.title .logo{
 
+text-align: left;
+padding-top: 5px;
+}
 table {
 
   border: 1px solid #666;   
