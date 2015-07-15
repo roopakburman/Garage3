@@ -329,8 +329,7 @@ function PeopleCtrl($scope, $http) {
 })              
 
 .controller('MenuCtrl', function($scope, $ionicSideMenuDelegate, $ionicPopup, $ionicModal) {              
-  
-  $scope.navTitle = '<img class="logo title" src="img/logo-white-sm.png" />'; 
+
   $ionicModal.fromTemplateUrl('modal.html', function (modal) {
     $scope.modal = modal;
   }, {
