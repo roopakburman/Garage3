@@ -209,17 +209,7 @@ function PeopleCtrl($scope, $http) {
 }
 
 })
-.controller('MyCtrl', function ($scope) {
-	function MyCtrl() {
-    
-    $scope.thisIsMe = false;
-    
-    $scope.showMe = function(){
-      $scope.thisIsMe = true;  
-    };
-}
-})
-	
+
 .controller('ListCtrl', function ($scope) {
 
   $scope.data = {
