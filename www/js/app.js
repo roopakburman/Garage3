@@ -281,6 +281,11 @@ function PeopleCtrl($scope, $http) {
        content: 'Please wait for a moment while I connect the call for you.'
      });
     };
+	
+	$('.timeline-panel').click(function() {
+    $('.timeline-body', this).toggle(); // p00f
+});
+
     $scope.showActionsheet = function () {
         $ionicActionSheet.show({
           titleText: 'Ionic ActionSheet',

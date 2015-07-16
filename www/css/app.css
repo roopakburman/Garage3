@@ -82,6 +82,10 @@ font-size: 10px;
   fill: #ff0077;
 }
 
+/*Controls icon sizes on the timeline badges*/
+.rb-bg{
+	font-size: 38px;
+}
 
 /* #map {
   width: 100%;
