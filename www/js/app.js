@@ -139,6 +139,8 @@ $scope.login = function(email, password){
 })
 .controller('dataCtrl', function($scope){
 
+
+
 	$scope.nameFilter = '';
     $scope.data = [
     {
@@ -207,6 +209,7 @@ function PeopleCtrl($scope, $http) {
     };
 
 }
+
 
 })
 

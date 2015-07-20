@@ -7,7 +7,7 @@
 		<div class="item item-text-wrap">
 			<div ng-controller="dataCtrl">
 <!-- 				<div class="container" ng-controller="MyCtrl"> -->
-				<input ng-model="nameFilter" /><button id="mybutton" ng-click="showMe()">Search</button>
+				<input ng-model="nameFilter" id="chatinput" onkeyUp="document.getElementById('hidden').className = ''"/>
 						<hr></hr>
 <!-- 						<h1>Knowledge base</h1> -->
 				<!-- <ul>
@@ -16,6 +16,7 @@
 					</li>
 				</ul>   -->
 <!-- 				<div ng-show="thisIsMe" class="ng-cloak"> -->
+				<div class="hidden" id="hidden">
 				<table>
 					<tr>
 <!-- 						<th>Topic Name</th> -->
@@ -34,10 +35,12 @@
 					<img src="{{datum.infoGraphic}}"></img>
 				</div>
 				</div>
+				</div>
 <!-- 				</div> -->
 <!-- 			</div> -->
             
           </div>  
 	</div>
+
 	</ion-content>
     </ion-view>
