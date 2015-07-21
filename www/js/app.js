@@ -1,4 +1,4 @@
-angular.module('ionicApp', ['ionic', 'ngCordova'])
+angular.module('ionicApp', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -10,6 +10,7 @@ angular.module('ionicApp', ['ionic', 'ngCordova'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+	
   });
 })
 .config(function ($stateProvider, $urlRouterProvider) {
@@ -56,20 +57,21 @@ angular.module('ionicApp', ['ionic', 'ngCordova'])
         }
       }
     })
-    .state('menu.tabs.form', {
-      url: "/form",
-      views: {
-        'form-tab': {
-          templateUrl: "form.html"
-        }
-      }
-    })
 	.state('menu.tabs.slidebox', {
       url: "/slidebox",
       views: {
         'slide-tab': {
           templateUrl: "slidebox.html",
           controller: 'SlideboxCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.podcast', {
+      url: "/podcast",
+      views: {
+        'podcast-tab': {
+          templateUrl: "podcast.html",
+          controller: 'podcastCtrl'
         }
       }
     })
@@ -105,6 +107,20 @@ angular.module('ionicApp', ['ionic', 'ngCordova'])
 	$urlRouterProvider.otherwise("/menu/login");
 
 })
+.controller('podcastCtrl', function($scope) {
+	
+/* 	$scope.playPod = function(){
+	var audio = document.getElementById("audio1");
+    audio.play();
+	}
+	$scope.stopPod = function(){
+		$(this).pause();
+		
+	} */
+
+	
+})
+
 
 .controller('loginCtrl', function($scope, $window, $location){
 /* $scope.go = function ( path ) {
@@ -307,47 +323,12 @@ function PeopleCtrl($scope, $http) {
     };
 })
 
-.controller('SlideboxCtrl', function($scope, $ionicSlideBoxDelegate, $cordovaMedia, $ionicLoading) {
+.controller('SlideboxCtrl', function($scope, $ionicSlideBoxDelegate) {
   $scope.nextSlide = function() {
     $ionicSlideBoxDelegate.next();
   }
-  
-$scope.play = function(src) {
-        var media = new Media(src, null, null, mediaStatusCallback);
-        $cordovaMedia.play(media);
-    }
- 
-    var mediaStatusCallback = function(status) {
-        if(status == 1) {
-            $ionicLoading.show({template: 'Loading...'});
-        } else {
-            $ionicLoading.hide();
-        }
-    }
 
-  
-/* 
- $cordovaEmailComposer.isAvailable().then(function() {
-   // is available
- }, function () {
-   // not available
- });
 
-  var email = {
-    to: 'roopak.burman@gmail.com',
-    cc: '',
-    bcc: ['', ''],
-    attachments: [
-      '',
-      '',
-      '',
-      ''
-    ],
-    subject: 'Register me',
-    body: 'Register me for the Chicago Event.',
-    isHtml: true
-  };
-   */
 })              
 
 .controller('MenuCtrl', function($scope, $ionicSideMenuDelegate, $ionicPopup, $ionicModal) {              
