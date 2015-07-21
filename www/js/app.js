@@ -1,4 +1,4 @@
-angular.module('ionicApp', ['ionic'])
+angular.module('ionicApp', ['ionic', 'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -307,11 +307,23 @@ function PeopleCtrl($scope, $http) {
     };
 })
 
-.controller('SlideboxCtrl', function($scope, $ionicSlideBoxDelegate) {
+.controller('SlideboxCtrl', function($scope, $ionicSlideBoxDelegate, $cordovaMedia, $ionicLoading) {
   $scope.nextSlide = function() {
     $ionicSlideBoxDelegate.next();
   }
   
+$scope.play = function(src) {
+        var media = new Media(src, null, null, mediaStatusCallback);
+        $cordovaMedia.play(media);
+    }
+ 
+    var mediaStatusCallback = function(status) {
+        if(status == 1) {
+            $ionicLoading.show({template: 'Loading...'});
+        } else {
+            $ionicLoading.hide();
+        }
+    }
 
   
 /* 
