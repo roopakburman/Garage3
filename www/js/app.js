@@ -1,6 +1,7 @@
-angular.module('ionicApp', ['ionic'])
-
-.run(function($ionicPlatform) {
+var ceb = angular.module('ionicApp', ['ionic'])
+var ref = new Firebase("https://glowing-fire-7224.firebaseio.com/");
+window.currentUser = "";
+ceb.run(function($ionicPlatform, $rootScope) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -10,7 +11,10 @@ angular.module('ionicApp', ['ionic'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
-	
+/* 	$rootScope.logout = function () {
+        console.log("Logging out from the app");
+		alert("You are successfully logged out.");
+    } */
   });
 })
 .config(function ($stateProvider, $urlRouterProvider) {
@@ -85,6 +89,16 @@ angular.module('ionicApp', ['ionic'])
         }
       }
     })
+	.state('menu.tabs.userProfile', {
+      url: "/userProfile",
+      views: {
+        'userProfile-tab': {
+          templateUrl: "userProfile.html",
+          controller: 'userProfileCtrl'
+		  
+        }
+      }
+    })	
     .state('menu.login', {
       url: "/login",
       views: {
@@ -99,6 +113,15 @@ angular.module('ionicApp', ['ionic'])
       views: {
         'menuContent': {
           templateUrl: "about.html"
+        }
+      }
+    })
+	.state('logout', {
+      url: "/logout",
+      views: {
+        'menuContent': {
+          templateUrl: "login.html",
+		  controller: "loginCtrl"
         }
       }
     });
@@ -121,14 +144,14 @@ angular.module('ionicApp', ['ionic'])
 	
 })
 
-
 .controller('loginCtrl', function($scope, $window, $location){
 /* $scope.go = function ( path ) {
   $location.path( path );
 }; */
 $scope.navTitle = '<img class="logo title" src="img/logo-white-sm.png" />'; 
+
 $scope.login = function(email, password){		
-		var ref = new Firebase("https://glowing-fire-7224.firebaseio.com/");
+		
 		var isLogin = false;
 		ref.authWithPassword({
 			email: email,
@@ -141,18 +164,120 @@ $scope.login = function(email, password){
 		console.log("Login Failed!", error);
 		} else {
 		console.log("Authenticated successfully with payload:", authData);
+		console.log("User " + authData.uid + " is logged in with " + authData.provider);
 		$scope.isLogin = true;
 		/* console.log("isLogin=true") */
 		window.location.href = '#menu/tab/buttons';
 		
+		currentUser = authData.uid;
+		
+		if(authData.uid == 'simplelogin:14'){
+			alert('Welcome Price!');
+		}
+		else if(authData.uid == 'simplelogin:15'){
+			alert('Welcome Tom!');
+		}
+		else if(authData.uid == 'simplelogin:16'){
+			alert('Welcome Melody!');
+		}
+		else if(authData.uid == 'simplelogin:17'){
+			alert('Welcome Warren!');
+		}		
+		else if(authData.uid == 'simplelogin:18'){
+			alert('Welcome Haniel!');
+		}
+		else if(authData.uid == 'simplelogin:19'){
+			alert('Welcome Garage Team!');
+		}
 		}
 		},{
 			remember: "sessiononly"
 		});
 
+
 		}
-	
+		$scope.logout = function(ref) {
+		
+		ref.onAuth(function(authData) {
+		  if (authData) {
+			console.log("Logged in");
+		  } else {
+			console.log("Logged out");
+			ref.unauth();;
+			alert("You are successfully logged out!");
+			}
+});
+		
+
+	}
+
 })
+.controller('userProfileCtrl', function($scope){
+	$scope.nameFilter = currentUser;
+	$scope.userData = [
+	{
+		"userID" : "simplelogin:14",
+		"userName" : "Price Jett",
+		"userEmail" : "jettp@cebglobal.com",
+		"userTitle" : "Chief Information Officer",
+		"userDept" : "IT",
+		"userPhone" : "x144772",
+		"userOffice" : "05502",
+		"uPic" : "img/price.png"
+	},
+	{
+		"userID" : "simplelogin:18",
+		"userName" : "Haniel Lynn",
+		"userEmail" : "lynnh@cebglobal.com",
+		"userTitle" : "Group President",
+		"userDept" : "BPDS General/Central",
+		"userPhone" : "x144015",
+		"userOffice" : "22192",
+		"uPic" : "img/haniel.jpg"
+	},
+	{
+		"userID" : "simplelogin:16",
+		"userName" : "Melody Jones",
+		"userEmail" : "melodyjones@cebglobal.com",
+		"userTitle" : "Chief Administrative Officer",
+		"userDept" : "Human Resources",
+		"userPhone" : "x144003",
+		"userOffice" : "19084",
+		"uPic" : "img/melody.jpg"
+	},
+	{
+		"userID" : "simplelogin:17",
+		"userName" : "Warren Thune",
+		"userEmail" : "thunew@cebglobal.com",
+		"userTitle" : "Group President",
+		"userDept" : "TM General/Central",
+		"userPhone" : "x144613",
+		"userOffice" : "21506",
+		"uPic" : "img/warren.jpg"
+	},
+	{
+		"userID" : "simplelogin:15",		
+		"userName" : "Tom Monahan",
+		"userEmail" : "MonahanT@cebglobal.com",
+		"userTitle" : "Chief Executive Officer",
+		"userDept" : "Office of the CEO",
+		"userPhone" : "x144013",
+		"userOffice" : "22088",
+		"uPic" : "img/tom.jpg"
+	},
+	{
+		"userID" : "simplelogin:19",		
+		"userName" : "The Garage",
+		"userEmail" : "garage@cebglobal.com",
+		"userTitle" : "The Garage",
+		"userDept" : "Secret room on 10th floor",
+		"userPhone" : "x146666",
+		"userOffice" : "xxxxxx",
+		"uPic" : "img/garage.jpg"
+	},
+	];
+})
+
 .controller('dataCtrl', function($scope){
 
 

@@ -1,0 +1,28 @@
+   <ion-view view-title="My Profile">
+    <ion-content class="padding">
+	<div class="card" ng-app>
+    <div class="item item-divider item-dark card-bk2">My Profile</div>
+		<div class="item item-text-wrap" ng-controller="userProfileCtrl">
+			<div clas="card">
+				<!-- <div>Description</div> -->
+				<div ng-repeat="datum in userData | filter: nameFilter"> 
+				<!-- | filter: nameFilter" -->
+				<h1>{{datum.userName}}<br></br></h1>
+				<img src="{{datum.uPic}}"></img><br></br>
+				
+				<h2>{{datum.userTitle}} - {{datum.userDept}}</h2><br></br>
+				
+				<span>{{datum.userEmail}}</span><br></br>
+				<span>{{datum.userPhone}}</span><br></br>
+				<span>{{datum.userOffice}}</span><br></br>
+
+				</div>
+
+			<p></p>
+			</div>
+
+         </div>  
+
+	</div>
+	</ion-content>
+    </ion-view>
