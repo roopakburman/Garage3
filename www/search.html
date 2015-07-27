@@ -24,7 +24,7 @@
 						<th>Searching for {{nameFilter}}</th>
 <!-- 						<th>Infographic</th> -->
 					</tr>
-					<tr ng-repeat="datum in data | filter: nameFilter">
+					<tr ng-repeat="datum in data | filter: nameFilter" zooming="true" min-zoom="{{zoomMin}}">
 <!-- 						<td>{{datum.clauseName | json}}</td> -->
 						<td>{{datum.details}}</td>
 <!-- 						<td>{{datum.infoGraphic | json}}</td> -->

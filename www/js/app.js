@@ -276,6 +276,7 @@ $scope.login = function(email, password){
 		"uPic" : "img/garage.jpg"
 	},
 	];
+	$scope.zoomMin = 1;
 })
 
 .controller('dataCtrl', function($scope){
