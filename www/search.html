@@ -16,16 +16,17 @@
 					</li>
 				</ul>   -->
 <!-- 				<div ng-show="thisIsMe" class="ng-cloak"> -->
-				<div class="hidden" id="hidden">
+				<div class="hidden" id="hidden" >
+				<div ng-hide="nameFilter==''">
 				<table>
 					<tr>
 <!-- 						<th>Topic Name</th> -->
-						<th>Description</th>
+						<th>Searching for {{nameFilter}}</th>
 <!-- 						<th>Infographic</th> -->
 					</tr>
 					<tr ng-repeat="datum in data | filter: nameFilter">
 <!-- 						<td>{{datum.clauseName | json}}</td> -->
-						<td>{{datum.details | json}}</td>
+						<td>{{datum.details}}</td>
 <!-- 						<td>{{datum.infoGraphic | json}}</td> -->
 					</tr>
 				</table>
@@ -33,6 +34,7 @@
 				
 				<div ng-repeat="datum in data | filter:nameFilter">
 					<img src="{{datum.infoGraphic}}"></img>
+				</div>
 				</div>
 				</div>
 				</div>
