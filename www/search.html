@@ -16,7 +16,7 @@
 					</li>
 				</ul>   -->
 <!-- 				<div ng-show="thisIsMe" class="ng-cloak"> -->
-				<div class="hidden" id="hidden" >
+				<div class="hidden" id="hidden" zooming="true" min-zoom="{{zoomMin}}>
 				<div ng-hide="nameFilter==''">
 				<table>
 					<tr>
@@ -24,7 +24,7 @@
 						<th>Searching for {{nameFilter}}</th>
 <!-- 						<th>Infographic</th> -->
 					</tr>
-					<tr ng-repeat="datum in data | filter: nameFilter" zooming="true" min-zoom="{{zoomMin}}">
+					<tr ng-repeat="datum in data | filter: nameFilter"">
 <!-- 						<td>{{datum.clauseName | json}}</td> -->
 						<td>{{datum.details}}</td>
 <!-- 						<td>{{datum.infoGraphic | json}}</td> -->
