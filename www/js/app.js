@@ -131,8 +131,8 @@ $scope.login = function(email, password){
 		var ref = new Firebase("https://glowing-fire-7224.firebaseio.com/");
 		var isLogin = false;
 		ref.authWithPassword({
-			email,
-			password
+			email: email,
+			password: password
 /* 		email : $scope.user.uName,
 		password : $scope.user.password */
 		}, function(error, authData) {
