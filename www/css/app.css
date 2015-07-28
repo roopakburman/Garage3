@@ -1,44 +1,45 @@
-/* Your app's CSS, go crazy, make it your own */
+
 .box {
-padding: 10px
+	padding: 10px
 }
 
 .scroll-content{
-background:url("../img/1.jpg") no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
+	background:url("../img/1.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
 }
 .hideByDefault{
     display: none;
 }
 
 .modal{
-padding: 10px;
-}
+	padding: 10px;
+	height: 70%;
+	}
 .card-bk1{
-color: #000000;
-background:url("../img/2.jpg") right;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
+	color: #000000;
+	background:url("../img/2.jpg") right;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
 
 }
 .card-bk2{
-color: #ffffff;
-background:url("../img/3.jpg") center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
+	color: #ffffff;
+	background:url("../img/3.jpg") center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
 
 }
 .card-listen{
-color: #ffffff;
-background:url("../img/listen.jpg");
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-		background-repeat: no-repeat;
+	color: #ffffff;
+	background:url("../img/listen.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
 
 }
 .video-container {
@@ -48,17 +49,16 @@ background:url("../img/listen.jpg");
 }
 .title .logo{
 
-text-align: left;
-padding-top: 5px;
+	text-align: left;
+	padding-top: 5px;
 }
 table {
-
-  border: 1px solid #666;   
+	border: 1px solid #666;   
     width: 100%;
 }
 th {
-  background: #f8f8f8; 
-  font-weight: bold;    
+	background: #f8f8f8; 
+	font-weight: bold;    
     padding: 2px;
 }
  
@@ -73,13 +73,13 @@ th {
     height: auto;
 }
 .cText {
-font-size: 10px;
+	font-size: 10px;
 }
 .spinner svg {
-  width: 28px;
-  height: 28px;
-  stroke: #ff0077;
-  fill: #ff0077;
+	width: 28px;
+	height: 28px;
+	stroke: #ff0077;
+	fill: #ff0077;
 }
 
 /*Controls icon sizes on the timeline badges*/
@@ -92,29 +92,57 @@ font-size: 10px;
 }
 
 .custom1{
-  font-size: 26px;
-  color : #42C0FB;
+	font-size: 26px;
+	color : #42C0FB;
 }
 .custom2{
-  font-size: 26px;
-  color : #DA4835;
+	font-size: 26px;
+	color : #DA4835;
 }
 .custom3{
-  font-size: 26px;
-  color : #3864A3;
+	font-size: 26px;
+	color : #3864A3;
 }
 .profileContent{
 	padding-left: 15px;
 	
 }
+.iconPhone{
+	font-size: 18px;
+}
+
+/*Fake the blinking effect --> Start*/
+/* .latestNews{
+	color: red;
+	font-size: 21px;
+	
+	animation-duration: 400ms;
+	animation-name: blink;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+} */
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+/*Fake the blinking effect --> End*/
+
+
+
+
+
+
 
 
 
 
 
 audio#iPlayer {
-	left:0px;
-
+	left:0px;			
 	width: 98%;
 }​
 

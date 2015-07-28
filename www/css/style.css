@@ -97,6 +97,8 @@
   left: 18%;
   background-color: white;
 }
+
+
 }
 
 .timeline > li.timeline-inverted > .timeline-panel:before {
@@ -155,26 +157,6 @@
     height: 100%;
 }
 
-.img1{
-	top: 360px;
-	display: block;
-	color: green;
-	font-size: 25px;
-	
-	animation-duration: 400ms;
-	animation-name: blink;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-
-}
-@keyframes blink {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.1;
-  }
-}
 
 
 .collapse{
@@ -225,19 +207,18 @@
   border-radius: 0 0 0 5px;
   
 }
-
-.page{
-    content: '';
-    position: absolute;
-    top: 0; right: 0;
-    border-top: 80px solid transparent;
-    border-left: 80px solid white;
-    width: 0;
-
+.resizeImg{
+	width: 100%;
+    position:relative;
+    background-size: cover;
+    background-position: center;
 }
 
-
-
+ol {
+  list-style: none;
+  list-style-type: disc;
+  padding-left:3%;
+}
 
 
 	

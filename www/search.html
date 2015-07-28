@@ -1,48 +1,39 @@
    <ion-view view-title="Search">
     <ion-content class="padding">
+	<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1"">
 	<div class="card" ng-app>
 	    
     <div class="item item-divider item-dark card-bk2">Search</div>
 
 		<div class="item item-text-wrap">
 			<div ng-controller="dataCtrl">
-<!-- 				<div class="container" ng-controller="MyCtrl"> -->
+
 				<input ng-model="nameFilter" id="chatinput" onkeyUp="document.getElementById('hidden').className = ''"/>
 						<hr></hr>
-<!-- 						<h1>Knowledge base</h1> -->
-				<!-- <ul>
-					<li ng-repeat="datum in data | filter: nameFilter">
-						{{datum | json}}
-					</li>
-				</ul>   -->
-<!-- 				<div ng-show="thisIsMe" class="ng-cloak"> -->
-				<div class="hidden" id="hidden" zooming="true" min-zoom="{{zoomMin}}>
+				<div class="hidden" id="hidden">
 				<div ng-hide="nameFilter==''">
 				<table>
 					<tr>
-<!-- 						<th>Topic Name</th> -->
 						<th>Searching for {{nameFilter}}</th>
-<!-- 						<th>Infographic</th> -->
 					</tr>
 					<tr ng-repeat="datum in data | filter: nameFilter"">
-<!-- 						<td>{{datum.clauseName | json}}</td> -->
 						<td>{{datum.details}}</td>
-<!-- 						<td>{{datum.infoGraphic | json}}</td> -->
 					</tr>
 				</table>
 				<p></p>
-				
+
 				<div ng-repeat="datum in data | filter:nameFilter">
-					<img src="{{datum.infoGraphic}}"></img>
+					
+						<img class="resizeImg" src="{{datum.infoGraphic}}"></img>
+					
 				</div>
 				</div>
 				</div>
 				</div>
-<!-- 				</div> -->
-<!-- 			</div> -->
+
             
           </div>  
 	</div>
-
+</ion-scroll>
 	</ion-content>
     </ion-view>

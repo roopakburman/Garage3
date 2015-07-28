@@ -44,6 +44,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
+
     .state('menu.tabs.list', {
       url: "/list",
       views: {
@@ -98,7 +99,55 @@ ceb.run(function($ionicPlatform, $rootScope) {
 		  
         }
       }
-    })	
+    })
+	.state('menu.tabs.faView1', {
+      url: "/faView1",
+      views: {
+        'userProfile-tab': {
+          templateUrl: "faView1.html"
+        }
+      }
+    })
+	.state('menu.tabs.img1', {
+      url: "/img1",
+      views: {
+        'userProfile-tab': {
+          templateUrl: "faView1img.html"
+        }
+      }
+    })
+	.state('menu.tabs.faView2', {
+      url: "/faView2",
+      views: {
+        'userProfile-tab': {
+          templateUrl: "faView2.html"
+        }
+      }
+    })
+	.state('menu.tabs.img2', {
+      url: "/img2",
+      views: {
+        'userProfile-tab': {
+          templateUrl: "faView2img.html"
+        }
+      }
+    })
+	.state('menu.tabs.faView3', {
+      url: "/faView3",
+      views: {
+        'userProfile-tab': {
+          templateUrl: "faView3.html"
+        }
+      }
+    })
+	.state('menu.tabs.img3', {
+      url: "/img3",
+      views: {
+        'userProfile-tab': {
+          templateUrl: "faView3img.html"
+        }
+      }
+    })
     .state('menu.login', {
       url: "/login",
       views: {
@@ -116,7 +165,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
-	.state('logout', {
+/* 	.state('logout', {
       url: "/logout",
       views: {
         'menuContent': {
@@ -124,7 +173,8 @@ ceb.run(function($ionicPlatform, $rootScope) {
 		  controller: "loginCtrl"
         }
       }
-    });
+    } */
+	// );
 
   /* $urlRouterProvider.otherwise("menu/tab/buttons");   */
 	$urlRouterProvider.otherwise("/menu/login");
@@ -196,20 +246,20 @@ $scope.login = function(email, password){
 
 
 		}
-		$scope.logout = function(ref) {
+		// $scope.logout = function(ref) {
 		
-		ref.onAuth(function(authData) {
-		  if (authData) {
-			console.log("Logged in");
-		  } else {
-			console.log("Logged out");
-			ref.unauth();;
-			alert("You are successfully logged out!");
-			}
-});
+		// ref.onAuth(function(authData) {
+		  // if (authData) {
+			// console.log("Logged in");
+		  // } else {
+			// console.log("Logged out");
+			// ref.unauth();;
+			// alert("You are successfully logged out!");
+			// }
+// });
 		
 
-	}
+	// }
 
 })
 .controller('userProfileCtrl', function($scope){
@@ -276,7 +326,7 @@ $scope.login = function(email, password){
 		"uPic" : "img/garage.jpg"
 	},
 	];
-	$scope.zoomMin = 1;
+
 })
 
 .controller('dataCtrl', function($scope){
@@ -409,7 +459,7 @@ function PeopleCtrl($scope, $http) {
   ];
 
 })
-.controller('ButtonsTabCtrl', function ($scope, $ionicPopup, $ionicActionSheet, $ionicModal) {
+.controller('ButtonsTabCtrl', function ($scope, $ionicModal) {
     $scope.showPopup = function () {
      $ionicPopup.alert({
        title: 'Calling your Account Manager!',
@@ -417,6 +467,24 @@ function PeopleCtrl($scope, $http) {
      });
     };
 	
+	$('.clickMe1').click(function(){
+		$('.panel1').toggle();
+	});
+	$('.clickMe2').click(function(){
+		$('.panel2').toggle();
+	});	
+	$('.clickMe3').click(function(){
+		$('.panel3').toggle();
+	});
+	$('.clickMe4').click(function(){
+		$('.panel4').toggle();
+	});
+	$('.clickMe5').click(function(){
+		$('.panel5').toggle();
+	});
+	$('.clickMe6').click(function(){
+		$('.panel6').toggle();
+	});
 	$('.timeline-panel').click(function() {
     $('.timeline-body', this).toggle(); // p00f
 });
