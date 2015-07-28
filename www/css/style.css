@@ -220,6 +220,27 @@ ol {
   padding-left:3%;
 }
 
-
+.customCardL{
+	width: 80%;
+	height: 50px;
+	border: 1px solid;
+	padding: 3% 2% 4% 19%;
 	
+}
+.customCardR{
+	width: 80%;
+	height: 50px;
+	border: 1px solid;
+	padding: 3% 2% 4% 19%;
+}
 	
+.dte, .loc, .sta, .tme{
+	text-align:center;
+  background-color:#d3d3d3;
+border:thin gray solid;
+}
+.dte1, .loc1, .sta1, .tme1{
+	text-align:center;
+	border:thin gray solid;
+	padding-top: 5px;
+}

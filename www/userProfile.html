@@ -25,17 +25,17 @@
 
 	</div> -->
 	<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
-	<div class="card" ng-app>
+	<div class="profileContent card " ng-app>
     <div class="row" ng-controller="userProfileCtrl">
         <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="well" ng-repeat="datum in userData | filter: nameFilter">
-                <div class="row" >
+
 
                     <div class="col-sm-6 col-md-4">
                         <img src="{{datum.uPic}}" alt="" class="img-rounded img-responsive" />
                     </div>
 					
-                    <div class="col-sm-6 col-md-8 profileContent text-wrap" >
+                    <div class="col-sm-6 col-md-8 text-wrap" >
                         <h4>{{datum.userName}}</h4>
                         {{datum.userTitle}} - {{datum.userDept}} </br>
                         {{datum.userEmail}} </br>
@@ -51,12 +51,12 @@
                             </ul>
                         </div> -->
                     </div>
-					
-				</div>
+
             </div>
         </div>
     </div>
 </div>
+</ion-scroll>
 <div class="card">
 
 		<div class="item item-divider card-bk2">
@@ -78,6 +78,6 @@
             <p>Identify Which of Your Top Priorities Risk Execution Failure—and Why...</p>
 		  </a>		  
 </div>
-</ion-scroll>
+
 	</ion-content>
     </ion-view>

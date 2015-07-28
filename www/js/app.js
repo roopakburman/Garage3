@@ -71,6 +71,31 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
+	.state('menu.tabs.live1', {
+      url: "/live1",
+      views: {
+        'slide-tab': {
+          templateUrl: "live1.html"
+        }
+      }
+    })
+	.state('menu.tabs.live1meeting', {
+      url: "/live1meeting",
+      views: {
+        'slide-tab': {
+          templateUrl: "live1meeting.html"
+        }
+      }
+    })
+	.state('menu.tabs.live2meeting', {
+      url: "/live2meeting",
+      views: {
+        'slide-tab': {
+          templateUrl: "live2meeting.html",
+		  controller: 'live2meetingCtrl'
+        }
+      }
+    })
 	.state('menu.tabs.podcast', {
       url: "/podcast",
       views: {
@@ -194,6 +219,12 @@ ceb.run(function($ionicPlatform, $rootScope) {
 	
 })
 
+.controller('live2meetingCtrl', function($scope){
+	$scope.registerMe = function(){
+		alert("Thank you for your interest. We've notified the Account Rep. Someone would reach out to you shortly");
+		
+	}
+})
 .controller('loginCtrl', function($scope, $window, $location){
 /* $scope.go = function ( path ) {
   $location.path( path );
