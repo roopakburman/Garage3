@@ -1,12 +1,12 @@
    <ion-view view-title="My Profile">
     <ion-content class="padding">
-	<div class="card" ng-app>
+<!-- 	<div class="card" ng-app>
     <div class="item item-divider item-dark card-bk2">My Profile</div>
 		<div class="item item-text-wrap" ng-controller="userProfileCtrl">
 			<div clas="card">
-				<!-- <div>Description</div> -->
+				
 				<div ng-repeat="datum in userData | filter: nameFilter"> 
-				<!-- | filter: nameFilter" -->
+				
 				<h1>{{datum.userName}}<br></br></h1>
 				<img src="{{datum.uPic}}"></img><br></br>
 				
@@ -23,6 +23,38 @@
 
          </div>  
 
-	</div>
+	</div> -->
+	
+	<div class="card" ng-app>
+    <div class="row" ng-controller="userProfileCtrl">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="well" ng-repeat="datum in userData | filter: nameFilter">
+                <div class="row" >
+
+                    <div class="col-sm-6 col-md-4">
+                        <img src="{{datum.uPic}}" alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class="col-sm-6 col-md-8 profileContent text-wrap" >
+                        <h4>{{datum.userName}}</h4>
+                        {{datum.userTitle}} - {{datum.userDept}} </br>
+                        {{datum.userEmail}} </br>
+                        {{datum.userOffice}}</br>
+                        {{datum.userPhone}}</br>
+                        <!-- Split button -->
+<!--                         <div class="btn-group">
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#"><i class="ion-social-twitter custom1"></i></a></li>
+                                <li><a href="#"><i class="ion-social-googleplus custom2"></i></a></li>
+                                <li><a href="#"><i class="ion-social-facebook custom3"></i></a></li>
+
+                            </ul>
+                        </div> -->
+                    </div>
+
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
 	</ion-content>
     </ion-view>
