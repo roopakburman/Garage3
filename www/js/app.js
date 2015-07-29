@@ -23,7 +23,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
     .state('menu', {
       url: "/menu",
       abstract: true,
-      templateUrl: "menu.html",
+      templateUrl: "/templates/menu.html",
       controller: 'MenuCtrl'
     })
 	
@@ -31,7 +31,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/tab",
       views: {
         'menuContent' :{
-          templateUrl: "tabs.html"
+          templateUrl: "/templates/tabs.html"
         }
       }
     })
@@ -39,7 +39,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/buttons",
       views: {
         'buttons-tab': {
-          templateUrl: "buttons.html",
+          templateUrl: "/templates/buttons.html",
           controller: 'ButtonsTabCtrl'
         }
       }
@@ -48,7 +48,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/bssbimg1",
       views: {
         'buttons-tab': {
-          templateUrl: "bssbimg1.html"
+          templateUrl: "/templates/bssbimg1.html"
         }
       }
     })
@@ -57,7 +57,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/list",
       views: {
         'list-tab': {
-          templateUrl: "list.html",
+          templateUrl: "/templates/list.html",
           controller: 'ListCtrl'
         }
       }
@@ -66,7 +66,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/item",
       views: {
         'list-tab': {
-          templateUrl: "item.html"
+          templateUrl: "/templates/item.html"
         }
       }
     })
@@ -74,7 +74,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/slidebox",
       views: {
         'slide-tab': {
-          templateUrl: "slidebox.html",
+          templateUrl: "/templates/slidebox.html",
           controller: 'SlideboxCtrl'
         }
       }
@@ -83,7 +83,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/live1",
       views: {
         'slide-tab': {
-          templateUrl: "live1.html"
+          templateUrl: "/templates/live1.html"
         }
       }
     })
@@ -91,7 +91,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/live1meeting",
       views: {
         'slide-tab': {
-          templateUrl: "live1meeting.html"
+          templateUrl: "/templates/live1meeting.html"
         }
       }
     })
@@ -99,7 +99,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/live2meeting",
       views: {
         'slide-tab': {
-          templateUrl: "live2meeting.html",
+          templateUrl: "/templates/live2meeting.html",
 		  controller: 'live2meetingCtrl'
         }
       }
@@ -108,7 +108,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/live3meeting",
       views: {
         'slide-tab': {
-          templateUrl: "live3meeting.html",
+          templateUrl: "/templates/live3meeting.html",
 		  controller: 'live3meetingCtrl'
         }
       }
@@ -117,7 +117,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/web1",
       views: {
         'slide-tab': {
-          templateUrl: "web1.html"
+          templateUrl: "/templates/web1.html"
         }
       }
     })
@@ -125,7 +125,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/web1meeting",
       views: {
         'slide-tab': {
-          templateUrl: "web1meeting.html"
+          templateUrl: "/templates/web1meeting.html"
         }
       }
     })
@@ -133,7 +133,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/web1img",
       views: {
         'slide-tab': {
-          templateUrl: "web1img.html"
+          templateUrl: "/templates/web1img.html"
         }
       }
     })
@@ -141,7 +141,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/web2meeting",
       views: {
         'slide-tab': {
-          templateUrl: "web2meeting.html"
+          templateUrl: "/templates/web2meeting.html"
         }
       }
     })
@@ -149,7 +149,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/web3meeting",
       views: {
         'slide-tab': {
-          templateUrl: "web3meeting.html"
+          templateUrl: "/templates/web3meeting.html"
         }
       }
     })
@@ -157,7 +157,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/web4meeting",
       views: {
         'slide-tab': {
-          templateUrl: "web4meeting.html"
+          templateUrl: "/templates/web4meeting.html"
         }
       }
     })
@@ -165,7 +165,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/podcast",
       views: {
         'podcast-tab': {
-          templateUrl: "podcast.html",
+          templateUrl: "/templates/podcast.html",
           controller: 'podcastCtrl'
         }
       }
@@ -174,7 +174,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/search",
       views: {
         'search-tab': {
-          templateUrl: "search.html",
+          templateUrl: "/templates/search.html",
           controller: 'dataCtrl'
 		  
         }
@@ -184,7 +184,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/userProfile",
       views: {
         'userProfile-tab': {
-          templateUrl: "userProfile.html",
+          templateUrl: "/templates/userProfile.html",
           controller: 'userProfileCtrl'
 		  
         }
@@ -194,7 +194,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/faView1",
       views: {
         'userProfile-tab': {
-          templateUrl: "faView1.html"
+          templateUrl: "/templates/faView1.html"
         }
       }
     })
@@ -202,7 +202,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/img1",
       views: {
         'userProfile-tab': {
-          templateUrl: "faView1img.html"
+          templateUrl: "/templates/faView1img.html"
         }
       }
     })
@@ -210,7 +210,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/faView2",
       views: {
         'userProfile-tab': {
-          templateUrl: "faView2.html"
+          templateUrl: "/templates/faView2.html"
         }
       }
     })
@@ -218,7 +218,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/img2",
       views: {
         'userProfile-tab': {
-          templateUrl: "faView2img.html"
+          templateUrl: "/templates/faView2img.html"
         }
       }
     })
@@ -226,7 +226,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/faView3",
       views: {
         'userProfile-tab': {
-          templateUrl: "faView3.html"
+          templateUrl: "/templates/faView3.html"
         }
       }
     })
@@ -234,7 +234,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/img3",
       views: {
         'userProfile-tab': {
-          templateUrl: "faView3img.html"
+          templateUrl: "/templates/faView3img.html"
         }
       }
     })
@@ -242,7 +242,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/login",
       views: {
         'menuContent': {
-          templateUrl: "login.html",
+          templateUrl: "/templates/login.html",
 		  controller: "loginCtrl"
         }
       }
@@ -251,7 +251,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/about",
       views: {
         'menuContent': {
-          templateUrl: "about.html"
+          templateUrl: "/templates/about.html"
         }
       }
     })
@@ -259,7 +259,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
       url: "/logout",
       views: {
         'menuContent': {
-          templateUrl: "login.html",
+          templateUrl: "/templates/login.html",
 		  controller: "loginCtrl"
         }
       }
@@ -629,7 +629,7 @@ function PeopleCtrl($scope, $http) {
 
 .controller('MenuCtrl', function($scope, $ionicSideMenuDelegate, $ionicPopup, $ionicModal) {              
 
-  $ionicModal.fromTemplateUrl('modal.html', function (modal) {
+  $ionicModal.fromTemplateUrl('/templates/modal.html', function (modal) {
     $scope.modal = modal;
   }, {
     animation: 'slide-in-up'
