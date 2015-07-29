@@ -18,7 +18,12 @@
 					<div class="col dte1"><p>16 SEPTEMBER 2015</p></div>
 					<div class="col tme1"><p>08:00 AM-04:00 PM</p></div>
 					<div class="col loc1"><p>Chicago, IL</p></div>
-					<div class="col sta1"><p><a class="button button-small button-positive" ng-click="registerMe()">Register</a></p></div>
+					<div class="col sta1"><p>
+					<a class="button button-small button-balanced" ng-class="{true: 'button-balanced', false: 'button-clear button-stable'}[!patient.archived]" ng-click="patient.archived = !patient.archived; registerMe()">{{!patient.archived && 'Register' || 'Registered'}}</a>
+					
+					
+					</p>
+					</div>
 				</div>
 				
 			</div>
