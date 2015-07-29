@@ -96,6 +96,63 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
+	.state('menu.tabs.live3meeting', {
+      url: "/live3meeting",
+      views: {
+        'slide-tab': {
+          templateUrl: "live3meeting.html",
+		  controller: 'live3meetingCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.web1', {
+      url: "/web1",
+      views: {
+        'slide-tab': {
+          templateUrl: "web1.html"
+        }
+      }
+    })
+	.state('menu.tabs.web1meeting', {
+      url: "/web1meeting",
+      views: {
+        'slide-tab': {
+          templateUrl: "web1meeting.html"
+        }
+      }
+    })
+	.state('menu.tabs.web1img', {
+      url: "/web1img",
+      views: {
+        'slide-tab': {
+          templateUrl: "web1img.html"
+        }
+      }
+    })
+	.state('menu.tabs.web2meeting', {
+      url: "/web2meeting",
+      views: {
+        'slide-tab': {
+          templateUrl: "web2meeting.html"
+        }
+      }
+    })
+	.state('menu.tabs.web3meeting', {
+      url: "/web3meeting",
+      views: {
+        'slide-tab': {
+          templateUrl: "web3meeting.html"
+        }
+      }
+    })
+	.state('menu.tabs.web4meeting', {
+      url: "/web4meeting",
+      views: {
+        'slide-tab': {
+          templateUrl: "web4meeting.html"
+        }
+      }
+    })
 	.state('menu.tabs.podcast', {
       url: "/podcast",
       views: {
@@ -221,6 +278,12 @@ ceb.run(function($ionicPlatform, $rootScope) {
 
 .controller('live2meetingCtrl', function($scope){
 	$scope.registerMe = function(){
+		alert("Thank you for your interest. We've notified the Account Rep. Someone would reach out to you shortly");
+		
+	}
+})
+.controller('live3meetingCtrl', function($scope){
+	$scope.registerMe1 = function(){
 		alert("Thank you for your interest. We've notified the Account Rep. Someone would reach out to you shortly");
 		
 	}
