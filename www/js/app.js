@@ -44,6 +44,14 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
+	.state('menu.tabs.bssbimg1', {
+      url: "/bssbimg1",
+      views: {
+        'buttons-tab': {
+          templateUrl: "bssbimg1.html"
+        }
+      }
+    })
 
     .state('menu.tabs.list', {
       url: "/list",
