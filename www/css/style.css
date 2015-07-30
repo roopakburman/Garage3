@@ -128,6 +128,10 @@
 .timeline-badge.info {
   background-color: #5bc0de !important;
 }
+.timeline-badge.royal {
+  background-color: #886AEA !important;
+}
+
 .timeline-title {
   margin-top: 0;
   color: inherit;
