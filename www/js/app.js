@@ -297,10 +297,13 @@ ceb.run(function($ionicPlatform, $rootScope) {
 		
 	}
 })
-.controller('loginCtrl', function($scope, $window, $location){
+.controller('loginCtrl', function($scope, $window, $location, $ionicSideMenuDelegate){
 /* $scope.go = function ( path ) {
   $location.path( path );
 }; */
+
+$ionicSideMenuDelegate.canDragContent(false)
+
 $scope.navTitle = '<img class="logo title" src="img/logo-white-sm.png" />'; 
 
 $scope.login = function(email, password){		
