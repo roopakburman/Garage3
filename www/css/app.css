@@ -4,7 +4,7 @@
 }
 
 .scroll-content{
-	background:url("../img/1.jpg") no-repeat center center fixed;
+	background:url("../img/1435902498958.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -132,9 +132,16 @@ th {
 }
 /*Fake the blinking effect --> End*/
 
-
-
-
+.action-sheet-wrapper{
+	position: relative;
+}
+.action-sheet-title{
+	font-size: 20px;
+	color: #000000;
+}
+.action-sheet .button{
+	font-size: 12px;
+}
 
 
 
