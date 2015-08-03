@@ -1,3 +1,7 @@
+nav ul
+{
+	list-style: none;
+}
 
 p {
   /* margin: 0 0 15px; */
@@ -11,15 +15,22 @@ p {
 }
 
 #searchMenu {
-  padding: 50px 0;
+	padding: 50px 0;
 	margin-top: -10px;
-	background-color: rgba(0,0,0,0.4)
+	background-color: rgba(0,0,0,0.6);
+	display:none;
+}
+#searchMenu1 {
+	padding: 50px 0;
+	margin-top: -10px;
+	background-color: rgba(0,0,0,0.6);
+	display:none;
 }
 #searchMenu ul {
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0 1%;
   padding: 0;
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
 }
 
@@ -32,13 +43,14 @@ p {
 
 #searchMenu li a {
   display: block;
-  margin: 0 5%;
-  padding: 1px 0;
+  margin: 0 0;
+  padding: 0 0;
   background: #fff;
   color: #666;
   text-align: center;
   text-decoration: none;
   font-size: 15px;
+  width:150px;
 }
 /* #searchMenu li a:hover {
   border: solid 1px #12a1c6;
@@ -57,26 +69,36 @@ p {
   background: #F98505;
   cursor: -webkit-grab;
 }
+#searchBtn1 {
+  margin: -9px auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 0 0 5px 5px;
+  background: #F98505;
+  cursor: -webkit-grab;
+}
 
-/* .layer {
+ .layer {
   position: fixed;
+  display: block;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: #ff725d;
 /*   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=50)"; */
   opacity: 0.5;
-} */
+} 
 
 /*---------------------
     mobile
 ----------------------- */
 @media screen and (max-width: 480px) {
   #searchMenu {
-    padding: 5%;
+    padding: 1%;
+	display: none;
   }
   #searchMenu li {
-    width: 100%;
+    width: 90%;
   }
   #searchMenu li a {
     border-top: none;
@@ -95,6 +117,19 @@ p {
 
 .srch{
 	color: white;
-	font-size: 20px;
+	font-size: 25px;
 	text-align: center;
+}
+select{
+	width:30%;
+	height: 44px;
+	vertical-align: middle;
+}
+.navRb{
+	width: 90%;
+	padding: 1px 0px 0px 20%;
+}
+.navBtn{
+	padding: 5px;
+	margin: 5px;
 }

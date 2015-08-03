@@ -45,15 +45,6 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
-    .state('menu.tabs.buttons1', {
-      url: "/buttons1",
-      views: {
-        'buttons-tab': {
-          templateUrl: "templates/buttons1.html",
-          controller: 'ButtonsTabCtrl'
-        }
-      }
-    })
     .state('menu.tabs.feed1', {
       url: "/feed1",
       views: {
@@ -311,7 +302,6 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
-	
     // .state('menu.about', {
       // url: "/about",
       // views: {
@@ -723,7 +713,7 @@ $scope.feed = [
 	"path" : "#/menu/tab/feed2"
 	},
     {
-	"program" : "LEGAL",	
+	"program" : "CIO",	
 	"content_type" : "notes", 
 	"title" : "Accelerating IT's Clock Speed", 
 	"synopsis" : "Learn tactics to make your IT team more responsive to the needs of business partners in an increasingly varied technology environment.",
@@ -732,94 +722,23 @@ $scope.feed = [
 	"path" : "#/menu/tab/feed4"
 	}
 ];
-$scope.iNew = [
-   {
-	"program" : "CIO",	
-	"content_type" : "notes", 
-	"title" : "Accelerating IT's Clock Speed", 
-	"synopsis" : "Learn tactics to make your IT team more responsive to the needs of business partners in an increasingly varied technology environment.",
-	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-bg ion-ios-paper-outline",
-	"path" : "#/menu/tab/feed4"
-	},
-    {
-	"program" : "CIO",	
-	"content_type" : "notes", 
-	"title" : "RACI Chart for Service-Aligned Teams", 
-	"synopsis" : "This six-step guide includes 32 documents to help you: Create an effective budgeting process,",
-	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-bg ion-ios-paper-outline",
-	"path" : "#/menu/tab/feed4"
-	},
-    {
-	"program" : "CIO",	
-	"content_type" : "notes", 
-	"title" : "CEB Ignition™ Guide to Creating the Annual Budget for IT", 
-	"synopsis" : "Use the sample RACI chart to plan which roles will be responsible for key service management activities.",
-	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-bg ion-ios-paper-outline",
-	"path" : "#/menu/tab/feed4"
-	}
-];
-$scope.openDrawer = function(){
 
+
+	
+$(function() {
 	var openBtn = $('#searchBtn'),
-	slideMenu = $('#searchMenu');
-		if(slideMenu.is(':visible')){
-		slideMenu.slideUp(500);
-	}
-	// layer = $('<nav>').addClass('hidden');
-	openBtn.on('click', function(){
-		if(slideMenu.is(':hidden')){
-			// layer.appendTo('body');
-		slideMenu.slideDown(500);
-		// } else {
-			// slideMenu.slideUp(500);
-			// // layer.remove();
+		slideMenu = $('#searchMenu'), 
+		layer = $('<div />').addClass('layer');
+	openBtn.on("click", function() {
+		if (slideMenu.is(':hidden')) {
+			layer.appendTo('head');
+			slideMenu.slideDown(300); 
+		} else {
+			slideMenu.slideUp(300); 
+			layer.remove();
 		}
 	});
-}
-
-$scope.openDrawer1 = function(){
-
-	var openBtn = $('#searchBtn1'),
-	slideMenu = $('#searchMenu1');
-		if(slideMenu.is(':visible')){
-		slideMenu.slideUp(500);
-	}
-	// layer = $('<nav>').addClass('hidden');
-	openBtn.on('click', function(){
-		if(slideMenu.is(':hidden')){
-			// layer.appendTo('body');
-		slideMenu.slideDown(500);
-		// } else {
-			// slideMenu.slideUp(500);
-			// // layer.remove();
-		}
-	});
-}
-	// $(function() {
-	// var openBtn = $('#searchBtn'),
-		// slideMenu = $('#searchMenu'), 
-		// layer = $('<div />').addClass('layer');
-	// openBtn.on("click", function() {
-		// if (slideMenu.is(':hidden')) {
-			// layer.appendTo('body');
-			// slideMenu.slideDown(300); 
-		// // } else {
-			// // slideMenu.slideUp(300); 
-			// // layer.remove();
-		// }
-		
-	// });
-// });
-//Sort the feed
- // $scope.predicate = 'program';
-      // $scope.reverse = true;
-      // $scope.order = function(predicate) {
-        // $scope.reverse = ($scope.predicate === predicate) ? !$scope.reverse : false;
-        // $scope.predicate = predicate;
-      // };
+});	
 
 })
 

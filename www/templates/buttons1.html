@@ -2,10 +2,10 @@
       <ion-content class="padding">
 			  <!-- popover start -->
 	  <div class="slide_container">       
-        <nav id="searchMenu">
+        <nav id="searchMenu1">
 		<div class="row navRb">	
-		<a ng-href ="#" class="button button-small button-outline button-energized navBtn">What's Trending</a>
-		<a ng-href ="#menu/tab/buttons1" ng-init="openDrawer(); liked" class="button button-small  button-positive navBtn">What's New</a>
+		<a href ="#menu/tab/buttons" ng-init="openDrawer1(); liked" class="button button-small button-positive navBtn">What's Trending</a>
+		<a href ="#" class="button button-small  button-outline button-energized navBtn">What's New</a>
 		<a href ="#" class="button button-small  button-positive navBtn">Sort by Topic</a>
 		<a href ="#" class="button button-small  button-positive navBtn">Sort by Category</a>
                 <select>
@@ -15,17 +15,17 @@
 				</select>
 		</div>
         </nav>
-        <div id="searchBtn"><!-- <i class="ion-android-funnel srch" ng-click="openDrawer()"></i> -->
-			<i id="like" ng-class="{'icon ion-arrow-up-b srch': liked, 'icon ion-arrow-down-b srch': !liked}" ng-click="liked=!liked; openDrawer()"></i>
+                <div id="searchBtn1"><!-- <i class="ion-android-funnel srch" ng-click="openDrawer()"></i> -->
+			<i id="like" ng-class="{'icon ion-arrow-up-b srch': liked, 'icon ion-arrow-down-b srch': !liked}" ng-click="liked=!liked; openDrawer1()"></i>
 		</div>
     </div>
 	
 		<div class="Card" ng-controller="ButtonsTabCtrl">
           <div class="row item item-divider card-bk2 ">
 			<div class="col col-25"><img class="logo title" src="img/logo-white-sm.png" /></div>
-            <div class="col">What's Trending</div>
+            <div class="col">What's New</div>
           </div>  
-		<ion-item ng-repeat="item in feed" class="item item-icon-right" href={{item.path}}>
+		<ion-item ng-repeat="item in iNew" class="item item-icon-right" href={{item.path}}>
 		
 			<strong>{{item.title}}</strong> - {{ item.synopsis}} <i class={{item.icon}}></i>
 		</ion-item> 
