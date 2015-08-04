@@ -63,11 +63,11 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
-    .state('menu.tabs.Feed1extn', {
+    .state('menu.tabs.feed1extn', {
       url: "/feed1extn",
       views: {
         'buttons-tab': {
-          templateUrl: "templates/Feed1extn.html",
+          templateUrl: "templates/feed1extn.html",
           controller: 'ButtonsTabCtrl'
         }
       }
