@@ -63,16 +63,16 @@ p {
 
 #searchBtn {
   margin: -9px auto;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 30px;
   border-radius: 0 0 5px 5px;
   background: #F98505;
   cursor: -webkit-grab;
 }
 #searchBtn1 {
   margin: -9px auto;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 30px;
   border-radius: 0 0 5px 5px;
   background: #F98505;
   cursor: -webkit-grab;
@@ -121,7 +121,7 @@ p {
 	text-align: center;
 }
 select{
-	width:10%;
+	width:25%;
 	height: 35px;
 	vertical-align: middle;
 	margin-top:	7px;
