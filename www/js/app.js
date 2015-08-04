@@ -108,6 +108,78 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
+	.state('menu.tabs.feed5', {
+      url: "/feed5",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed5.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })	
+    .state('menu.tabs.feed5img1', {
+      url: "/feed5img1",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed5img1.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed5img2', {
+      url: "/feed5img2",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed5img2.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed5img3', {
+      url: "/feed5img3",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed5img3.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed6', {
+      url: "/feed6",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed6.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed6img1', {
+      url: "/feed6img1",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed6img1.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed6img2', {
+      url: "/feed6img2",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed6img2.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed6img3', {
+      url: "/feed6img3",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed6img3.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
 	.state('menu.tabs.bssbimg1', {
       url: "/bssbimg1",
       views: {
@@ -498,7 +570,30 @@ $scope.login = function(email, password){
 	];
 
 })
-
+.controller("tickerCtrl",['$scope',function($scope){
+    $scope.iTicker = [
+	{
+		"prog" : "Government: ",
+		"newsFeed" : "The future of Government IT - Establishing IT as a broker, not a builder."
+	},
+	{
+		"prog" : "Financial Services: ",
+		"newsFeed" : "Generate the next level of breakthrough performance in the financial services industry."
+	},
+	{
+		"prog" : "Finance: ",
+		"newsFeed" : "75% of CxOs are unhappy with the talent mix of their teams."
+	},
+	{
+		"prog" : "Innovation & Strategy: ",
+		"newsFeed" : "Companies whose R&D workforces have high innovation potential see 75% greater new product sales than other companies."
+	},
+	{
+		"prog" : "Human Resources: ",
+		"newsFeed" : "Employees are 2X more likely to stay with their organization compared to five years ago. Access Q2 workforce trends."
+	}
+	];
+}])
 .controller('dataCtrl', function($scope){
 	$scope.nameFilter = '';
     $scope.data = [
@@ -696,16 +791,16 @@ function PeopleCtrl($scope, $http) {
 
 $scope.feed = [
     {
-	"program" : "CIO",
+	"program" : "CIO Leadership Council",
 	"content_type" : "image", 
 	"title" : "What is Adaptive IT", 
 	"synopsis" : "To succeed in an era when change is constant and the impact of technology ubiquitous, IT leaders must adopt a set of management principles that allow IT to help the enterprise maximize returns from technology investments in any environment, not just the environment for which the IT organization was designed.",
 	"data" : "AdaptiveIT.png",
-	"icon" : "icon rb-bg ion-image",
+	"icon" : "icon rb-bg ion-ios-paper-outline",
 	"path" : "#/menu/tab/feed1"
 	},
     {
-	"program" : "CIO",
+	"program" : "CIO Leadership Council",
 	"content_type" : "video", 
 	"title" : "What Are End-to-End IT Services?",
 	"synopsis" : "End-to-end IT services package all the technologies, processes, and resources across IT needed to deliver a specific business outcome while hiding technical complexity...",
@@ -714,7 +809,7 @@ $scope.feed = [
 	"path" : "#/menu/tab/feed3"
 	},
     {
-	"program" : "CIO",	
+	"program" : "CIO Leadership Council",	
 	"content_type" : "notes", 
 	"title" : "The Role of the Head of IT Finance", 
 	"synopsis" : "Wondering how other IT organizations design the role of the head of IT Finance? This research brief profiles five member organizations, detailing...",
@@ -723,18 +818,7 @@ $scope.feed = [
 	"path" : "#/menu/tab/feed2"
 	},
     {
-	"program" : "LEGAL",	
-	"content_type" : "notes", 
-	"title" : "Accelerating IT's Clock Speed", 
-	"synopsis" : "Learn tactics to make your IT team more responsive to the needs of business partners in an increasingly varied technology environment.",
-	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-bg ion-ios-paper-outline",
-	"path" : "#/menu/tab/feed4"
-	}
-];
-$scope.iNew = [
-   {
-	"program" : "CIO",	
+	"program" : "CIO Leadership Council",	
 	"content_type" : "notes", 
 	"title" : "Accelerating IT's Clock Speed", 
 	"synopsis" : "Learn tactics to make your IT team more responsive to the needs of business partners in an increasingly varied technology environment.",
@@ -743,7 +827,36 @@ $scope.iNew = [
 	"path" : "#/menu/tab/feed4"
 	},
     {
-	"program" : "CIO",	
+	"program" : "Legal Leadership Council",	
+	"content_type" : "notes", 
+	"title" : "Engagement and Retention for In-House Legal Department Non-Lawyer Professionals", 
+	"synopsis" : "Engagement is neutral among in-house legal department non-lawyer professionals. Watch out for the negative impact of dissatisfaction with Opportunity on discretionary effort and retention. Review the key findings about engaging and retaining paralegals and other department staff from the latest Global Talent Trend Series data.",
+	"data" : "Corporate strategy at the world’s leading organizations increasingly depends on step-changes in how human capital is recruited, managed, deployed, and enabled. In the budgets and business plans of the 10,000 organizations we support, we see uniformly high expectations for gains in employee productivity, innovation, and ethical conduct. Decisions on talent are now among the principal determinants of an organization’s ability to execute strategy.",
+	"icon" : "icon rb-bg ion-ios-paper-outline",
+	"path" : "#/menu/tab/feed5"
+	},
+    {
+	"program" : "Recruiting Leadership Council",	
+	"content_type" : "notes", 
+	"title" : "Executive Recruiting", 
+	"synopsis" : "With more than one-third of executives hired externally, the bar is higher for Recruiting to bring in leaders who can succeed by working with others and adapting to change. Improve executive quality of hire by hiring for network fit and enabling executive recruiters to use their Talent Advisor capabilities.",
+	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
+	"icon" : "icon rb-bg ion-ios-paper-outline",
+	"path" : "#/menu/tab/feed6"
+	}
+];
+$scope.iNew = [
+   {
+	"program" : "CIO Leadership Council",	
+	"content_type" : "notes", 
+	"title" : "Accelerating IT's Clock Speed", 
+	"synopsis" : "Learn tactics to make your IT team more responsive to the needs of business partners in an increasingly varied technology environment.",
+	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
+	"icon" : "icon rb-bg ion-ios-paper-outline",
+	"path" : "#/menu/tab/feed4"
+	},
+    {
+	"program" : "CIO Leadership Council",	
 	"content_type" : "notes", 
 	"title" : "RACI Chart for Service-Aligned Teams", 
 	"synopsis" : "This six-step guide includes 32 documents to help you: Create an effective budgeting process,",
@@ -752,7 +865,7 @@ $scope.iNew = [
 	"path" : "#/menu/tab/feed4"
 	},
     {
-	"program" : "CIO",	
+	"program" : "CIO Leadership Council",	
 	"content_type" : "notes", 
 	"title" : "CEB Ignition™ Guide to Creating the Annual Budget for IT", 
 	"synopsis" : "Use the sample RACI chart to plan which roles will be responsible for key service management activities.",

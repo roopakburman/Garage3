@@ -4,14 +4,14 @@
 	  <div class="slide_container">       
         <nav id="searchMenu">
 		<div class="row navRb">	
-		<a ng-href ="#" class="button button-small button-outline button-energized navBtn">What's Trending</a>
-		<a ng-href ="#menu/tab/buttons1" ng-init="openDrawer(); liked" class="button button-small  button-positive navBtn">What's New</a>
+		<a ng-href ="#" class="button button-small button-outline button-energized navBtn" ng-init="openDrawer(); !liked">What's Trending</a>
+		<a ng-href ="#menu/tab/buttons1" class="button button-small button-positive navBtn" ng-init="openDrawer(); !liked">What's New</a>
 		<a href ="#" class="button button-small  button-positive navBtn">Sort by Topic</a>
 		<a href ="#" class="button button-small  button-positive navBtn">Sort by Category</a>
-                <select>
-				  <option value="p1">CIO Leadership Council</option>
-				  <option value="p2">Legal Leadership Council</option>
-				  <option value="p3">Recruiting Leadership Council</option>
+                <select class="ion-input-select" ng-model="sProg">
+				  <option selected="selected" value="CIO Leadership Council">IT</option>
+				  <option value="Legal Leadership Council">Legal</option>
+				  <option value="Recruiting Leadership Council">HR</option>
 				</select>
 		</div>
         </nav>
@@ -25,13 +25,19 @@
 			<div class="col col-25"><img class="logo title" src="img/logo-white-sm.png" /></div>
             <div class="col">What's Trending</div>
           </div>  
-		<ion-item ng-repeat="item in feed" class="item item-icon-right" href={{item.path}}>
+		<ion-item ng-repeat="item in feed | filter:sProg" class="item item-icon-right" href={{item.path}}>
 		
 			<strong>{{item.title}}</strong> - {{ item.synopsis}} <i class={{item.icon}}></i>
 		</ion-item> 
           </a>
 
         </div>         
-
+		<div class="card" ng-controller="tickerCtrl">
+		<marquee>
+			<span ng-repeat="item in iTicker">
+				<i class="icon ion-ios-pulse-strong"></i> <strong>{{item.prog}}</strong>{{item.newsFeed}} 
+			</span>
+		</marquee>
+		</div>
 	  </ion-content>
     </ion-view>

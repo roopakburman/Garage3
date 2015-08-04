@@ -9,9 +9,9 @@
 		<a href ="#" class="button button-small  button-positive navBtn">Sort by Topic</a>
 		<a href ="#" class="button button-small  button-positive navBtn">Sort by Category</a>
                 <select>
-				  <option value="p1">CIO Leadership Council</option>
-				  <option value="p2">Legal Leadership Council</option>
-				  <option value="p3">Recruiting Leadership Council</option>
+				  <option value="p1">IT</option>
+				  <option value="p2">Legal</option>
+				  <option value="p3">HR</option>
 				</select>
 		</div>
         </nav>
@@ -32,6 +32,12 @@
           </a>
 
         </div>         
-
+		<div class="card" ng-controller="tickerCtrl">
+		<marquee>
+			<span ng-repeat="item in iTicker">
+				<i class="icon ion-ios-pulse-strong"></i> <strong>{{item.prog}}</strong>{{item.newsFeed}} 
+			</span>
+		</marquee>
+		</div>
 	  </ion-content>
     </ion-view>
