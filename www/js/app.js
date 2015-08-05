@@ -180,6 +180,88 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
+	.state('menu.tabs.feed7', {
+      url: "/feed7",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed7.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed7extn1', {
+      url: "/feed7extn1",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed7extn1.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed7extn2', {
+      url: "/feed7extn2",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed7extn2.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed7extn3', {
+      url: "/feed7extn3",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed7extn3.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed7extn4', {
+      url: "/feed7extn4",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed7extn4.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.contactUs', {
+      url: "/contactUs",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/contactUs.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed7meeting1', {
+      url: "/feed7meeting1",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed7meeting1.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	
+	.state('menu.tabs.feed7img1', {
+      url: "/feed7img1",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed7img1.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed7img2', {
+      url: "/feed7img2",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed7img2.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
 	.state('menu.tabs.bssbimg1', {
       url: "/bssbimg1",
       views: {
@@ -294,6 +376,38 @@ ceb.run(function($ionicPlatform, $rootScope) {
       views: {
         'slide-tab': {
           templateUrl: "templates/web4meeting.html"
+        }
+      }
+    })
+	.state('menu.tabs.myEvents', {
+      url: "/myEvents",
+      views: {
+        'slide-tab': {
+          templateUrl: "templates/myEvents.html"
+        }
+      }
+    })
+	.state('menu.tabs.myEvents1', {
+      url: "/myEvents1",
+      views: {
+        'slide-tab': {
+          templateUrl: "templates/myEvents1.html"
+        }
+      }
+    })
+	.state('menu.tabs.myEvents2', {
+      url: "/myEvents2",
+      views: {
+        'slide-tab': {
+          templateUrl: "templates/myEvents2.html"
+        }
+      }
+    })
+	.state('menu.tabs.myEvents3', {
+      url: "/myEvents3",
+      views: {
+        'slide-tab': {
+          templateUrl: "templates/myEvents3.html"
         }
       }
     })
@@ -791,8 +905,17 @@ function PeopleCtrl($scope, $http) {
 
 $scope.feed = [
     {
+	"program" : "Recruiting Leadership Council",	
+	"content_type" : "video", 
+	"title" : "The Performance Transformation", 
+	"synopsis" : "HR focuses on motivation strategies to drive employee willingness to be enterprise contributors—employees who work with and through others, contributing and consuming ideas and input to improve their own performance and that of their peers. However, for 75% of them, their organizations get in their way of becoming enterprise contributors.",
+	"data" : "HR focuses on motivation strategies to drive employee willingness to be enterprise contributors—employees who work with and through others, contributing and consuming ideas and input to improve their own performance and that of their peers. However, for 75% of them, their organizations get in their way of becoming enterprise contributors.",
+	"icon" : "icon rb-bg ion-images",
+	"path" : "#/menu/tab/feed7"
+	},
+	{
 	"program" : "CIO Leadership Council",
-	"content_type" : "image", 
+	"content_type" : "notes", 
 	"title" : "What is Adaptive IT", 
 	"synopsis" : "To succeed in an era when change is constant and the impact of technology ubiquitous, IT leaders must adopt a set of management principles that allow IT to help the enterprise maximize returns from technology investments in any environment, not just the environment for which the IT organization was designed.",
 	"data" : "AdaptiveIT.png",
@@ -836,14 +959,24 @@ $scope.feed = [
 	"path" : "#/menu/tab/feed5"
 	},
     {
-	"program" : "Recruiting Leadership Council",	
+	"program" : "Legal Leadership Council",	
 	"content_type" : "notes", 
 	"title" : "Executive Recruiting", 
 	"synopsis" : "With more than one-third of executives hired externally, the bar is higher for Recruiting to bring in leaders who can succeed by working with others and adapting to change. Improve executive quality of hire by hiring for network fit and enabling executive recruiters to use their Talent Advisor capabilities.",
 	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
 	"icon" : "icon rb-bg ion-ios-paper-outline",
 	"path" : "#/menu/tab/feed6"
+	},
+    {
+	"program" : "Recruiting Leadership Council",	
+	"content_type" : "image", 
+	"title" : "2015 CEB Legal Budget & Headcount Benchmarking Results", 
+	"synopsis" : "With more than one-third of executives hired externally, the bar is higher for Recruiting to bring in leaders who can succeed by working with others and adapting to change. Improve executive quality of hire by hiring for network fit and enabling executive recruiters to use their Talent Advisor capabilities.",
+	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
+	"icon" : "icon rb-bg ion-ios-paper-outline",
+	"path" : "#/menu/tab/feed6"
 	}
+    
 ];
 $scope.iNew = [
    {
@@ -934,6 +1067,39 @@ $scope.openDrawer1 = function(){
         // $scope.predicate = predicate;
       // };
 
+	  
+	  if(currentUser == 'simplelogin:14'){
+			$scope.userName = "Price Jett";
+			$scope.userEmail = "jettp@cebglobal.com";
+			$scope.userPhone = "571-303-4772";			
+		}
+		else if(currentUser == 'simplelogin:15'){
+			$scope.userName = "Tom Monahan";
+			$scope.userEmail = "monahant@cebglobal.com";
+			$scope.userPhone = "571-303-4013";				
+		}
+		else if(currentUser == 'simplelogin:16'){
+			$scope.userName = "Melody Jones";
+			$scope.userEmail = "melodyjones@cebglobal.com";
+			$scope.userPhone = "571-303-4003";
+		}
+		else if(currentUser == 'simplelogin:17'){
+			$scope.userName = "Warren Thune";
+			$scope.userEmail = "thunew@cebglobal.com";
+			$scope.userPhone = "571-303-4613";
+		}		
+		else if(currentUser == 'simplelogin:18'){
+			$scope.userName = "Haniel Lynn";
+			$scope.userEmail = "lynnh@cebglobal.com";
+			$scope.userPhone = "571-303-4015";
+		}
+		else if(currentUser == 'simplelogin:19'){
+			$scope.userName = "The Asgardians";
+			$scope.userEmail = "garage@cebglobal.com";
+			$scope.userPhone = "571-303-6666";
+		}
+	  
+	  
 })
 
 .controller('SlideboxCtrl', function($scope, $ionicSlideBoxDelegate) {
@@ -948,9 +1114,12 @@ $scope.openDrawer1 = function(){
 
   $ionicModal.fromTemplateUrl('templates/modal.html', function (modal) {
     $scope.modal = modal;
+	
   }, {
     animation: 'slide-in-up'
   });
+ 
+  
  })
 
  /* .controller('MyController', function($scope, $ionicPopover) {
@@ -987,6 +1156,43 @@ $scope.openDrawer1 = function(){
   });
 }) */
  
+ .controller('contactAMCtrl', function($scope, $timeout, $ionicPopup) {
+
+ $scope.contactAM = function() {
+   $scope.data = {}
+
+   // An elaborate, custom popup
+   var myPopup = $ionicPopup.show({
+     template: '<textarea ng-model="data.wifi">',
+     title: 'Contact your Account Manager',
+     subTitle: 'Please type in your question and we will get back to you.',
+     scope: $scope,
+     buttons: [
+       { text: 'Cancel'},
+       {
+         text: '<b>Contact AM</b>',
+         type: 'button-assertive',
+         onTap: function(e) {
+           if (!$scope.data.wifi) {
+             //don't allow the user to close unless he enters text
+             e.preventDefault();
+           } else {
+             return $scope.data.wifi;
+           }
+         }
+       },
+     ]
+   });
+   // myPopup.then(function(res) {
+     // console.log('Tapped!', res);
+   // });
+   // $timeout(function() {
+      // myPopup.close(); //close the popup after 3 seconds for some reason
+   // }, 3000);
+  };
+
+ 
+      })
  
  .controller('AppCtrl', function() {
 

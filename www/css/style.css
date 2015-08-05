@@ -255,10 +255,17 @@ border:thin gray solid;
 .img2{
 	height: 100%;
 }
+img{
+	width: 50%;
+
+}
 .t1{
 	height:600px;
 }
 
-
+.customImg{
+	height: 80%;
+	width: 70%;
+}
 
 
