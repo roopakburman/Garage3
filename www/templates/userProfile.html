@@ -1,55 +1,22 @@
    <ion-view view-title="My Profile">
     <ion-content class="padding">
-<!-- 	<div class="card" ng-app>
-    <div class="item item-divider item-dark card-bk2">My Profile</div>
-		<div class="item item-text-wrap" ng-controller="userProfileCtrl">
-			<div clas="card">
-				
-				<div ng-repeat="datum in userData | filter: nameFilter"> 
-				
-				<h1>{{datum.userName}}<br></br></h1>
-				<img src="{{datum.uPic}}"></img><br></br>
-				
-				<h2>{{datum.userTitle}} - {{datum.userDept}}</h2><br></br>
-				
-				<span>{{datum.userEmail}}</span><br></br>
-				<span>{{datum.userPhone}}</span><br></br>
-				<span>{{datum.userOffice}}</span><br></br>
-
-				</div>
-
-			<p></p>
-			</div>
-
-         </div>  
-
-	</div> -->
 <!-- 	<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1"> -->
 	<div class="profileContent card " ng-app>
     <div class="row" ng-controller="userProfileCtrl">
         <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="well" ng-repeat="datum in userData | filter: nameFilter">
 
-
+					<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
                     <div class="col-sm-6 col-md-4">
                         <img src="{{datum.uPic}}" alt="" class="img-rounded img-responsive" />
                     </div>
-					
+					</ion-scroll>
                     <div class="col-sm-6 col-md-8 text-wrap" >
                         <h4>{{datum.userName}}</h4>
                         {{datum.userTitle}} - {{datum.userDept}} </br>
                         {{datum.userEmail}} </br>
                         {{datum.userOffice}}</br>
                         {{datum.userPhone}}</br>
-                        <!-- Split button -->
-<!--                         <div class="btn-group">
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#"><i class="ion-social-twitter custom1"></i></a></li>
-                                <li><a href="#"><i class="ion-social-googleplus custom2"></i></a></li>
-                                <li><a href="#"><i class="ion-social-facebook custom3"></i></a></li>
-
-                            </ul>
-                        </div> -->
                     </div>
 
             </div>
@@ -57,6 +24,34 @@
     </div>
 </div>
 <!-- </ion-scroll> -->
+<div class="card">
+
+	<div class="item item-divider card-bk2">
+		My Account Manager
+	</div>
+	
+	<div class="row">
+		
+		<div class="col col-20">
+		<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
+			<img src="img/James.jpg" class="img1" />
+		</ion-scroll>
+		</div>
+		
+		<div class="col col-50 text-wrap" >
+			<h4>James McKenna</h4>
+			Senior Account Manager - Information Technology Practice</br>
+			mckenna@cebglobal.com </br>
+			Washington DC</br>
+			571-303-3354</br>
+		</div>
+
+		<div class="col col-50 text-wrap" >
+			<a href="tel:+1-571-303-5395" class="button button-small icon-left ion-ios-telephone button-assertive">Call James</a><br></br>
+			<a href="#/menu/tab/contactUs" class="button button-small icon-left ion-ios-email button-assertive">Drop a message to james</a>
+		</div>
+	</div>
+</div>
 <div class="card">
 
 		<div class="item item-divider card-bk2">
@@ -78,26 +73,7 @@
             <p>Identify Which of Your Top Priorities Risk Execution Failure—and Why...</p>
 		  </a>		  
 </div>
-<div class="card">
 
-		<div class="item item-divider card-bk2">
-        My Memberships
-        </div>  
-          
-        <a class="item" href="#/menu/tab/faView1">
-		<h2>3 Steps to a More Responsive PMO</h2>
-            <p>PMOs must take three steps to improve their portfolio management and resource allocation to cope with the uncertainty and complexity of the project po...</p>
-		  </a>
-		
-		 <a class="item item-text-wrap" href="#/menu/tab/faView2">
-        <!-- <i class="icon ion-cash"></i> --><h2>What is Adaptive IT?</h2><br>
-            <p>To succeed in an era when change is constant and the impact of technology ubiquitous, IT leaders must apply five principles that enable continuous change in the...</p>
-		  </a>
-		  
-		 <a class="item item-text-wrap" href="#/menu/tab/faView3">
-        <!-- <i class="icon ion-cash"></i> --><h2>Strategy Execution Dashboard</h2><br>
-            <p>Identify Which of Your Top Priorities Risk Execution Failure—and Why...</p>
-		  </a>		  
-</div>
+
 	</ion-content>
     </ion-view>

@@ -4,18 +4,19 @@
 	  <div class="slide_container">       
         <nav id="searchMenu">
 		<div class="row navRb">	
-		<a ng-href ="#" class="button button-small button-outline button-energized navBtn" ng-init="openDrawer(); !liked">What's Trending</a>
-		<a ng-href ="#menu/tab/buttons1" class="button button-small button-positive navBtn" ng-init="openDrawer(); !liked">What's New</a>
+		<a ng-href ="#" class="button button-small button-outline button-energized navBtn" !liked">What's Trending</a>
+		<a ng-href ="#menu/tab/buttons1" class="button button-small button-positive navBtn" ng-click="openDrawer(); !liked">What's New</a>
 		<a href ="#" class="button button-small  button-positive navBtn">Sort by Topic</a>
 		<a href ="#" class="button button-small  button-positive navBtn">Sort by Category</a>
-                <select class="ion-input-select" ng-model="sProg">
-				  <option selected="selected" value="CIO Leadership Council">IT</option>
+                <select id="pSelector" class="ion-input-select" ng-model="sProg">
+				  <option selected="selected" value="">All</option>
+				  <option value="CIO Leadership Council">IT</option>
 				  <option value="Legal Leadership Council">Legal</option>
 				  <option value="Recruiting Leadership Council">HR</option>
 				</select>
 		</div>
         </nav>
-        <div id="searchBtn">&nbsp;&nbsp;&nbsp;<!-- <i class="ion-android-funnel srch" ng-click="openDrawer()"></i> -->
+        <div id="searchBtn">&nbsp;&nbsp;&nbsp;
 			<i id="like" ng-class="{'icon ion-arrow-up-b srch': liked, 'icon ion-arrow-down-b srch': !liked}" ng-click="liked=!liked; openDrawer()"></i>
 		</div>
     </div>

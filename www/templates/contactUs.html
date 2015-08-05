@@ -1,27 +1,28 @@
 <ion-view title="Contact your Account Manager">
 	<ion-content class="padding" overflow-scroll="true">
-		<div class="card">
+		<div class="customCardL">
 			<label class="item item-input">
 			  <span class="input-label"><strong>Name</strong></span>
-			  <input type="text" ng-model="userName">
+			  <input type="text" ng-model="userName" class="fElements">
 			</label>
 			<label class="item item-input">
 			  <span class="input-label"><strong>Email</strong></span>
-			  <input type="email" ng-model="userEmail">
+			  <input type="email" ng-model="userEmail" class="fElements">
 			</label>
 			<label class="item item-input">
 			  <span class="input-label"><strong>Telephone</strong></span>
-			  <input type="tel" ng-model="userPhone">
+			  <input type="tel" ng-model="userPhone" class="fElements">
 			</label>
 			<label class="item item-input">
-			  <span class="input-label"><strong>Date</strong></span>
-			  <input type="date">
+			  <span class="input-label"><strong>Pick a date to meet</strong></span>
+			  <input type="date" class="fElements">
 			</label>
 			<label class="item item-input">
-			  <span class="input-label"><strong>Leave us a message</strong></span>
-			  <input type="textarea">
+			  <span class="input-label"><strong>Your message</strong></span>
+			  <textarea rows="8" cols="50" placeholder="Your question" class="fElements"></textarea>
 			</label>
-			<button class="button button-full button-balanced">Contact</button>
+			<button class="button button-full button-balanced" ng-click="contactJames()">Contact</button>
+
 		</div>
 
 	</ion-content>

@@ -225,15 +225,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
-	.state('menu.tabs.contactUs', {
-      url: "/contactUs",
-      views: {
-        'buttons-tab': {
-          templateUrl: "templates/contactUs.html",
-          controller: 'ButtonsTabCtrl'
-        }
-      }
-    })
+	
 	.state('menu.tabs.feed7meeting1', {
       url: "/feed7meeting1",
       views: {
@@ -258,6 +250,33 @@ ceb.run(function($ionicPlatform, $rootScope) {
       views: {
         'buttons-tab': {
           templateUrl: "templates/feed7img2.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed8', {
+      url: "/feed8",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed8.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed9', {
+      url: "/feed9",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed9.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feed10', {
+      url: "/feed10",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed10.html",
           controller: 'ButtonsTabCtrl'
         }
       }
@@ -437,6 +456,15 @@ ceb.run(function($ionicPlatform, $rootScope) {
           templateUrl: "templates/userProfile.html",
           controller: 'userProfileCtrl'
 		  
+        }
+      }
+    })
+	.state('menu.tabs.contactUs', {
+      url: "/contactUs",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/contactUs.html",
+          controller: 'userProfileCtrl'
         }
       }
     })
@@ -682,6 +710,43 @@ $scope.login = function(email, password){
 		"uPic" : "img/garage.jpg"
 	},
 	];
+
+	if(currentUser == 'simplelogin:14'){
+			$scope.userName = "Price Jett";
+			$scope.userEmail = "jettp@cebglobal.com";
+			$scope.userPhone = "571-303-4772";			
+		}
+		else if(currentUser == 'simplelogin:15'){
+			$scope.userName = "Tom Monahan";
+			$scope.userEmail = "monahant@cebglobal.com";
+			$scope.userPhone = "571-303-4013";				
+		}
+		else if(currentUser == 'simplelogin:16'){
+			$scope.userName = "Melody Jones";
+			$scope.userEmail = "melodyjones@cebglobal.com";
+			$scope.userPhone = "571-303-4003";
+		}
+		else if(currentUser == 'simplelogin:17'){
+			$scope.userName = "Warren Thune";
+			$scope.userEmail = "thunew@cebglobal.com";
+			$scope.userPhone = "571-303-4613";
+		}		
+		else if(currentUser == 'simplelogin:18'){
+			$scope.userName = "Haniel Lynn";
+			$scope.userEmail = "lynnh@cebglobal.com";
+			$scope.userPhone = "571-303-4015";
+		}
+		else if(currentUser == 'simplelogin:19'){
+			$scope.userName = "The Asgardians";
+			$scope.userEmail = "garage@cebglobal.com";
+			$scope.userPhone = "571-303-6666";
+		}
+	
+	$scope.contactJames = function(){
+		alert('Thanks for your message. James would reach out to you shortly.');
+		
+		window.location.href = '#menu/tab/userProfile';
+	}
 
 })
 .controller("tickerCtrl",['$scope',function($scope){
@@ -969,12 +1034,39 @@ $scope.feed = [
 	},
     {
 	"program" : "Recruiting Leadership Council",	
-	"content_type" : "image", 
-	"title" : "2015 CEB Legal Budget & Headcount Benchmarking Results", 
-	"synopsis" : "With more than one-third of executives hired externally, the bar is higher for Recruiting to bring in leaders who can succeed by working with others and adapting to change. Improve executive quality of hire by hiring for network fit and enabling executive recruiters to use their Talent Advisor capabilities.",
+	"content_type" : "notes", 
+	"title" : "Reorient your executive recruting strategy from search savings to quality gains.", 
+	"synopsis" : "More than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful",
 	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
 	"icon" : "icon rb-bg ion-ios-paper-outline",
 	"path" : "#/menu/tab/feed6"
+	},
+    {
+	"program" : "Recruiting Leadership Council",	
+	"content_type" : "video", 
+	"title" : "The Performance Transformation", 
+	"synopsis" : "The new work environment is full of performance challenges, yet performance must improve by 27% to meet business goals over the next 12 months.",
+	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
+	"icon" : "icon rb-bg ion-ios-videocam",
+	"path" : "#/menu/tab/feed8"
+	},
+    {
+	"program" : "Recruiting Leadership Council",	
+	"content_type" : "video", 
+	"title" : "Take Your HR Team to the Next Level", 
+	"synopsis" : "Less than one-fifth of line leaders rates HR as an effective strategic partner to the line.",
+	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
+	"icon" : "icon rb-bg ion-ios-videocam",
+	"path" : "#/menu/tab/feed9"
+	},
+    {
+	"program" : "Recruiting Leadership Council",	
+	"content_type" : "video", 
+	"title" : "Legal Leadership Council", 
+	"synopsis" : "Given the changing impact of information, traditional monitoring processes and technology advancements alone no longer deliver effective identification, management, and prevention of business risks. This change demands the need for early detection and rootcause analysis.",
+	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
+	"icon" : "icon rb-bg ion-ios-videocam",
+	"path" : "#/menu/tab/feed10"
 	}
     
 ];
@@ -1067,37 +1159,13 @@ $scope.openDrawer1 = function(){
         // $scope.predicate = predicate;
       // };
 
+	  $('#pSelector1').change(function () {
+			$scope.openDrawer1();
+	  });
+	  $('#pSelector').change(function () {
+			$scope.openDrawer();
+	  });
 	  
-	  if(currentUser == 'simplelogin:14'){
-			$scope.userName = "Price Jett";
-			$scope.userEmail = "jettp@cebglobal.com";
-			$scope.userPhone = "571-303-4772";			
-		}
-		else if(currentUser == 'simplelogin:15'){
-			$scope.userName = "Tom Monahan";
-			$scope.userEmail = "monahant@cebglobal.com";
-			$scope.userPhone = "571-303-4013";				
-		}
-		else if(currentUser == 'simplelogin:16'){
-			$scope.userName = "Melody Jones";
-			$scope.userEmail = "melodyjones@cebglobal.com";
-			$scope.userPhone = "571-303-4003";
-		}
-		else if(currentUser == 'simplelogin:17'){
-			$scope.userName = "Warren Thune";
-			$scope.userEmail = "thunew@cebglobal.com";
-			$scope.userPhone = "571-303-4613";
-		}		
-		else if(currentUser == 'simplelogin:18'){
-			$scope.userName = "Haniel Lynn";
-			$scope.userEmail = "lynnh@cebglobal.com";
-			$scope.userPhone = "571-303-4015";
-		}
-		else if(currentUser == 'simplelogin:19'){
-			$scope.userName = "The Asgardians";
-			$scope.userEmail = "garage@cebglobal.com";
-			$scope.userPhone = "571-303-6666";
-		}
 	  
 	  
 })

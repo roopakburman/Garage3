@@ -4,18 +4,19 @@
 	  <div class="slide_container">       
         <nav id="searchMenu1">
 		<div class="row navRb">	
-		<a href ="#menu/tab/buttons" ng-init="openDrawer1(); liked" class="button button-small button-positive navBtn">What's Trending</a>
+		<a href ="#menu/tab/buttons" ng-click="openDrawer1(); liked" class="button button-small button-positive navBtn">What's Trending</a>
 		<a href ="#" class="button button-small  button-outline button-energized navBtn">What's New</a>
 		<a href ="#" class="button button-small  button-positive navBtn">Sort by Topic</a>
 		<a href ="#" class="button button-small  button-positive navBtn">Sort by Category</a>
-                <select>
-				  <option value="p1">IT</option>
-				  <option value="p2">Legal</option>
-				  <option value="p3">HR</option>
+                <select id="pSelector1" class="ion-input-select" ng-model="sProg1">
+				  <option selected="selected" value="">All</option>
+				  <option value="CIO Leadership Council">IT</option>
+				  <option value="Legal Leadership Council">Legal</option>
+				  <option value="Recruiting Leadership Council">HR</option>
 				</select>
 		</div>
         </nav>
-        <div id="searchBtn1">&nbsp;&nbsp;&nbsp;<!-- <i class="ion-android-funnel srch" ng-click="openDrawer()"></i> -->
+        <div id="searchBtn1">&nbsp;&nbsp;&nbsp;
 			<i id="like" ng-class="{'icon ion-arrow-up-b srch': liked, 'icon ion-arrow-down-b srch': !liked}" ng-click="liked=!liked; openDrawer1()"></i>
 		</div>
     </div>
@@ -25,8 +26,7 @@
 			<div class="col col-25"><img class="logo title" src="img/logo-white-sm.png" /></div>
             <div class="col">What's New</div>
           </div>  
-		<ion-item ng-repeat="item in iNew" class="item item-icon-right" href={{item.path}}>
-		
+		<ion-item ng-repeat="item in iNew | filter:sProg1" class="item item-icon-right" href={{item.path}}>
 			<strong>{{item.title}}</strong> - {{ item.synopsis}} <i class={{item.icon}}></i>
 		</ion-item> 
           </a>
