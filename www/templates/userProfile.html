@@ -1,7 +1,36 @@
    <ion-view view-title="My Profile">
     <ion-content class="padding">
 <!-- 	<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1"> -->
-	<div class="profileContent card " ng-app>
+<div class="card">
+
+	<div class="item item-divider card-bk2">
+		My Account Manager
+	</div>
+	
+	<div class="row">
+		
+		<div class="col col-20">
+		<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
+			<img src="img/James.jpg" class="img1" />
+		</ion-scroll>
+		</div>
+		
+		<div class="col text-wrap" >
+			<h4>James McKenna</h4>
+			Senior Account Manager - Information Technology Practice</br>
+			mckenna@cebglobal.com </br>
+			Washington DC</br>
+			571-303-3354</br>
+		<div class="col col-50 text-wrap" >
+			<a href="tel:+1-571-303-5395" class="button button-small icon-left ion-ios-telephone button-balanced">Call James</a>
+			<a href="#/menu/tab/contactUs" class="button button-small icon-left ion-ios-email button-balanced">Drop a message to james</a>
+		</div>
+		</div>
+
+		
+	</div>
+</div>
+<div class="profileContent card " ng-app>
     <div class="row" ng-controller="userProfileCtrl">
         <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="well" ng-repeat="datum in userData | filter: nameFilter">
@@ -24,34 +53,7 @@
     </div>
 </div>
 <!-- </ion-scroll> -->
-<div class="card">
 
-	<div class="item item-divider card-bk2">
-		My Account Manager
-	</div>
-	
-	<div class="row">
-		
-		<div class="col col-20">
-		<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
-			<img src="img/James.jpg" class="img1" />
-		</ion-scroll>
-		</div>
-		
-		<div class="col col-50 text-wrap" >
-			<h4>James McKenna</h4>
-			Senior Account Manager - Information Technology Practice</br>
-			mckenna@cebglobal.com </br>
-			Washington DC</br>
-			571-303-3354</br>
-		</div>
-
-		<div class="col col-50 text-wrap" >
-			<a href="tel:+1-571-303-5395" class="button button-small icon-left ion-ios-telephone button-assertive">Call James</a><br></br>
-			<a href="#/menu/tab/contactUs" class="button button-small icon-left ion-ios-email button-assertive">Drop a message to james</a>
-		</div>
-	</div>
-</div>
 <div class="card">
 
 		<div class="item item-divider card-bk2">

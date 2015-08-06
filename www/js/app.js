@@ -635,6 +635,8 @@ $scope.login = function(email, password){
 		}
 		else if(authData.uid == 'simplelogin:25'){
 			alert('Welcome Eve!');
+		}else if(authData.uid == 'simplelogin:26'){
+			alert('Welcome Julie!');
 		}
 		}
 		},{
@@ -761,6 +763,16 @@ $scope.login = function(email, password){
 		"userPhone" : "571-303-6666",
 		"userOffice" : "Washington DC",
 		"uPic" : "img/eve.jpg"
+	},
+	{
+		"userID" : "simplelogin:26",		
+		"userName" : "Julie Donahue",
+		"userEmail" : "jdonahue@cebglobal.com",
+		"userTitle" : "Senior Central L＆D Lead Senior Central L&D Lead",
+		"userDept" : "Human Resources",
+		"userPhone" : "571-303-4756",
+		"userOffice" : "Washington DC",
+		"uPic" : "img/julie.jpg"
 	}
 	];
 
@@ -813,6 +825,11 @@ $scope.login = function(email, password){
 			$scope.userName = "Eve Koopmann";
 			$scope.userEmail = "ekoopmann@cebglobal.com";
 			$scope.userPhone = "571-303-6666";
+		}
+		else if(currentUser == 'simplelogin:26'){
+			$scope.userName = "Julie Donahue";
+			$scope.userEmail = "jdonahue@cebglobal.com";
+			$scope.userPhone = "571-303-4756";
 		}
 	
 	$scope.contactJames = function(){
@@ -1054,11 +1071,11 @@ $scope.feed = [
 	},
     {
 	"program" : "Legal Leadership Council",	
-	"content_type" : "notes", 
+	"content_type" : "images", 
 	"title" : "Executive Recruiting", 
 	"synopsis" : "With more than one-third of executives hired externally, the bar is higher for Recruiting to bring in leaders who can succeed by working with others and adapting to change. Improve executive quality of hire by hiring for network fit and enabling executive recruiters to use their Talent Advisor capabilities.",
 	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
-	"icon" : "icon rb-notes ion-ios-paper",
+	"icon" : "icon rb-images ion-images",
 	"path" : "#/menu/tab/feed6"
 	},
     {
