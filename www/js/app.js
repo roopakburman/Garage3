@@ -12,10 +12,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
-/* 	$rootScope.logout = function () {
-        console.log("Logging out from the app");
-		alert("You are successfully logged out.");
-    } */
+
   });
 })
 .config(function ($stateProvider, $urlRouterProvider) {
@@ -291,6 +288,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
+	
 	.state('menu.tabs.bssbimg1', {
       url: "/bssbimg1",
       views: {
@@ -523,6 +521,14 @@ ceb.run(function($ionicPlatform, $rootScope) {
       views: {
         'userProfile-tab': {
           templateUrl: "templates/faView3img.html"
+        }
+      }
+    })
+	.state('menu.tabs.testPush', {
+      url: "/testPush",
+      views: {
+        'userProfile-tab': {
+          templateUrl: "templates/testPush.html"
         }
       }
     })
@@ -1008,7 +1014,7 @@ function PeopleCtrl($scope, $http) {
     chart1.data = {"cols": [
         {id: "month", label: "Month", type: "string"},
         {id: "laptop-id", label: "My Company", type: "number"},
-        {id: "desktop-id", label: "Retail Banking", type: "number"}
+        {id: "desktop-id", label: "Automobiles Industry", type: "number"}
         
     ], "rows": [
         {c: [
@@ -1069,7 +1075,7 @@ function PeopleCtrl($scope, $http) {
 			{v: 1}
         ]},
         {c: [
-            {v: "Retail Banking"},
+            {v: "Automobiles Industry"},
             {v: .19},
             {v: .12},
 			{v: .29},
@@ -1097,75 +1103,27 @@ function PeopleCtrl($scope, $http) {
 
 })
 .controller('ButtonsTabCtrl', ['$scope', '$filter', function ($scope, $filter) {
-	/* Google Chart start*/
-// var chart1 = {};
-    // chart1.type = "ColumnChart";
-    // chart1.cssStyle = "height:300px; width:400px;";
-    // chart1.data = {"cols": [
-        // {id: "month", label: "Quarter", type: "string"},
-        // {id: "laptop-id", label: "IT", type: "number"},
-        // {id: "desktop-id", label: "HR", type: "number"},
-        // {id: "server-id", label: "Legal", type: "number"},
-        // {id: "cost-id", label: "SMAC", type: "number"}
-    // ], "rows": [
-        // {c: [
-            // {v: "Q1"},
-            // {v: 19, f: "42 items"},
-            // {v: 12, f: "Ony 12 items"},
-            // {v: 7, f: "7 servers"},
-            // {v: 4}
-        // ]},
-        // {c: [
-            // {v: "Q2"},
-            // {v: 13},
-            // {v: 15, f: "1 unit (Out of stock this month)"},
-            // {v: 12},
-            // {v: 8}
-        // ]},
-        // {c: [
-            // {v: "Q3"},
-            // {v: 24},
-            // {v: 20},
-            // {v: 11},
-            // {v: 16}
-
-        // ]}
-    // ]};
-
-    // chart1.options = {
-        // "title": "Quarterly NBB",
-        // "isStacked": "false",
-        // "fill": 20,
-        // "displayExactValues": false,
-        // "vAxis": {
-            // "title": "Sales(in USD millions)", "gridlines": {"count": 4}
-         // },
-        // // "hAxis": {
-            // // "title": ""
-        // // }
-    // };
-
-    // chart1.formatters = {};
-
-    // $scope.chart = chart1;
 	
-	/*Chart 2*/
-	
+
 	
 	var chart1 = {};
     chart1.type = "PieChart";
     chart1.data = [
        ['Component', 'cost'],
-       ['Software', 50000],
-       ['Hardware', 80000]
+       ['Risk management', 50000],
+       ['Cash Efficiency', 80000],
+       ['Capital Structure', 20000],
+       ['All Other', 70000]
       ];
-    chart1.data.push(['Services',20000]);
+    // chart1.data.push(['Services',20000]);
     chart1.options = {
         displayExactValues: true,
-        width: 400,
-        height: 200,
+        width: 550,
+        height: 400,
         is3D: false,
-        chartArea: {left:10,top:10,bottom:0,height:"100%"}
+        
+		colors: ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
+		title: "Automobiles Industry"
     };
 
     chart1.formatters = {
@@ -1176,15 +1134,37 @@ function PeopleCtrl($scope, $http) {
     };
 
     $scope.chart = chart1;
+	
+	/*Chart 2*/
+	var chartNew = {};
+    chartNew.type = "PieChart";
+    chartNew.data = [
+       ['Component', 'cost'],
+       ['Risk management', 30000],
+       ['Cash Efficiency', 20000],
+       ['Capital Structure', 50000],
+       ['All Other', 70000]
+      ];
+    // chartNew.data.push(['Services',20000]);
+    chartNew.options = {
+        displayExactValues: true,
+        width: 550,
+        height: 400,
+        is3D: false,
+		colors: ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
+		title: "My Company"
+    };
 
-    $scope.aa=1*$scope.chart.data[1][1];
-    $scope.bb=1*$scope.chart.data[2][1];
-    $scope.cc=1*$scope.chart.data[3][1];
-	
-	
-	
-	
+    chartNew.formatters = {
+      number : [{
+        columnNum: 1,
+        pattern: "$ #,##0.00"
+      }]
+    };
+
+    $scope.chartMy = chartNew;
 	/* Google Chart End*/	
+	
 	$('.clickMe1').click(function(){
 		$('.panel1').toggle();
 	});
@@ -1389,36 +1369,43 @@ $scope.openDrawer1 = function(){
 			$scope.openDrawer();
 	  });
 	  
-	  
-	  
+
 }])
 
-.controller('SlideboxCtrl', function($scope, $ionicSlideBoxDelegate) {
+.controller('SlideboxCtrl', function($scope, $ionicSlideBoxDelegate, $timeout, $ionicPopup) {
   $scope.nextSlide = function() {
     $ionicSlideBoxDelegate.next();
   }
 
+  /*Fake Push notification start*/	  
+	$scope.callAtTimeout = function() {
+        console.log("$scope.callAtTimeout - Timeout occurred");
+		// alert('Your Budget Diagnostics have been delivered');
+		
+		var confirmPopup = $ionicPopup.confirm({
+       title: 'Budget Diagnostic Results',
+       template: 'Your diagnostic results are in. Do you want to see them?'
+     });
+     confirmPopup.then(function(res) {
+       if(res) {
+         console.log('You are sure');
+		 window.location.href="#menu/tab/feedBenchmark"
+       } else {
+         console.log('You are not sure');
+		 alert('Your Budget Diagnostics have been saved in your Workspace on the My CEB tab.');
+       }
+     });
+		
+		
+    }
+    $timeout( function(){ $scope.callAtTimeout(); }, 10000);
 
-})              
+/*Fake Push notification End*/	
 
-.controller('MenuCtrl', function($scope, $ionicSideMenuDelegate, $ionicPopup, $ionicModal) {              
 
-  $ionicModal.fromTemplateUrl('templates/modal.html', function (modal) {
-    $scope.modal = modal;
-	  $scope.modal.confrm = function(){
-	  alert('Thank you for your message.')
-	  $scope.modal.hide();
-  };
-  }, {
-    animation: 'slide-in-up'
-  });
- 
 
- })
- 
- .controller('contactAMCtrl', function($scope, $timeout, $ionicPopup) {
 
- $scope.contactAM = function() {
+$scope.contactAM = function() {
    $scope.data = {}
 
    // An elaborate, custom popup
@@ -1443,18 +1430,25 @@ $scope.openDrawer1 = function(){
        },
      ]
    });
-   // myPopup.then(function(res) {
-     // console.log('Tapped!', res);
-   // });
-   // $timeout(function() {
-      // myPopup.close(); //close the popup after 3 seconds for some reason
-   // }, 3000);
   };
 
+})              
+
+.controller('MenuCtrl', function($scope, $ionicSideMenuDelegate, $ionicPopup, $ionicModal) {              
+
+  $ionicModal.fromTemplateUrl('templates/modal.html', function (modal) {
+    $scope.modal = modal;
+	  $scope.modal.confrm = function(){
+	  alert('Thank you for your message.')
+	  $scope.modal.hide();
+  };
+  }, {
+    animation: 'slide-in-up'
+  });
  
-      })
- 
- .controller('AppCtrl', function() {
+
+ })
+.controller('AppCtrl', function() {
 
   ionic.Platform.ready(function() {
 
