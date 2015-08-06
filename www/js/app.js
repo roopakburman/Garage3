@@ -1031,7 +1031,7 @@ $scope.feed = [
 	"title" : "The Role of the Head of IT Finance", 
 	"synopsis" : "Wondering how other IT organizations design the role of the head of IT Finance? This research brief profiles five member organizations, detailing...",
 	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-notes ion-ios-paper-outline",
+	"icon" : "icon rb-notes ion-ios-paper",
 	"path" : "#/menu/tab/feed2"
 	},
     {
@@ -1040,7 +1040,7 @@ $scope.feed = [
 	"title" : "Accelerating IT's Clock Speed", 
 	"synopsis" : "Learn tactics to make your IT team more responsive to the needs of business partners in an increasingly varied technology environment.",
 	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-notes ion-ios-paper-outline",
+	"icon" : "icon rb-notes ion-ios-paper",
 	"path" : "#/menu/tab/feed4"
 	},
     {
@@ -1058,7 +1058,7 @@ $scope.feed = [
 	"title" : "Executive Recruiting", 
 	"synopsis" : "With more than one-third of executives hired externally, the bar is higher for Recruiting to bring in leaders who can succeed by working with others and adapting to change. Improve executive quality of hire by hiring for network fit and enabling executive recruiters to use their Talent Advisor capabilities.",
 	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
-	"icon" : "icon rb-notes ion-ios-paper-outline",
+	"icon" : "icon rb-notes ion-ios-paper",
 	"path" : "#/menu/tab/feed6"
 	},
     {
@@ -1106,7 +1106,7 @@ $scope.iNew = [
 	"title" : "Accelerating IT's Clock Speed", 
 	"synopsis" : "Learn tactics to make your IT team more responsive to the needs of business partners in an increasingly varied technology environment.",
 	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-notes ion-ios-paper-outline",
+	"icon" : "icon rb-notes ion-ios-paper",
 	"path" : "#/menu/tab/feed4"
 	},
     {
@@ -1115,7 +1115,7 @@ $scope.iNew = [
 	"title" : "RACI Chart for Service-Aligned Teams", 
 	"synopsis" : "This six-step guide includes 32 documents to help you: Create an effective budgeting process,",
 	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-notes ion-ios-paper-outline",
+	"icon" : "icon rb-notes ion-ios-paper",
 	"path" : "#/menu/tab/feed4"
 	},
     {
@@ -1124,7 +1124,7 @@ $scope.iNew = [
 	"title" : "CEB Ignition™ Guide to Creating the Annual Budget for IT", 
 	"synopsis" : "Use the sample RACI chart to plan which roles will be responsible for key service management activities.",
 	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-notes ion-ios-paper-outline",
+	"icon" : "icon rb-notes ion-ios-paper",
 	"path" : "#/menu/tab/feed4"
 	}
 ];
