@@ -1,4 +1,4 @@
-var ceb = angular.module('ionicApp', ['ionic'])
+var ceb = angular.module('ionicApp', ['ionic', 'googlechart'])
 var ref = new Firebase("https://glowing-fire-7224.firebaseio.com/");
 window.currentUser = "";
 window.sortState ="";
@@ -278,6 +278,15 @@ ceb.run(function($ionicPlatform, $rootScope) {
       views: {
         'buttons-tab': {
           templateUrl: "templates/feed10.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.feedBenchmark', {
+      url: "/feedBenchmark",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feedBenchmark.html",
           controller: 'ButtonsTabCtrl'
         }
       }
@@ -990,8 +999,192 @@ function PeopleCtrl($scope, $http) {
   ];
 
 })
+
+.controller("chartCtrl2", function ($scope) {
+
+    var chart1 = {};
+    chart1.type = "ColumnChart";
+    chart1.cssStyle = "height:450px; width:650px;";
+    chart1.data = {"cols": [
+        {id: "month", label: "Month", type: "string"},
+        {id: "laptop-id", label: "My Company", type: "number"},
+        {id: "desktop-id", label: "Retail Banking", type: "number"}
+        
+    ], "rows": [
+        {c: [
+            {v: "In-House Counsel"},
+            {v: .19},
+            {v: .12}
+        ]},
+        {c: [
+            {v: "Outside Counsel"},
+            {v: .13},
+            {v: .19}
+        ]},
+        {c: [
+            {v: "Admin Staff"},
+            {v: .24},
+            {v: .10}
+
+        ]}
+    ]};
+
+    chart1.options = {
+        "title": "Budget Allocation",
+		"legend": { "position": 'bottom', "textStyle": {"fontSize": 12}},
+        "isStacked": "false",
+        "fill": 21,
+        "displayExactValues": false,
+        "vAxis": {
+            "title": "", "gridlines": {"count": 6},
+			"format": '#,###%'
+        },
+		"colors": ['#FF8C26','#0FC1F2']
+    };
+
+    chart1.formatters = {};
+
+    $scope.chart2 = chart1;
+
+})
+.controller("chartCtrl3", function ($scope) {
+
+    var chart1 = {};
+    chart1.type = "ColumnChart";
+    chart1.cssStyle = "height:450px; width:650px;";
+    chart1.data = {"cols": [
+        {id: "month", label: "Month", type: "string"},
+		{id: "Other-id", label: "Other", type: "number"},
+        {id: "Finance-id", label: "Finance", type: "number"},
+        {id: "LegalDept-id", label: "Legal Dept.", type: "number"},
+		{id: "RiskFunc-id", label: "Risk Function", type: "number"}
+        
+        
+    ], "rows": [
+        {c: [
+            {v: "My Company"},
+            {v: 0},
+            {v: 0},
+			{v: 0},
+			{v: 1}
+        ]},
+        {c: [
+            {v: "Retail Banking"},
+            {v: .19},
+            {v: .12},
+			{v: .29},
+			{v: .4}
+        ]}
+    ]};
+
+    chart1.options = {
+        "title": "Location of Compliance and Ethics Program",
+		"legend": { "position": 'bottom', "textStyle": {"fontSize": 12}},
+        "isStacked": "true",
+        "fill": 21,
+        "displayExactValues": false,
+        "vAxis": {
+            "title": "", "gridlines": {"count": 6},
+			"format": '#,###%'
+        },
+		"colors": ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC']
+    };
+
+    chart1.formatters = {};
+
+    $scope.chart2 = chart1;
+
+
+})
 .controller('ButtonsTabCtrl', ['$scope', '$filter', function ($scope, $filter) {
+	/* Google Chart start*/
+// var chart1 = {};
+    // chart1.type = "ColumnChart";
+    // chart1.cssStyle = "height:300px; width:400px;";
+    // chart1.data = {"cols": [
+        // {id: "month", label: "Quarter", type: "string"},
+        // {id: "laptop-id", label: "IT", type: "number"},
+        // {id: "desktop-id", label: "HR", type: "number"},
+        // {id: "server-id", label: "Legal", type: "number"},
+        // {id: "cost-id", label: "SMAC", type: "number"}
+    // ], "rows": [
+        // {c: [
+            // {v: "Q1"},
+            // {v: 19, f: "42 items"},
+            // {v: 12, f: "Ony 12 items"},
+            // {v: 7, f: "7 servers"},
+            // {v: 4}
+        // ]},
+        // {c: [
+            // {v: "Q2"},
+            // {v: 13},
+            // {v: 15, f: "1 unit (Out of stock this month)"},
+            // {v: 12},
+            // {v: 8}
+        // ]},
+        // {c: [
+            // {v: "Q3"},
+            // {v: 24},
+            // {v: 20},
+            // {v: 11},
+            // {v: 16}
+
+        // ]}
+    // ]};
+
+    // chart1.options = {
+        // "title": "Quarterly NBB",
+        // "isStacked": "false",
+        // "fill": 20,
+        // "displayExactValues": false,
+        // "vAxis": {
+            // "title": "Sales(in USD millions)", "gridlines": {"count": 4}
+         // },
+        // // "hAxis": {
+            // // "title": ""
+        // // }
+    // };
+
+    // chart1.formatters = {};
+
+    // $scope.chart = chart1;
 	
+	/*Chart 2*/
+	
+	
+	var chart1 = {};
+    chart1.type = "PieChart";
+    chart1.data = [
+       ['Component', 'cost'],
+       ['Software', 50000],
+       ['Hardware', 80000]
+      ];
+    chart1.data.push(['Services',20000]);
+    chart1.options = {
+        displayExactValues: true,
+        width: 400,
+        height: 200,
+        is3D: false,
+        chartArea: {left:10,top:10,bottom:0,height:"100%"}
+    };
+
+    chart1.formatters = {
+      number : [{
+        columnNum: 1,
+        pattern: "$ #,##0.00"
+      }]
+    };
+
+    $scope.chart = chart1;
+
+    $scope.aa=1*$scope.chart.data[1][1];
+    $scope.bb=1*$scope.chart.data[2][1];
+    $scope.cc=1*$scope.chart.data[3][1];
+	
+	
+	
+	
+	/* Google Chart End*/	
 	$('.clickMe1').click(function(){
 		$('.panel1').toggle();
 	});
