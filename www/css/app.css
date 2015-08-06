@@ -87,7 +87,18 @@ th {
 .rb-bg{
 	font-size: 38px;
 }
-
+.rb-images{
+	font-size: 38px;
+	color: #8D64AA;
+}
+.rb-videos{
+	font-size: 38px;
+	color: #F4B213;
+}
+.rb-notes{
+	font-size: 38px;
+	color: #00AEEF;
+}
 .hidden{
 	display: none;
 }

@@ -1,13 +1,13 @@
 <ion-view view-title="What's Trending">
-      <ion-content class="padding">
+      <ion-content class="padding" ng-controller="ButtonsTabCtrl">
 			  <!-- popover start -->
 	  <div class="slide_container">       
         <nav id="searchMenu">
 		<div class="row navRb">	
 		<a ng-href ="#" class="button button-small button-outline button-energized navBtn" !liked">What's Trending</a>
 		<a ng-href ="#menu/tab/buttons1" class="button button-small button-positive navBtn" ng-click="openDrawer(); !liked">What's New</a>
-		<a href ="#" class="button button-small  button-positive navBtn">Sort by Topic</a>
-		<a href ="#" class="button button-small  button-positive navBtn">Sort by Category</a>
+		<a href ="#" class="button button-small  button-positive navBtn" ng-click="reverse=!reverse;order('program',reverse); openDrawer()">Sort by Topic</a>
+		<a href ="#" class="button button-small  button-positive navBtn" ng-click="reverse=!reverse;order('content_type',reverse); openDrawer()">Sort by Category</a>
                 <select id="pSelector" class="ion-input-select" ng-model="sProg">
 				  <option selected="selected" value="">All</option>
 				  <option value="CIO Leadership Council">IT</option>
@@ -21,12 +21,13 @@
 		</div>
     </div>
 	
-		<div class="Card" ng-controller="ButtonsTabCtrl">
+		<div class="Card" >
           <div class="row item item-divider card-bk2 ">
 			<div class="col col-25"><img class="logo title" src="img/logo-white-sm.png" /></div>
             <div class="col">What's Trending</div>
           </div>  
-		<ion-item ng-repeat="item in feed | filter:sProg" class="item item-icon-right" href={{item.path}}>
+		  
+		<ion-item ng-repeat="item in feed | orderBy:predicate | filter:sProg" class="item item-icon-right" href={{item.path}}>
 		
 			<strong>{{item.title}}</strong> - {{ item.synopsis}} <i class={{item.icon}}></i>
 		</ion-item> 

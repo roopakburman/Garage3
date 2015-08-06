@@ -1,6 +1,7 @@
 var ceb = angular.module('ionicApp', ['ionic'])
 var ref = new Firebase("https://glowing-fire-7224.firebaseio.com/");
 window.currentUser = "";
+window.sortState ="";
 ceb.run(function($ionicPlatform, $rootScope) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -623,6 +624,18 @@ $scope.login = function(email, password){
 		else if(authData.uid == 'simplelogin:19'){
 			alert('Welcome Garage Team!');
 		}
+		else if(authData.uid == 'simplelogin:22'){
+			alert('Welcome Rob!');
+		}
+		else if(authData.uid == 'simplelogin:23'){
+			alert('Welcome Andrea!');
+		}
+		else if(authData.uid == 'simplelogin:24'){
+			alert('Welcome Aaron!');
+		}
+		else if(authData.uid == 'simplelogin:25'){
+			alert('Welcome Eve!');
+		}
 		}
 		},{
 			remember: "sessiononly"
@@ -655,8 +668,8 @@ $scope.login = function(email, password){
 		"userEmail" : "jettp@cebglobal.com",
 		"userTitle" : "Chief Information Officer",
 		"userDept" : "IT",
-		"userPhone" : "x144772",
-		"userOffice" : "05502",
+		"userPhone" : "571-303-4772",
+		"userOffice" : "Washington DC",
 		"uPic" : "img/price.png"
 	},
 	{
@@ -665,8 +678,8 @@ $scope.login = function(email, password){
 		"userEmail" : "lynnh@cebglobal.com",
 		"userTitle" : "Group President",
 		"userDept" : "BPDS General/Central",
-		"userPhone" : "x144015",
-		"userOffice" : "22192",
+		"userPhone" : "571-303-4015",
+		"userOffice" : "Washington DC",
 		"uPic" : "img/haniel.jpg"
 	},
 	{
@@ -675,8 +688,8 @@ $scope.login = function(email, password){
 		"userEmail" : "melodyjones@cebglobal.com",
 		"userTitle" : "Chief Administrative Officer",
 		"userDept" : "Human Resources",
-		"userPhone" : "x144003",
-		"userOffice" : "19084",
+		"userPhone" : "571-303-4003",
+		"userOffice" : "Washington DC",
 		"uPic" : "img/melody.jpg"
 	},
 	{
@@ -685,8 +698,8 @@ $scope.login = function(email, password){
 		"userEmail" : "thunew@cebglobal.com",
 		"userTitle" : "Group President",
 		"userDept" : "TM General/Central",
-		"userPhone" : "x144613",
-		"userOffice" : "21506",
+		"userPhone" : "571-303-4613",
+		"userOffice" : "Washington DC",
 		"uPic" : "img/warren.jpg"
 	},
 	{
@@ -695,8 +708,8 @@ $scope.login = function(email, password){
 		"userEmail" : "MonahanT@cebglobal.com",
 		"userTitle" : "Chief Executive Officer",
 		"userDept" : "Office of the CEO",
-		"userPhone" : "x144013",
-		"userOffice" : "22088",
+		"userPhone" : "571-303-4013",
+		"userOffice" : "Washington DC",
 		"uPic" : "img/tom.jpg"
 	},
 	{
@@ -705,10 +718,50 @@ $scope.login = function(email, password){
 		"userEmail" : "garage@cebglobal.com",
 		"userTitle" : "The Garage",
 		"userDept" : "Secret room on 10th floor",
-		"userPhone" : "x146666",
-		"userOffice" : "xxxxxx",
+		"userPhone" : "571-303-6666",
+		"userOffice" : "Washington DC",
 		"uPic" : "img/garage.jpg"
 	},
+	{
+		"userID" : "simplelogin:22",		
+		"userName" : "Rob Chen",
+		"userEmail" : "robchen@cebglobal.com",
+		"userTitle" : "Chief Marketing Officer",
+		"userDept" : "Marketing",
+		"userPhone" : "571-303-6666",
+		"userOffice" : "Washington DC",
+		"uPic" : "img/rob.jpg"
+	},
+	{
+		"userID" : "simplelogin:23",		
+		"userName" : "Andrea Birdsong",
+		"userEmail" : "abirdsong@cebglobal.com",
+		"userTitle" : "Senior Digital Marketing Manager",
+		"userDept" : "Marketing",
+		"userPhone" : "571-303-6666",
+		"userOffice" : "Washington DC",
+		"uPic" : "img/garage.jpg"
+	},
+	{
+		"userID" : "simplelogin:24",		
+		"userName" : "Aaron Myers",
+		"userEmail" : "amyers@cebglobal.com",
+		"userTitle" : "Executive Assistant",
+		"userDept" : "IT",
+		"userPhone" : "571-303-6666",
+		"userOffice" : "Washington DC",
+		"uPic" : "img/garage.jpg"
+	},
+	{
+		"userID" : "simplelogin:25",		
+		"userName" : "Eve Koopmann",
+		"userEmail" : "ekoopmann@cebglobal.com",
+		"userTitle" : "Market Director",
+		"userDept" : "Information Technology Practice",
+		"userPhone" : "571-303-6666",
+		"userOffice" : "Washington DC",
+		"uPic" : "img/eve.jpg"
+	}
 	];
 
 	if(currentUser == 'simplelogin:14'){
@@ -739,6 +792,26 @@ $scope.login = function(email, password){
 		else if(currentUser == 'simplelogin:19'){
 			$scope.userName = "The Asgardians";
 			$scope.userEmail = "garage@cebglobal.com";
+			$scope.userPhone = "571-303-6666";
+		}
+		else if(currentUser == 'simplelogin:22'){
+			$scope.userName = "Rob Chen";
+			$scope.userEmail = "robchen@cebglobal.com";
+			$scope.userPhone = "571-303-6666";
+		}
+		else if(currentUser == 'simplelogin:23'){
+			$scope.userName = "Andrea Birdsong";
+			$scope.userEmail = "abirdsong@cebglobal.com";
+			$scope.userPhone = "571-303-6666";
+		}
+		else if(currentUser == 'simplelogin:24'){
+			$scope.userName = "Aaron Myers";
+			$scope.userEmail = "amyers@cebglobal.com";
+			$scope.userPhone = "571-303-6666";
+		}
+		else if(currentUser == 'simplelogin:25'){
+			$scope.userName = "Eve Koopmann";
+			$scope.userEmail = "ekoopmann@cebglobal.com";
 			$scope.userPhone = "571-303-6666";
 		}
 	
@@ -900,13 +973,7 @@ function PeopleCtrl($scope, $http) {
   ];
 
 })
-.controller('ButtonsTabCtrl', function ($scope, $ionicModal, $ionicActionSheet) {
-    $scope.showPopup = function () {
-     $ionicPopup.alert({
-       title: 'Calling your Account Manager!',
-       content: 'Please wait for a moment while I connect the call for you.'
-     });
-    };
+.controller('ButtonsTabCtrl', ['$scope', '$filter', function ($scope, $filter) {
 	
 	$('.clickMe1').click(function(){
 		$('.panel1').toggle();
@@ -929,62 +996,24 @@ function PeopleCtrl($scope, $http) {
 	$('.timeline-panel').click(function() {
     $('.timeline-body', this).toggle(); // p00f
 });
-
-    $scope.showActionsheet = function () {
-        $ionicActionSheet.show({
-          titleText: 'Select an option',
-          buttons: [
-            {
-              text: 'Sort by Category'
-            },
-            {
-              text: 'Sort by Program'
-            },
-          ],
-          // destructiveText: 'Delete',
-          cancelText: 'Cancel',
-          cancel: function () {
-            console.log('CANCELLED');
-          },
-          buttonClicked: function (index) {
-            console.log('BUTTON CLICKED', index);
-            return true;
-          },
-          destructiveButtonClicked: function () {
-            console.log('DESTRUCT');
-            return true;
-          },
-		  buttonClicked: function(index) {
-       if(index === 0){ // Manual Button
-         alert('Manual button clicked...');
-       }
-       else if(index === 1){
-        alert('See on Site button clicked...');
-       }
-
-       return true;
-  }
-        });
-		
-    };
-
 $scope.feed = [
     {
+		
 	"program" : "Recruiting Leadership Council",	
-	"content_type" : "video", 
+	"content_type" : "images", 
 	"title" : "The Performance Transformation", 
 	"synopsis" : "HR focuses on motivation strategies to drive employee willingness to be enterprise contributors—employees who work with and through others, contributing and consuming ideas and input to improve their own performance and that of their peers. However, for 75% of them, their organizations get in their way of becoming enterprise contributors.",
 	"data" : "HR focuses on motivation strategies to drive employee willingness to be enterprise contributors—employees who work with and through others, contributing and consuming ideas and input to improve their own performance and that of their peers. However, for 75% of them, their organizations get in their way of becoming enterprise contributors.",
-	"icon" : "icon rb-bg ion-images",
+	"icon" : "icon rb-images ion-images",
 	"path" : "#/menu/tab/feed7"
 	},
 	{
 	"program" : "CIO Leadership Council",
-	"content_type" : "notes", 
+	"content_type" : "images", 
 	"title" : "What is Adaptive IT", 
 	"synopsis" : "To succeed in an era when change is constant and the impact of technology ubiquitous, IT leaders must adopt a set of management principles that allow IT to help the enterprise maximize returns from technology investments in any environment, not just the environment for which the IT organization was designed.",
 	"data" : "AdaptiveIT.png",
-	"icon" : "icon rb-bg ion-ios-paper-outline",
+	"icon" : "icon rb-images ion-images",
 	"path" : "#/menu/tab/feed1"
 	},
     {
@@ -993,7 +1022,7 @@ $scope.feed = [
 	"title" : "What Are End-to-End IT Services?",
 	"synopsis" : "End-to-end IT services package all the technologies, processes, and resources across IT needed to deliver a specific business outcome while hiding technical complexity...",
 	"data" : "https://www.youtube.com/embed/G8pgmwo2FE0",
-	"icon" : "icon rb-bg ion-ios-videocam",
+	"icon" : "icon rb-videos ion-ios-videocam",
 	"path" : "#/menu/tab/feed3"
 	},
     {
@@ -1002,7 +1031,7 @@ $scope.feed = [
 	"title" : "The Role of the Head of IT Finance", 
 	"synopsis" : "Wondering how other IT organizations design the role of the head of IT Finance? This research brief profiles five member organizations, detailing...",
 	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-bg ion-ios-paper-outline",
+	"icon" : "icon rb-notes ion-ios-paper-outline",
 	"path" : "#/menu/tab/feed2"
 	},
     {
@@ -1011,16 +1040,16 @@ $scope.feed = [
 	"title" : "Accelerating IT's Clock Speed", 
 	"synopsis" : "Learn tactics to make your IT team more responsive to the needs of business partners in an increasingly varied technology environment.",
 	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-bg ion-ios-paper-outline",
+	"icon" : "icon rb-notes ion-ios-paper-outline",
 	"path" : "#/menu/tab/feed4"
 	},
     {
 	"program" : "Legal Leadership Council",	
-	"content_type" : "notes", 
+	"content_type" : "images", 
 	"title" : "Engagement and Retention for In-House Legal Department Non-Lawyer Professionals", 
 	"synopsis" : "Engagement is neutral among in-house legal department non-lawyer professionals. Watch out for the negative impact of dissatisfaction with Opportunity on discretionary effort and retention. Review the key findings about engaging and retaining paralegals and other department staff from the latest Global Talent Trend Series data.",
 	"data" : "Corporate strategy at the world’s leading organizations increasingly depends on step-changes in how human capital is recruited, managed, deployed, and enabled. In the budgets and business plans of the 10,000 organizations we support, we see uniformly high expectations for gains in employee productivity, innovation, and ethical conduct. Decisions on talent are now among the principal determinants of an organization’s ability to execute strategy.",
-	"icon" : "icon rb-bg ion-ios-paper-outline",
+	"icon" : "icon rb-images ion-images",
 	"path" : "#/menu/tab/feed5"
 	},
     {
@@ -1029,16 +1058,16 @@ $scope.feed = [
 	"title" : "Executive Recruiting", 
 	"synopsis" : "With more than one-third of executives hired externally, the bar is higher for Recruiting to bring in leaders who can succeed by working with others and adapting to change. Improve executive quality of hire by hiring for network fit and enabling executive recruiters to use their Talent Advisor capabilities.",
 	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
-	"icon" : "icon rb-bg ion-ios-paper-outline",
+	"icon" : "icon rb-notes ion-ios-paper-outline",
 	"path" : "#/menu/tab/feed6"
 	},
     {
 	"program" : "Recruiting Leadership Council",	
-	"content_type" : "notes", 
+	"content_type" : "images", 
 	"title" : "Reorient your executive recruting strategy from search savings to quality gains.", 
 	"synopsis" : "More than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful",
 	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
-	"icon" : "icon rb-bg ion-ios-paper-outline",
+	"icon" : "icon rb-images ion-images",
 	"path" : "#/menu/tab/feed6"
 	},
     {
@@ -1047,7 +1076,7 @@ $scope.feed = [
 	"title" : "The Performance Transformation", 
 	"synopsis" : "The new work environment is full of performance challenges, yet performance must improve by 27% to meet business goals over the next 12 months.",
 	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
-	"icon" : "icon rb-bg ion-ios-videocam",
+	"icon" : "icon rb-videos ion-ios-videocam",
 	"path" : "#/menu/tab/feed8"
 	},
     {
@@ -1056,7 +1085,7 @@ $scope.feed = [
 	"title" : "Take Your HR Team to the Next Level", 
 	"synopsis" : "Less than one-fifth of line leaders rates HR as an effective strategic partner to the line.",
 	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
-	"icon" : "icon rb-bg ion-ios-videocam",
+	"icon" : "icon rb-videos ion-ios-videocam",
 	"path" : "#/menu/tab/feed9"
 	},
     {
@@ -1065,7 +1094,7 @@ $scope.feed = [
 	"title" : "Legal Leadership Council", 
 	"synopsis" : "Given the changing impact of information, traditional monitoring processes and technology advancements alone no longer deliver effective identification, management, and prevention of business risks. This change demands the need for early detection and rootcause analysis.",
 	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
-	"icon" : "icon rb-bg ion-ios-videocam",
+	"icon" : "icon rb-videos ion-ios-videocam",
 	"path" : "#/menu/tab/feed10"
 	}
     
@@ -1077,7 +1106,7 @@ $scope.iNew = [
 	"title" : "Accelerating IT's Clock Speed", 
 	"synopsis" : "Learn tactics to make your IT team more responsive to the needs of business partners in an increasingly varied technology environment.",
 	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-bg ion-ios-paper-outline",
+	"icon" : "icon rb-notes ion-ios-paper-outline",
 	"path" : "#/menu/tab/feed4"
 	},
     {
@@ -1086,7 +1115,7 @@ $scope.iNew = [
 	"title" : "RACI Chart for Service-Aligned Teams", 
 	"synopsis" : "This six-step guide includes 32 documents to help you: Create an effective budgeting process,",
 	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-bg ion-ios-paper-outline",
+	"icon" : "icon rb-notes ion-ios-paper-outline",
 	"path" : "#/menu/tab/feed4"
 	},
     {
@@ -1095,7 +1124,7 @@ $scope.iNew = [
 	"title" : "CEB Ignition™ Guide to Creating the Annual Budget for IT", 
 	"synopsis" : "Use the sample RACI chart to plan which roles will be responsible for key service management activities.",
 	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-bg ion-ios-paper-outline",
+	"icon" : "icon rb-notes ion-ios-paper-outline",
 	"path" : "#/menu/tab/feed4"
 	}
 ];
@@ -1136,28 +1165,12 @@ $scope.openDrawer1 = function(){
 		}
 	});
 }
-	// $(function() {
-	// var openBtn = $('#searchBtn'),
-		// slideMenu = $('#searchMenu'), 
-		// layer = $('<div />').addClass('layer');
-	// openBtn.on("click", function() {
-		// if (slideMenu.is(':hidden')) {
-			// layer.appendTo('body');
-			// slideMenu.slideDown(300); 
-		// // } else {
-			// // slideMenu.slideUp(300); 
-			// // layer.remove();
-		// }
-		
-	// });
-// });
-//Sort the feed
- // $scope.predicate = 'program';
-      // $scope.reverse = true;
-      // $scope.order = function(predicate) {
-        // $scope.reverse = ($scope.predicate === predicate) ? !$scope.reverse : false;
-        // $scope.predicate = predicate;
-      // };
+	var orderBy = $filter('orderBy');
+	$scope.order = function(predicate, reverse) {
+		$scope.feed = orderBy($scope.feed, predicate, reverse);
+	};
+	$scope.order('program',false);
+
 
 	  $('#pSelector1').change(function () {
 			$scope.openDrawer1();
@@ -1168,7 +1181,7 @@ $scope.openDrawer1 = function(){
 	  
 	  
 	  
-})
+}])
 
 .controller('SlideboxCtrl', function($scope, $ionicSlideBoxDelegate) {
   $scope.nextSlide = function() {
@@ -1182,47 +1195,16 @@ $scope.openDrawer1 = function(){
 
   $ionicModal.fromTemplateUrl('templates/modal.html', function (modal) {
     $scope.modal = modal;
-	
+	  $scope.modal.confrm = function(){
+	  alert('Thank you for your message.')
+	  $scope.modal.hide();
+  };
   }, {
     animation: 'slide-in-up'
   });
  
-  
+
  })
-
- /* .controller('MyController', function($scope, $ionicPopover) {
-
-  // .fromTemplate() method
-  var template = '<ion-popover-view><ion-header-bar> <h1 class="title">My Popover Title</h1> </ion-header-bar> <ion-content> Hello! </ion-content></ion-popover-view>';
-
-  $scope.popover = $ionicPopover.fromTemplate(template, {
-    scope: $scope
-  });
-  // .fromTemplateUrl() method
-  $ionicPopover.fromTemplateUrl('my-popover.html', {
-    scope: $scope
-  }).then(function(popover) {
-    $scope.popover = popover;
-  });
-  $scope.openPopover = function($event) {
-    $scope.popover.show($event);
-  };
-  $scope.closePopover = function() {
-    $scope.popover.hide();
-  };
-  //Cleanup the popover when we're done with it!
-  $scope.$on('$destroy', function() {
-    $scope.popover.remove();
-  });
-  // Execute action on hide popover
-  $scope.$on('popover.hidden', function() {
-    // Execute action
-  });
-  // Execute action on remove popover
-  $scope.$on('popover.removed', function() {
-    // Execute action
-  });
-}) */
  
  .controller('contactAMCtrl', function($scope, $timeout, $ionicPopup) {
 
