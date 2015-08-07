@@ -1384,19 +1384,28 @@ $scope.openDrawer1 = function(){
 		
 		var confirmPopup = $ionicPopup.confirm({
        title: 'Budget Diagnostic Results',
-       template: 'Your diagnostic results are in. Do you want to see them?'
+       template: 'Your diagnostic results are in. Do you want to see them?',
+	   cancelText: 'Not now',
+        okText: 'Yes'
+		// buttons: [
+                    // {
+                        // text: 'Not now'
+                    // },
+                  // {
+                      // text: '<b>Yes</b>',
+                      // type: 'button-assertive'
+                  // }
+                // ]
      });
      confirmPopup.then(function(res) {
        if(res) {
-         console.log('You are sure');
+         // console.log('You are sure');
 		 window.location.href="#menu/tab/feedBenchmark"
        } else {
-         console.log('You are not sure');
+         // console.log('You are not sure');
 		 alert('Your Budget Diagnostics have been saved in your Workspace on the My CEB tab.');
        }
      });
-		
-		
     }
     $timeout( function(){ $scope.callAtTimeout(); }, 10000);
 
