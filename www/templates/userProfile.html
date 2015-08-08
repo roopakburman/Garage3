@@ -1,57 +1,60 @@
    <ion-view view-title="My Profile">
     <ion-content class="padding">
 <!-- 	<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1"> -->
+<div class="card " ng-app>
+	<div class="item item-divider card-bk2">
+		My Profile
+	</div>	
+	<div ng-repeat="datum in userData | filter: nameFilter">
+	<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
+    <div class="row" ng-controller="userProfileCtrl">
+		<div class="col col-25">
+			<img src="{{datum.uPic}}" alt="" class="james" />
+		</div>
+		<div class="col text-wrap" >
+			<h4>{{datum.userName}}</h4>
+			{{datum.userTitle}} - {{datum.userDept}} </br>
+			{{datum.userEmail}} </br>
+			{{datum.userOffice}}</br>
+			{{datum.userPhone}}</br></br>
+			<a href="#/" class="button button-small icon-left ion-edit button-balanced">Edit Your Profile</a>
+		</div>
+		
+    </div>
+	</ion-scroll>
+	</div>
+</div>
 <div class="card">
 
 	<div class="item item-divider card-bk2">
 		My Account Manager
 	</div>
-	
+	<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
 	<div class="row">
+		<div class="col col-25">
 		
-		<div class="col col-30">
-		<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
 			<img src="img/James.jpg" class="james" />
-		</ion-scroll>
-		</div>
 		
+		</div>
+	
 		<div class="col text-wrap" >
 			<h4>James McKenna</h4>
 			Senior Account Manager - Information Technology Practice</br>
 			mckenna@cebglobal.com </br>
 			Washington DC</br>
-			571-303-3354</br>
+			571-303-3354</br></br>
 		<div class="col col-50 text-wrap" >
 			<a href="tel:+1-571-303-5395" class="button button-small icon-left ion-ios-telephone button-balanced">Call James</a>
-			<a href="#/menu/tab/contactUs" class="button button-small icon-left ion-ios-email button-balanced">Drop a message to james</a>
+			<a href="#/menu/tab/contactUs" class="button button-small icon-left ion-ios-email button-balanced">Drop a message to James</a>
 		</div>
 		</div>
 
 		
 	</div>
+	</ion-scroll>
 </div>
-<div class="profileContent card " ng-app>
-    <div class="row" ng-controller="userProfileCtrl">
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well" ng-repeat="datum in userData | filter: nameFilter">
 
-					<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
-                    <div class="col-sm-6 col-md-4">
-                        <img src="{{datum.uPic}}" alt="" class="img-rounded img-responsive" />
-                    </div>
-					</ion-scroll>
-                    <div class="col-sm-6 col-md-8 text-wrap" >
-                        <h4>{{datum.userName}}</h4>
-                        {{datum.userTitle}} - {{datum.userDept}} </br>
-                        {{datum.userEmail}} </br>
-                        {{datum.userOffice}}</br>
-                        {{datum.userPhone}}</br>
-                    </div>
 
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <div class="card">
@@ -59,7 +62,10 @@
 		<div class="item item-divider card-bk2">
         My Favorites
         </div>  
-          
+        <a class="item item-icon-right item-text-wrap" href="#/menu/tab/feedBenchmark">
+        <i class="icon ion-ios-pulse-strong"></i><h2>Budget Diagnostic Results 2015</h2><br>
+            <p>The median annual revenue for all participating companies was $525 million, including participants ranging from under $10 million to $3 billion...</p>
+		  </a>  
         <a class="item" href="#/menu/tab/faView1">
 		<h2>3 Steps to a More Responsive PMO</h2>
             <p>PMOs must take three steps to improve their portfolio management and resource allocation to cope with the uncertainty and complexity of the project po...</p>
@@ -74,10 +80,7 @@
         <!-- <i class="icon ion-cash"></i> --><h2>Strategy Execution Dashboard</h2><br>
             <p>Identify Which of Your Top Priorities Risk Execution Failure—and Why...</p>
 		  </a>
-			<a class="item item-icon-right item-text-wrap" href="#/menu/tab/feedBenchmark">
-        <i class="icon ion-ios-pulse-strong"></i><h2>Budget Diagnostic Results 2015</h2><br>
-            <p>The median annual revenue for all participating companies was $525 million, including participants ranging from under $10 million to $3 billion...</p>
-		  </a>	
+				
 </div>
 
 

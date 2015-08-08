@@ -612,6 +612,7 @@ $scope.login = function(email, password){
 		if (error) {
 		$scope.isLogin = false;
 		console.log("Login Failed!", error);
+		alert(error);
 		} else {
 		console.log("Authenticated successfully with payload:", authData);
 		console.log("User " + authData.uid + " is logged in with " + authData.provider);
@@ -622,7 +623,7 @@ $scope.login = function(email, password){
 		currentUser = authData.uid;
 		
 		if(authData.uid == 'simplelogin:14'){
-			alert('Welcome Price!');
+			alert('Welcome James!');
 		}
 		else if(authData.uid == 'simplelogin:15'){
 			alert('Welcome Tom!');
@@ -681,13 +682,13 @@ $scope.login = function(email, password){
 	$scope.userData = [
 	{
 		"userID" : "simplelogin:14",
-		"userName" : "Price Jett",
-		"userEmail" : "jettp@cebglobal.com",
+		"userName" : "James King",
+		"userEmail" : "JKing@KingInternational.com",
 		"userTitle" : "Chief Information Officer",
 		"userDept" : "IT",
 		"userPhone" : "571-303-4772",
 		"userOffice" : "Washington DC",
-		"uPic" : "img/price.png"
+		"uPic" : "img/James_King.jpg"
 	},
 	{
 		"userID" : "simplelogin:18",
@@ -1014,38 +1015,78 @@ function PeopleCtrl($scope, $http) {
     chart1.data = {"cols": [
         {id: "month", label: "Month", type: "string"},
         {id: "laptop-id", label: "My Company", type: "number"},
-        {id: "desktop-id", label: "Automobiles Industry", type: "number"}
+        {id: "desktop-id", label: "Banking & FS", type: "number"}
         
     ], "rows": [
         {c: [
-            {v: "In-House Counsel"},
-            {v: .19},
-            {v: .12}
+            {v: "General"},
+            {v: .4, f: "40%"},
+            {v: .6, f: "60%"}
         ]},
         {c: [
-            {v: "Outside Counsel"},
-            {v: .13},
-            {v: .19}
+            {v: "Contracts"},
+            {v: .5, f: "50%"},
+            {v: .5, f: "50%"}
         ]},
         {c: [
-            {v: "Admin Staff"},
-            {v: .24},
-            {v: .10}
+            {v: "FIN"},
+            {v: .2, f: "20%"},
+            {v: .8, f: "80%"}
+
+        ]},
+        {c: [
+            {v: "L&E"},
+            {v: .1, f: "10%"},
+            {v: .9, f: "90%"}
+
+        ]},
+        {c: [
+            {v: "M&A"},
+            {v: .4, f: "40%"},
+            {v: .6, f: "60%"}
+
+        ]},
+        {c: [
+            {v: "IT"},
+            {v: .7, f: "70%"},
+            {v: .3, f: "30%"}
+
+        ]},
+        {c: [
+            {v: "HR"},
+            {v: .6, f: "60%"},
+            {v: .4, f: "40%"}
+
+        ]},
+        {c: [
+            {v: "Admin"},
+            {v: .3, f: "30%"},
+            {v: .7, f: "70%"}
 
         ]}
+		
     ]};
 
     chart1.options = {
-        "title": "Budget Allocation",
-		"legend": { "position": 'bottom', "textStyle": {"fontSize": 12}},
-        "isStacked": "false",
-        "fill": 21,
+        "title": "Outside Spending by Practice Area",
+		"legend": { "textStyle": {"fontSize": 11}},
+        "isStacked": "true",
+        "fill": 20,
         "displayExactValues": false,
+		// "tooltip": {'text' : 'value' },
         "vAxis": {
             "title": "", "gridlines": {"count": 6},
 			"format": '#,###%'
         },
-		"colors": ['#FF8C26','#0FC1F2']
+		"colors": ['#FF8C26','#0FC1F2'],
+		"annotations": {
+          "alwaysOutside": false,
+          "textStyle": {
+            "fontSize": 12,
+            "auraColor": 'none',
+            "color": '#555'
+          }
+    }
     };
 
     chart1.formatters = {};
@@ -1059,36 +1100,45 @@ function PeopleCtrl($scope, $http) {
     chart1.type = "ColumnChart";
     chart1.cssStyle = "height:450px; width:650px;";
     chart1.data = {"cols": [
-        {id: "month", label: "Month", type: "string"},
-		{id: "Other-id", label: "Other", type: "number"},
-        {id: "Finance-id", label: "Finance", type: "number"},
-        {id: "LegalDept-id", label: "Legal Dept.", type: "number"},
-		{id: "RiskFunc-id", label: "Risk Function", type: "number"}
+        {id: "dept", label: "dept", type: "string"},
+		{id: "admin-id", label: "Admin", type: "number"},
+        {id: "nonlawyers-id", label: "Non-Lawyers", type: "number"},
+        {id: "lawyers-id", label: "Lawyers.", type: "number"}
         
         
     ], "rows": [
         {c: [
             {v: "My Company"},
-            {v: 0},
-            {v: 0},
-			{v: 0},
-			{v: 1}
+            {v: .6},
+            {v: .2},
+			{v: .2}
         ]},
         {c: [
-            {v: "Automobiles Industry"},
-            {v: .19},
-            {v: .12},
-			{v: .29},
-			{v: .4}
-        ]}
+            {v: "Banking & FS"},
+            {v: .5},
+            {v: .2},
+			{v: .3}
+		]},
+        {c: [
+            {v: "$5 Bil - $10 Bil"},
+            {v: .7},
+            {v: .2},
+			{v: .1}
+		]},
+        {c: [
+            {v: "1 to 5 Lawyers"},
+            {v: .7},
+            {v: .2},
+			{v: .1}
+		]}
     ]};
 
     chart1.options = {
-        "title": "Location of Compliance and Ethics Program",
-		"legend": { "position": 'bottom', "textStyle": {"fontSize": 12}},
+        "title": "Proportions of Legal Staff",
+		"legend": {  "textStyle": {"fontSize": 11}},
         "isStacked": "true",
-        "fill": 21,
-        "displayExactValues": false,
+        "fill": 20,
+        "displayExactValues": true,
         "vAxis": {
             "title": "", "gridlines": {"count": 6},
 			"format": '#,###%'
@@ -1096,73 +1146,195 @@ function PeopleCtrl($scope, $http) {
 		"colors": ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC']
     };
 
-    chart1.formatters = {};
+    chart1.formatters = {
+      number : [{
+        
+        pattern: "#,###%"
+      }]
+    };
 
     $scope.chart2 = chart1;
 
 
 })
 .controller('ButtonsTabCtrl', ['$scope', '$filter', function ($scope, $filter) {
+	// var chart1 = {};
+    // chart1.type = "PieChart";
+    // chart1.data = [
+       // ['Component', 'cost'],
+       // ['E-billing', 50000],
+       // ['IP Management', 80000],
+       // ['CMS', 20000],
+       // ['E-learning', 70000]
+      // ];
+    // // chart1.data.push(['Services',20000]);
+    // chart1.options = {
+        // displayExactValues: true,
+        // width: 550,
+        // height: 400,
+        // is3D: false,
+        // pieHole: 0.5,
+		// colors: ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
+		// title: "Banking & FS"
+    // };
+
+    // chart1.formatters = {
+      // number : [{
+        // columnNum: 1,
+        // pattern: "$ #,##0.00"
+      // }]
+    // };
+
+    // $scope.chart = chart1;
 	
+	// /*Chart 2*/
+	// var chartNew = {};
+    // chartNew.type = "PieChart";
+    // chartNew.data = [
+       // ['Component', 'cost'],
+       // ['E-billing', 30000],
+       // ['IP Management', 20000],
+       // ['CMS', 50000],
+       // ['E-learning', 70000]
+      // ];
+    // // chartNew.data.push(['Services',20000]);
+    // chartNew.options = {
+        // displayExactValues: true,
+        // width: 550,
+        // height: 400,
+        // is3D: false,
+		// pieHole: 0.5,
+		// colors: ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
+		// title: "My Company"
+    // };
 
+    // chartNew.formatters = {
+      // number : [{
+        // columnNum: 1,
+        // pattern: "$ #,##0.00"
+      // }]
+    // };
+
+    // $scope.chartMy = chartNew;
 	
-	var chart1 = {};
-    chart1.type = "PieChart";
-    chart1.data = [
-       ['Component', 'cost'],
-       ['Risk management', 50000],
-       ['Cash Efficiency', 80000],
-       ['Capital Structure', 20000],
-       ['All Other', 70000]
-      ];
-    // chart1.data.push(['Services',20000]);
-    chart1.options = {
-        displayExactValues: true,
-        width: 550,
-        height: 400,
-        is3D: false,
-        
-		colors: ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
-		title: "Automobiles Industry"
-    };
-
-    chart1.formatters = {
-      number : [{
-        columnNum: 1,
-        pattern: "$ #,##0.00"
-      }]
-    };
-
-    $scope.chart = chart1;
 	
-	/*Chart 2*/
-	var chartNew = {};
-    chartNew.type = "PieChart";
-    chartNew.data = [
-       ['Component', 'cost'],
-       ['Risk management', 30000],
-       ['Cash Efficiency', 20000],
-       ['Capital Structure', 50000],
-       ['All Other', 70000]
-      ];
-    // chartNew.data.push(['Services',20000]);
-    chartNew.options = {
-        displayExactValues: true,
-        width: 550,
-        height: 400,
-        is3D: false,
-		colors: ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
-		title: "My Company"
-    };
-
-    chartNew.formatters = {
-      number : [{
-        columnNum: 1,
-        pattern: "$ #,##0.00"
-      }]
-    };
-
-    $scope.chartMy = chartNew;
+	$scope.chartMy = {
+  "type": "ColumnChart",
+  "displayed": true,
+  "data": {
+    "cols": [
+      {
+        "id": "month",
+        "label": "Month",
+        "type": "string",
+        "p": {}
+      },
+      {
+        "id": "laptop-id",
+        "label": "Laptop",
+        "type": "number",
+        "p": {}
+      },
+      {
+        "id": "desktop-id",
+        "label": "Desktop",
+        "type": "number",
+        "p": {}
+      },
+      {
+        "id": "server-id",
+        "label": "Server",
+        "type": "number",
+        "p": {}
+      },
+      {
+        "id": "cost-id",
+        "label": "Shipping",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      {
+        "c": [
+          {
+            "v": "January"
+          },
+          {
+            "v": 19,
+            "f": "42 items"
+          },
+          {
+            "v": 12,
+            "f": "Ony 12 items"
+          },
+          {
+            "v": 7,
+            "f": "7 servers"
+          },
+          {
+            "v": 4
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "February"
+          },
+          {
+            "v": 13
+          },
+          {
+            "v": 1,
+            "f": "1 unit (Out of stock this month)"
+          },
+          {
+            "v": 12
+          },
+          {
+            "v": 2
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "March"
+          },
+          {
+            "v": 24
+          },
+          {
+            "v": 5
+          },
+          {
+            "v": 11
+          },
+          {
+            "v": 6
+          }
+        ]
+      }
+    ]
+  },
+  "options": {
+    "title": "Sales per month",
+    "isStacked": "true",
+    "fill": 20,
+    "displayExactValues": true,
+    "vAxis": {
+      "title": "Sales unit",
+      "gridlines": {
+        "count": 10
+      }
+    },
+    "hAxis": {
+      "title": "Date"
+    }
+  },
+  "formatters": {}
+}
+	
 	/* Google Chart End*/	
 	
 	$('.clickMe1').click(function(){
@@ -1406,9 +1578,15 @@ $scope.openDrawer1 = function(){
 		 alert('Your Budget Diagnostics have been saved in your Workspace on the My CEB tab.');
        }
      });
-    }
+	}
     $timeout( function(){ $scope.callAtTimeout(); }, 10000);
-
+	$scope.$on(
+		"$destroy",
+		function(event) {
+			$timeout.cancel(callAtTimeout);
+			console.log('destroyed!');
+		}
+	);
 /*Fake Push notification End*/	
 
 

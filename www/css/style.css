@@ -267,9 +267,19 @@ img{
 
 }
 img.james{
-	width: 60%;
+	width: 90%;
 
 }
+
+.favMeYes{
+	color: Blue;
+	font-size: 21px;
+}
+.favMeNo{
+	color: gray;
+	font-size: 21px;
+}
+
 .t1{
 	height:600px;
 }
@@ -288,3 +298,4 @@ input.fElements{
 	width: 600px !important;
 	background-color: #B3E9FF;
 
+}

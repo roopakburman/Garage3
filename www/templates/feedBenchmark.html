@@ -1,9 +1,10 @@
     <ion-view title="My Budget Diagnostic Results">
       <ion-content class="padding">
 		<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
+
 		<div class="card" >
 		    <div class="item item-divider card-bk2">
-				IT
+				Outside Spending and Law Firm Management
 			</div> 
 			<div class="row">
 				<div class="col" ng-controller="chartCtrl2">
@@ -13,18 +14,18 @@
 
 			</div>
 			<div class="item item-divider card-bk2">
-				Compliance & Ethics
+				 Legal Department Staffing
 			</div> 
 			<div class="row">
 				<div class="col" ng-controller="chartCtrl3">
-					<div google-chart chart="chart2">
+					<div google-chart chart="chart2"  style="{{chart.cssStyle}}">
 				</div>
 			</div>
 			</div>
 		</div>
 		<div class="card" >
 		    <div class="item item-divider card-bk2">
-				Finance Staff Time Spend
+				Legal Technology Use
 			</div> 		
 			<div class="row">
 				<div class="col col-50">
@@ -34,7 +35,7 @@
 				</div>
 				<div class="col col-50">
 					<div google-chart chart="chartMy"
-						style="padding:0;width:400px">
+						 style="{{cssStyle}}">
 				    </div>
 				</div>
 			</div>
