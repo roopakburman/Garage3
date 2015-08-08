@@ -1,7 +1,8 @@
     <ion-view title="Adaptive IT?">
       <ion-content class="padding">
 		<div class="card">
-        <h1 class="item item-text-wrap">What is Adaptive IT?</h1>
+        <h1 class="item item-text-wrap">What is Adaptive IT? <i ng-class="{true: 'icon ion-thumbsup favMeNo', false: 'icon ion-thumbsup favMeYes'}[!favorite]" ng-click="favorite = !favorite" href="#"></i>
+				<i ng-class="{true: 'icon ion-share favMeNo', false: 'icon ion-share favMeYes'}[!email]" ng-click="email = !email" href="#"></i></h1>
 
 
 					<p class="item item-text-wrap">Many of today’s IT organizations are built for efficiency and standardization, presenting a significant challenge to responding to rapidly changing, unpredictable business demand. Current approaches to addressing the challenges posed by today’s business environment rely on new organizational structures, such as Two-Speed IT and dedicated innovation teams, which don’t fully solve the problem.<br></br>To succeed in an era when change is constant and the impact of technology ubiquitous, IT leaders must adopt a set of management principles that allow IT to help the enterprise maximize returns from technology investments in any environment, not just the environment for which the IT organization was designed.</p>

@@ -438,6 +438,30 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
+	.state('menu.tabs.myPastEvents', {
+      url: "/myPastEvents",
+      views: {
+        'slide-tab': {
+          templateUrl: "templates/myPastEvents.html"
+        }
+      }
+    })
+	.state('menu.tabs.myPastEvents2', {
+      url: "/myPastEvents2",
+      views: {
+        'slide-tab': {
+          templateUrl: "templates/myPastEvents2.html"
+        }
+      }
+    })
+	.state('menu.tabs.myPastEvents3', {
+      url: "/myPastEvents3",
+      views: {
+        'slide-tab': {
+          templateUrl: "templates/myPastEvents3.html"
+        }
+      }
+    })
 	.state('menu.tabs.podcast', {
       url: "/podcast",
       views: {

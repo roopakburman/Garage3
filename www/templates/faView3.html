@@ -1,7 +1,8 @@
     <ion-view title="Strategy Execution Dashboard">
       <ion-content class="padding">
 		<div class="card">
-        <h1 class="item item-text-wrap">Strategy Execution Dashboard</h1>
+        <h1 class="item item-text-wrap">Strategy Execution Dashboard <i ng-class="{true: 'icon ion-thumbsup favMeNo', false: 'icon ion-thumbsup favMeYes'}[!favorite]" ng-click="favorite = !favorite" href="#"></i>
+				<i ng-class="{true: 'icon ion-share favMeNo', false: 'icon ion-share favMeYes'}[!email]" ng-click="email = !email" href="#"></i></h1>
 
 			<p class="item item-text-wrap">CIOs spend almost two months a year developing and rolling out the IT strategy, but a third of an IT strategy’s value is lost during execution. What’s hard is knowing where the IT strategy will face roadblocks before it is too late.<br></br>Our new Strategy Execution Dashboard will help you identify which of your organization’s IT strategic priorities face high execution risk—and why. This service, which is included in your CEB CIO membership, is <strong>customized to your organization’s strategy</strong> and populated with a comprehensive, peer-tested framework of leading indicators of IT strategy execution gaps.</p>
 			<h1 class="item item-text-wrap">What It Is</h1>
