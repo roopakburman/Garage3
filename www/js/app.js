@@ -1020,29 +1020,29 @@ function PeopleCtrl($scope, $http) {
     ], "rows": [
         {c: [
             {v: "General"},
-            {v: .4, f: "40%"},
+            {v: .8, f: "40%"},
             {v: .6, f: "60%"}
         ]},
         {c: [
             {v: "Contracts"},
-            {v: .5, f: "50%"},
+            {v: .7, f: "50%"},
             {v: .5, f: "50%"}
         ]},
         {c: [
             {v: "FIN"},
-            {v: .2, f: "20%"},
+            {v: .7, f: "20%"},
             {v: .8, f: "80%"}
 
         ]},
         {c: [
             {v: "L&E"},
-            {v: .1, f: "10%"},
+            {v: .6, f: "10%"},
             {v: .9, f: "90%"}
 
         ]},
         {c: [
             {v: "M&A"},
-            {v: .4, f: "40%"},
+            {v: .7, f: "40%"},
             {v: .6, f: "60%"}
 
         ]},
@@ -1069,7 +1069,7 @@ function PeopleCtrl($scope, $http) {
 
     chart1.options = {
         "title": "Outside Spending by Practice Area",
-        "isStacked": "true",
+        "isStacked": "false",
         "fill": 20,
         "displayExactValues": false,
 		"legend": {position: 'bottom', textStyle: {fontSize: 10}},
@@ -1188,7 +1188,7 @@ function PeopleCtrl($scope, $http) {
       },
       {
         "id": "cost-id",
-        "label": "Shipping",
+        "label": "Mobile",
         "type": "number"
       }
     ],
@@ -1199,19 +1199,19 @@ function PeopleCtrl($scope, $http) {
             "v": "My Company"
           },
           {
-            "v": 19,
+            "v": .6,
             "f": ""
           },
           {
-            "v": 12,
+            "v": .2,
             "f": ""
           },
           {
-            "v": 7,
+            "v": .1,
             "f": ""
           },
           {
-            "v": 4
+            "v": .1
           }
         ]
       },
@@ -1221,17 +1221,17 @@ function PeopleCtrl($scope, $http) {
             "v": "Banking & FS"
           },
           {
-            "v": 13
+            "v": .1
           },
           {
-            "v": 1,
+            "v": .7,
             "f": ""
           },
           {
-            "v": 12
+            "v": .1
           },
           {
-            "v": 2
+            "v": .1
           }
         ]
       },
@@ -1241,16 +1241,16 @@ function PeopleCtrl($scope, $http) {
             "v": "$5-$10B"
           },
           {
-            "v": 24
+            "v": .1
           },
           {
-            "v": 5
+            "v": .1
           },
           {
-            "v": 11
+            "v": .2
           },
           {
-            "v": 6
+            "v": .6
           }
         ]
       }
@@ -1264,16 +1264,22 @@ function PeopleCtrl($scope, $http) {
 	"colors": ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
 	"legend": {position: 'bottom', textStyle: {fontSize: 10}},
     "vAxis": {
-      "title": "Sales unit",
+      "title": "",
       "gridlines": {
         "count": 10
       }
     },
     "hAxis": {
-      "title": ""
+      "title": "",
+	  "format": '#,###%'
     }
   },
-  "formatters": {}
+  "formatters": {
+	        number : [{
+        
+        pattern: "#,###%"
+      }]
+  }
 }
 	
 	/* Google Chart End*/	
