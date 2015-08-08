@@ -1158,182 +1158,182 @@ function PeopleCtrl($scope, $http) {
 
 })
 .controller('ButtonsTabCtrl', ['$scope', '$filter', function ($scope, $filter) {
-	// var chart1 = {};
-    // chart1.type = "PieChart";
-    // chart1.data = [
-       // ['Component', 'cost'],
-       // ['E-billing', 50000],
-       // ['IP Management', 80000],
-       // ['CMS', 20000],
-       // ['E-learning', 70000]
-      // ];
-    // // chart1.data.push(['Services',20000]);
-    // chart1.options = {
-        // displayExactValues: true,
-        // width: 550,
-        // height: 400,
-        // is3D: false,
-        // pieHole: 0.5,
-		// colors: ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
-		// title: "Banking & FS"
-    // };
+	var chart1 = {};
+    chart1.type = "PieChart";
+    chart1.data = [
+       ['Component', 'cost'],
+       ['E-billing', 50000],
+       ['IP Management', 80000],
+       ['CMS', 20000],
+       ['E-learning', 70000]
+      ];
+    // chart1.data.push(['Services',20000]);
+    chart1.options = {
+        displayExactValues: true,
+        width: 550,
+        height: 400,
+        is3D: false,
+        pieHole: 0.5,
+		colors: ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
+		title: "Banking & FS"
+    };
 
-    // chart1.formatters = {
-      // number : [{
-        // columnNum: 1,
-        // pattern: "$ #,##0.00"
-      // }]
-    // };
+    chart1.formatters = {
+      number : [{
+        columnNum: 1,
+        pattern: "$ #,##0.00"
+      }]
+    };
 
-    // $scope.chart = chart1;
+    $scope.chart = chart1;
 	
-	// /*Chart 2*/
-	// var chartNew = {};
-    // chartNew.type = "PieChart";
-    // chartNew.data = [
-       // ['Component', 'cost'],
-       // ['E-billing', 30000],
-       // ['IP Management', 20000],
-       // ['CMS', 50000],
-       // ['E-learning', 70000]
-      // ];
-    // // chartNew.data.push(['Services',20000]);
-    // chartNew.options = {
-        // displayExactValues: true,
-        // width: 550,
-        // height: 400,
-        // is3D: false,
-		// pieHole: 0.5,
-		// colors: ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
-		// title: "My Company"
-    // };
+	/*Chart 2*/
+	var chartNew = {};
+    chartNew.type = "PieChart";
+    chartNew.data = [
+       ['Component', 'cost'],
+       ['E-billing', 30000],
+       ['IP Management', 20000],
+       ['CMS', 50000],
+       ['E-learning', 70000]
+      ];
+    // chartNew.data.push(['Services',20000]);
+    chartNew.options = {
+        displayExactValues: true,
+        width: 550,
+        height: 400,
+        is3D: false,
+		pieHole: 0.5,
+		colors: ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
+		title: "My Company"
+    };
 
-    // chartNew.formatters = {
-      // number : [{
-        // columnNum: 1,
-        // pattern: "$ #,##0.00"
-      // }]
-    // };
+    chartNew.formatters = {
+      number : [{
+        columnNum: 1,
+        pattern: "$ #,##0.00"
+      }]
+    };
 
-    // $scope.chartMy = chartNew;
+    $scope.chartMy = chartNew;
 	
 	
-	$scope.chartMy = {
-  "type": "ColumnChart",
-  "displayed": true,
-  "data": {
-    "cols": [
-      {
-        "id": "month",
-        "label": "Month",
-        "type": "string",
-        "p": {}
-      },
-      {
-        "id": "laptop-id",
-        "label": "Laptop",
-        "type": "number",
-        "p": {}
-      },
-      {
-        "id": "desktop-id",
-        "label": "Desktop",
-        "type": "number",
-        "p": {}
-      },
-      {
-        "id": "server-id",
-        "label": "Server",
-        "type": "number",
-        "p": {}
-      },
-      {
-        "id": "cost-id",
-        "label": "Shipping",
-        "type": "number"
-      }
-    ],
-    "rows": [
-      {
-        "c": [
-          {
-            "v": "January"
-          },
-          {
-            "v": 19,
-            "f": "42 items"
-          },
-          {
-            "v": 12,
-            "f": "Ony 12 items"
-          },
-          {
-            "v": 7,
-            "f": "7 servers"
-          },
-          {
-            "v": 4
-          }
-        ]
-      },
-      {
-        "c": [
-          {
-            "v": "February"
-          },
-          {
-            "v": 13
-          },
-          {
-            "v": 1,
-            "f": "1 unit (Out of stock this month)"
-          },
-          {
-            "v": 12
-          },
-          {
-            "v": 2
-          }
-        ]
-      },
-      {
-        "c": [
-          {
-            "v": "March"
-          },
-          {
-            "v": 24
-          },
-          {
-            "v": 5
-          },
-          {
-            "v": 11
-          },
-          {
-            "v": 6
-          }
-        ]
-      }
-    ]
-  },
-  "options": {
-    "title": "Sales per month",
-    "isStacked": "true",
-    "fill": 20,
-    "displayExactValues": true,
-    "vAxis": {
-      "title": "Sales unit",
-      "gridlines": {
-        "count": 10
-      }
-    },
-    "hAxis": {
-      "title": "Date"
-    }
-  },
-  "formatters": {}
-}
+	// $scope.chartMy = {
+  // "type": "ColumnChart",
+  // "displayed": true,
+  // "data": {
+    // "cols": [
+      // {
+        // "id": "month",
+        // "label": "Month",
+        // "type": "string",
+        // "p": {}
+      // },
+      // {
+        // "id": "laptop-id",
+        // "label": "Laptop",
+        // "type": "number",
+        // "p": {}
+      // },
+      // {
+        // "id": "desktop-id",
+        // "label": "Desktop",
+        // "type": "number",
+        // "p": {}
+      // },
+      // {
+        // "id": "server-id",
+        // "label": "Server",
+        // "type": "number",
+        // "p": {}
+      // },
+      // {
+        // "id": "cost-id",
+        // "label": "Shipping",
+        // "type": "number"
+      // }
+    // ],
+    // "rows": [
+      // {
+        // "c": [
+          // {
+            // "v": "January"
+          // },
+          // {
+            // "v": 19,
+            // "f": "42 items"
+          // },
+          // {
+            // "v": 12,
+            // "f": "Ony 12 items"
+          // },
+          // {
+            // "v": 7,
+            // "f": "7 servers"
+          // },
+          // {
+            // "v": 4
+          // }
+        // ]
+      // },
+      // {
+        // "c": [
+          // {
+            // "v": "February"
+          // },
+          // {
+            // "v": 13
+          // },
+          // {
+            // "v": 1,
+            // "f": "1 unit (Out of stock this month)"
+          // },
+          // {
+            // "v": 12
+          // },
+          // {
+            // "v": 2
+          // }
+        // ]
+      // },
+      // {
+        // "c": [
+          // {
+            // "v": "March"
+          // },
+          // {
+            // "v": 24
+          // },
+          // {
+            // "v": 5
+          // },
+          // {
+            // "v": 11
+          // },
+          // {
+            // "v": 6
+          // }
+        // ]
+      // }
+    // ]
+  // },
+  // "options": {
+    // "title": "Sales per month",
+    // "isStacked": "true",
+    // "fill": 20,
+    // "displayExactValues": true,
+    // "vAxis": {
+      // "title": "Sales unit",
+      // "gridlines": {
+        // "count": 10
+      // }
+    // },
+    // "hAxis": {
+      // "title": "Date"
+    // }
+  // },
+  // "formatters": {}
+// }
 	
 	/* Google Chart End*/	
 	
