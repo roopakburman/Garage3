@@ -491,6 +491,16 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
+	.state('menu.tabs.userProfileExtn', {
+      url: "/userProfileExtn",
+      views: {
+        'userProfile-tab': {
+          templateUrl: "templates/userProfileExtn.html",
+          controller: 'userProfileCtrl'
+		  
+        }
+      }
+    })
 	.state('menu.tabs.contactUs', {
       url: "/contactUs",
       views: {
