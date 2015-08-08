@@ -598,7 +598,7 @@ ceb.run(function($ionicPlatform, $rootScope) {
 
 $ionicSideMenuDelegate.canDragContent(false)
 
-$scope.navTitle = '<img class="logo title" src="img/logo-white-sm.png" />'; 
+$scope.navTitle = '<img class="title" src="img/logo-white-sm.png" />'; 
 
 $scope.login = function(email, password){		
 		
@@ -1069,11 +1069,10 @@ function PeopleCtrl($scope, $http) {
 
     chart1.options = {
         "title": "Outside Spending by Practice Area",
-		"legend": { "textStyle": {"fontSize": 11}},
         "isStacked": "true",
         "fill": 20,
         "displayExactValues": false,
-		// "tooltip": {'text' : 'value' },
+		"legend": {position: 'bottom', textStyle: {fontSize: 10}},
         "vAxis": {
             "title": "", "gridlines": {"count": 6},
 			"format": '#,###%'
@@ -1082,7 +1081,7 @@ function PeopleCtrl($scope, $http) {
 		"annotations": {
           "alwaysOutside": false,
           "textStyle": {
-            "fontSize": 12,
+            "fontSize": 10,
             "auraColor": 'none',
             "color": '#555'
           }
@@ -1120,13 +1119,13 @@ function PeopleCtrl($scope, $http) {
 			{v: .3}
 		]},
         {c: [
-            {v: "$5 Bil - $10 Bil"},
+            {v: "$5-$10 Bil"},
             {v: .7},
             {v: .2},
 			{v: .1}
 		]},
         {c: [
-            {v: "1 to 5 Lawyers"},
+            {v: "1-5 Lawyers"},
             {v: .7},
             {v: .2},
 			{v: .1}
@@ -1135,10 +1134,10 @@ function PeopleCtrl($scope, $http) {
 
     chart1.options = {
         "title": "Proportions of Legal Staff",
-		"legend": {  "textStyle": {"fontSize": 11}},
         "isStacked": "true",
         "fill": 20,
         "displayExactValues": true,
+		"legend": {position: 'bottom', textStyle: {fontSize: 10}},
         "vAxis": {
             "title": "", "gridlines": {"count": 6},
 			"format": '#,###%'
@@ -1158,182 +1157,124 @@ function PeopleCtrl($scope, $http) {
 
 })
 .controller('ButtonsTabCtrl', ['$scope', '$filter', function ($scope, $filter) {
-	var chart1 = {};
-    chart1.type = "PieChart";
-    chart1.data = [
-       ['Component', 'cost'],
-       ['E-billing', 50000],
-       ['IP Management', 80000],
-       ['CMS', 20000],
-       ['E-learning', 70000]
-      ];
-    // chart1.data.push(['Services',20000]);
-    chart1.options = {
-        displayExactValues: true,
-        width: 550,
-        height: 400,
-        is3D: false,
-        pieHole: 0.5,
-		colors: ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
-		title: "Banking & FS"
-    };
-
-    chart1.formatters = {
-      number : [{
-        columnNum: 1,
-        pattern: "$ #,##0.00"
-      }]
-    };
-
-    $scope.chart = chart1;
-	
-	/*Chart 2*/
-	var chartNew = {};
-    chartNew.type = "PieChart";
-    chartNew.data = [
-       ['Component', 'cost'],
-       ['E-billing', 30000],
-       ['IP Management', 20000],
-       ['CMS', 50000],
-       ['E-learning', 70000]
-      ];
-    // chartNew.data.push(['Services',20000]);
-    chartNew.options = {
-        displayExactValues: true,
-        width: 550,
-        height: 400,
-        is3D: false,
-		pieHole: 0.5,
-		colors: ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
-		title: "My Company"
-    };
-
-    chartNew.formatters = {
-      number : [{
-        columnNum: 1,
-        pattern: "$ #,##0.00"
-      }]
-    };
-
-    $scope.chartMy = chartNew;
-	
-	
-	// $scope.chartMy = {
-  // "type": "ColumnChart",
-  // "displayed": true,
-  // "data": {
-    // "cols": [
-      // {
-        // "id": "month",
-        // "label": "Month",
-        // "type": "string",
-        // "p": {}
-      // },
-      // {
-        // "id": "laptop-id",
-        // "label": "Laptop",
-        // "type": "number",
-        // "p": {}
-      // },
-      // {
-        // "id": "desktop-id",
-        // "label": "Desktop",
-        // "type": "number",
-        // "p": {}
-      // },
-      // {
-        // "id": "server-id",
-        // "label": "Server",
-        // "type": "number",
-        // "p": {}
-      // },
-      // {
-        // "id": "cost-id",
-        // "label": "Shipping",
-        // "type": "number"
-      // }
-    // ],
-    // "rows": [
-      // {
-        // "c": [
-          // {
-            // "v": "January"
-          // },
-          // {
-            // "v": 19,
-            // "f": "42 items"
-          // },
-          // {
-            // "v": 12,
-            // "f": "Ony 12 items"
-          // },
-          // {
-            // "v": 7,
-            // "f": "7 servers"
-          // },
-          // {
-            // "v": 4
-          // }
-        // ]
-      // },
-      // {
-        // "c": [
-          // {
-            // "v": "February"
-          // },
-          // {
-            // "v": 13
-          // },
-          // {
-            // "v": 1,
-            // "f": "1 unit (Out of stock this month)"
-          // },
-          // {
-            // "v": 12
-          // },
-          // {
-            // "v": 2
-          // }
-        // ]
-      // },
-      // {
-        // "c": [
-          // {
-            // "v": "March"
-          // },
-          // {
-            // "v": 24
-          // },
-          // {
-            // "v": 5
-          // },
-          // {
-            // "v": 11
-          // },
-          // {
-            // "v": 6
-          // }
-        // ]
-      // }
-    // ]
-  // },
-  // "options": {
-    // "title": "Sales per month",
-    // "isStacked": "true",
-    // "fill": 20,
-    // "displayExactValues": true,
-    // "vAxis": {
-      // "title": "Sales unit",
-      // "gridlines": {
-        // "count": 10
-      // }
-    // },
-    // "hAxis": {
-      // "title": "Date"
-    // }
-  // },
-  // "formatters": {}
-// }
+	$scope.chartMy = {
+  "type": "BarChart",
+  "displayed": true,
+  "data": {
+    "cols": [
+      {
+        "id": "month",
+        "label": "Month",
+        "type": "string",
+        "p": {}
+      },
+      {
+        "id": "laptop-id",
+        "label": "Laptop",
+        "type": "number",
+        "p": {}
+      },
+      {
+        "id": "desktop-id",
+        "label": "Desktop",
+        "type": "number",
+        "p": {}
+      },
+      {
+        "id": "server-id",
+        "label": "Server",
+        "type": "number",
+        "p": {}
+      },
+      {
+        "id": "cost-id",
+        "label": "Shipping",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      {
+        "c": [
+          {
+            "v": "My Company"
+          },
+          {
+            "v": 19,
+            "f": ""
+          },
+          {
+            "v": 12,
+            "f": ""
+          },
+          {
+            "v": 7,
+            "f": ""
+          },
+          {
+            "v": 4
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "Banking & FS"
+          },
+          {
+            "v": 13
+          },
+          {
+            "v": 1,
+            "f": ""
+          },
+          {
+            "v": 12
+          },
+          {
+            "v": 2
+          }
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "$5-$10B"
+          },
+          {
+            "v": 24
+          },
+          {
+            "v": 5
+          },
+          {
+            "v": 11
+          },
+          {
+            "v": 6
+          }
+        ]
+      }
+    ]
+  },
+  "options": {
+    "title": "",
+    "isStacked": "true",
+    "fill": 20,
+    "displayExactValues": true,
+	"colors": ['#C0C0C0','#0FC1F2','#7FD6F7','#7CB5EC'],
+	"legend": {position: 'bottom', textStyle: {fontSize: 10}},
+    "vAxis": {
+      "title": "Sales unit",
+      "gridlines": {
+        "count": 10
+      }
+    },
+    "hAxis": {
+      "title": ""
+    }
+  },
+  "formatters": {}
+}
 	
 	/* Google Chart End*/	
 	

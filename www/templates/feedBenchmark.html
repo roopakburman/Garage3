@@ -1,7 +1,13 @@
     <ion-view title="My Budget Diagnostic Results">
       <ion-content class="padding">
 		<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
+		<div class="card" >
+			<div class="item item-divider card-bk2">
+				Want to schedule a call with your account representative for a detailed walkthrough?
+			</div>
+				<a href="#/menu/tab/contactUs" class="button button-small icon-left ion-ios-email button-balanced">Email James</a>
 
+		</div>
 		<div class="card" >
 		    <div class="item item-divider card-bk2">
 				Outside Spending and Law Firm Management
@@ -28,17 +34,20 @@
 				Legal Technology Use
 			</div> 		
 			<div class="row">
-				<div class="col col-50">
+<!-- 				<div class="col col-50"> -->
 					<div google-chart chart="chart"
-						style="padding:0;width:400px">
+						style="padding:0;width:600px">
 				    </div>
-				</div>
+<!-- 				</div>
 				<div class="col col-50">
 					<div google-chart chart="chartMy"
 						 style="{{cssStyle}}">
 				    </div>
-				</div>
-			</div>
+				</div>-->
+			</div> 
+			<div google-chart chart="chartMy"
+						 style="{{cssStyle}}">
+				    </div>
 		</div>
 
 		</ion-scroll>
