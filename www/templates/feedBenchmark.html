@@ -1,15 +1,15 @@
     <ion-view title="My Budget Diagnostic Results">
       <ion-content class="padding">
-		<ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
+		
 
 		<div class="card" >
 		    <div class="item item-text-wrap item-divider card-bk2">
 				Outside Spending and Law Firm Management
 			</div> 
 			<div class="row">
-				<div class="col" ng-controller="chartCtrl2">
+				<div class="col" ng-controller="chartCtrl2"><ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
 					<div google-chart chart="chart2">
-				    </div>
+				    </div></ion-scroll>
 				</div>
 
 			</div>
@@ -21,9 +21,9 @@
 				 Legal Department Staffing
 			</div> 
 			<div class="row">
-				<div class="col" ng-controller="chartCtrl3">
+				<div class="col" ng-controller="chartCtrl3"><ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
 					<div google-chart chart="chart2"  style="{{chart.cssStyle}}">
-				</div>
+				</div></ion-scroll>
 			</div>
 			</div>
 			<div>
@@ -35,21 +35,8 @@
 		    <div class="item item-text-wrap item-divider card-bk2">
 				Legal Technology Use
 			</div> 		
-			<div class="row">
-<!-- 				<div class="col col-50"> -->
-<!-- 					<div google-chart chart="chart"
-						style="padding:0;width:600px">
-				    </div> -->
-<!-- 				</div>
-				<div class="col col-50">
-					<div google-chart chart="chartMy"
-						 style="{{cssStyle}}">
-				    </div>
-				</div>-->
-			
-			<div google-chart chart="chartMy"
-						 style="{{cssStyle}}">
-				    </div>
+			<div class="row"><ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
+			<div google-chart chart="chartMy" style = "height:450px; width:650px;"></div></ion-scroll>
 			</div> 
 			<div>
 			<span>Want to schedule a call with your account representative for a detailed walkthrough? 
@@ -57,7 +44,7 @@
 			</div>
 		</div>
 
-		</ion-scroll>
+		
       </ion-content>
     </ion-view>
 	

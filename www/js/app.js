@@ -223,7 +223,6 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
-	
 	.state('menu.tabs.feed7meeting1', {
       url: "/feed7meeting1",
       views: {
