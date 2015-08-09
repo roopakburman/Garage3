@@ -686,6 +686,8 @@ $scope.login = function(email, password){
 			alert('Welcome Eve!');
 		}else if(authData.uid == 'simplelogin:26'){
 			alert('Welcome Julie!');
+		}else if(authData.uid == 'simplelogin:27'){
+			alert('Welcome Matthew!');
 		}
 		}
 		},{
@@ -714,14 +716,24 @@ $scope.login = function(email, password){
 	$scope.nameFilter = currentUser;
 	$scope.userData = [
 	{
-		"userID" : "simplelogin:14",
-		"userName" : "James King",
-		"userEmail" : "JKing@KingInternational.com",
+		"userID" : "simplelogin:27",
+		"userName" : "Matthew King",
+		"userEmail" : "matt@king.com",
 		"userTitle" : "Chief Information Officer",
 		"userDept" : "IT",
 		"userPhone" : "571-303-4772",
 		"userOffice" : "Washington DC",
 		"uPic" : "img/James_King.jpg"
+	},
+	{
+		"userID" : "simplelogin:14",
+		"userName" : "Price Jett",
+		"userEmail" : "jettp@cebglobal.com",
+		"userTitle" : "Chief Information Officer",
+		"userDept" : "IT",
+		"userPhone" : "571-303-4772",
+		"userOffice" : "Washington DC",
+		"uPic" : "img/price.png"
 	},
 	{
 		"userID" : "simplelogin:18",
@@ -878,6 +890,11 @@ $scope.login = function(email, password){
 		else if(currentUser == 'simplelogin:26'){
 			$scope.userName = "Julie Donahue";
 			$scope.userEmail = "jdonahue@cebglobal.com";
+			$scope.userPhone = "571-303-4756";
+		}
+		else if(currentUser == 'simplelogin:27'){
+			$scope.userName = "Matthew King";
+			$scope.userEmail = "matt@king.com";
 			$scope.userPhone = "571-303-4756";
 		}
 	
@@ -1555,11 +1572,11 @@ $scope.openDrawer1 = function(){
 		 window.location.href="#menu/tab/feedBenchmark"
        } else {
          // console.log('You are not sure');
-		 alert('Your Budget Diagnostics have been saved in your Workspace on the My CEB tab.');
+		 alert('Your Budget Diagnostics have been saved in the My Favorites section.');
        }
      });
 	}
-    $timeout( function(){ $scope.callAtTimeout(); }, 10000);
+    $timeout( function(){ $scope.callAtTimeout(); }, 78000);
 	$scope.$on(
 		"$destroy",
 		function(event) {
