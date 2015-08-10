@@ -6,7 +6,9 @@ nav ul
 p {
   /* margin: 0 0 15px; */
 }
-
+.popup-head{
+background-color: cornflowerblue
+}
 .slide_container {
   width: 100%;
   position: absolute;

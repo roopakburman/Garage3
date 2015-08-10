@@ -1,8 +1,8 @@
 <ion-view title="My Feed">
 	<ion-content class="padding">
 				<div class="card">
-        <h1><p class="item item-text-wrap">The Role of the Head of IT Finance <i ng-class="{true: 'icon ion-thumbsup favMeNo', false: 'icon ion-thumbsup favMeYes'}[!favorite]" ng-click="favorite = !favorite" href="#"></i>
-				<i ng-class="{true: 'icon ion-share favMeNo', false: 'icon ion-share favMeYes'}[!email]" ng-click="email = !email" href="#"></i></p></h1>
+        <h1><p class="item item-text-wrap">The Role of the Head of IT Finance <i ng-class="{true: 'icon ion-ios-star favMeNo', false: 'icon ion-ios-star favMeYes'}[!favorite]" ng-click="favorite = !favorite" href="#"></i>
+				<i ng-class="{true: 'icon ion-share favMeNo', false: 'icon ion-share favMeYes'}[!email]" ng-click="email = !email; modal1.show()"></i></p></h1>
 		<hr></hr>
 			<div class="row">
 				<div class="col">
@@ -17,9 +17,11 @@
 					<p>Because most profiled heads of IT Finance focus on managing budgets, delivering financial reporting, and other finance-centric duties, three profiled organizations prioritize finance skills over IT knowledge.</p>
 					<p>By improving relationships with vendors and forming more strategic partnerships, the head of IT Finance can reduce vendor costs and deliver savings to the business.</p>
 				</div>
-				
+
 			</div>
 </p></div>
+
+
 
 	</ion-content>
 </ion-view>

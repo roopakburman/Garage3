@@ -278,12 +278,30 @@ ceb.run(function($ionicPlatform, $rootScope) {
         }
       }
     })
+	.state('menu.tabs.feed11', {
+      url: "/feed11",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/feed11.html",
+          controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
 	.state('menu.tabs.feedBenchmark', {
       url: "/feedBenchmark",
       views: {
         'buttons-tab': {
           templateUrl: "templates/feedBenchmark.html",
           controller: 'ButtonsTabCtrl'
+        }
+      }
+    })
+	.state('menu.tabs.modal1', {
+      url: "/modal1",
+      views: {
+        'buttons-tab': {
+          templateUrl: "templates/modal1.html",
+          controller: 'shareCtrl'
         }
       }
     })
@@ -458,6 +476,14 @@ ceb.run(function($ionicPlatform, $rootScope) {
       views: {
         'slide-tab': {
           templateUrl: "templates/myPastEvents3.html"
+        }
+      }
+    })
+	.state('menu.tabs.myPastEvents4', {
+      url: "/myPastEvents4",
+      views: {
+        'slide-tab': {
+          templateUrl: "templates/myPastEvents4.html"
         }
       }
     })
@@ -1232,7 +1258,7 @@ function PeopleCtrl($scope, $http) {
       },
       {
         "id": "server-id",
-        "label": "Server",
+        "label": "iPad",
         "type": "number",
         "p": {}
       },
@@ -1369,11 +1395,20 @@ $scope.feed = [
 	{
 	"program" : "CIO Leadership Council",
 	"content_type" : "images", 
-	"title" : "What is Adaptive IT", 
-	"synopsis" : "To succeed in an era when change is constant and the impact of technology ubiquitous, IT leaders must adopt a set of management principles that allow IT to help the enterprise maximize returns from technology investments in any environment, not just the environment for which the IT organization was designed.",
+	"title" : "Digital Marketing Capabilities Roadmaps, 2013-2016", 
+	"synopsis" : "Digital marketing capabilities are changing fast. Marketers and their IT partners face difficult investment decisions or risk falling behind.",
 	"data" : "AdaptiveIT.png",
 	"icon" : "icon rb-images ion-images",
 	"path" : "#/menu/tab/feed1"
+	},
+	{
+	"program" : "CIO Leadership Council", 
+	"content_type" : "video", 
+	"title" : "The Digital Evolution in B2B Marketing", 
+	"synopsis" : "To be found by customers in a noisy digital environment demands that suppliers provide valuable, highly relevant content.",
+	"data" : "57%—that’s how far the average B2B buyer is through the purchase decision before engaging a supplier sales rep.",
+	"icon" : "icon rb-videos ion-ios-videocam",
+	"path" : "#/menu/tab/feed11"
 	},
     {
 	"program" : "CIO Leadership Council",
@@ -1536,11 +1571,20 @@ $scope.openDrawer1 = function(){
 	  });
 	  $('#pSelector').change(function () {
 			$scope.openDrawer();
-	  });
-	  
-
+	  });  
 }])
 
+.controller('shareCtrl', function($scope, $ionicSideMenuDelegate, $ionicPopup, $ionicModal){
+		$ionicModal.fromTemplateUrl('templates/modal1.html', function (modal) {
+		$scope.modal1 = modal;
+		$scope.modal1.confrm = function(){
+		alert('Content Sent!')
+		$scope.modal1.hide();
+		};
+	}, {
+		animation: 'slide-in-up'
+	});	
+})
 .controller('SlideboxCtrl', function($scope, $ionicSlideBoxDelegate, $timeout, $ionicPopup) {
   $scope.nextSlide = function() {
     $ionicSlideBoxDelegate.next();
@@ -1552,7 +1596,7 @@ $scope.openDrawer1 = function(){
 		// alert('Your Budget Diagnostics have been delivered');
 		
 		var confirmPopup = $ionicPopup.confirm({
-       title: 'Budget Diagnostic Results',
+       title: 'CEB: 2015 Budget Diagnostic Results',
        template: 'Your diagnostic results are in. Do you want to see them?',
 	   cancelText: 'Not now',
         okText: 'Yes'
