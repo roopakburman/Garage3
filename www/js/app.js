@@ -12,7 +12,6 @@ ceb.run(function($ionicPlatform, $rootScope) {
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
-
   });
 })
 .config(function ($stateProvider, $urlRouterProvider) {
