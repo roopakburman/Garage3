@@ -1,8 +1,19 @@
-    <ion-view title="My Budget Diagnostic Results">
+    <ion-view title="Diagnostic Results">
       <ion-content class="padding">
-		
-
 		<div class="card" >
+		    <div class="item item-text-wrap item-divider card-bk2">
+				Technology Usage
+			</div> 		
+			<div class="row">
+				<div class="col"><ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
+			<div google-chart chart="chartMy" style = ""></div></ion-scroll>
+			</div> 
+			</div>
+			<div>
+			<span>Want to schedule a call with your account representative for a detailed walkthrough? 
+				<a href="#/menu/tab/contactUs" class="button button-small icon-left ion-ios-email button-positive">Request a Meeting </a></span>
+			</div>
+		</div>		<div class="card" >
 		    <div class="item item-text-wrap item-divider card-bk2">
 				Outside Spending and Law Firm Management
 			</div> 
@@ -33,22 +44,6 @@
 				<a href="#/menu/tab/contactUs" class="button button-small icon-left ion-ios-email button-positive">Request a Meeting </a></span>
 			</div>
 		</div>
-		<div class="card" >
-		    <div class="item item-text-wrap item-divider card-bk2">
-				Technology Usage
-			</div> 		
-			<div class="row">
-				<div class="col"><ion-scroll direction="xy" locking="false" zooming="true" min-zoom="1">
-			<div google-chart chart="chartMy" style = ""></div></ion-scroll>
-			</div> 
-			</div>
-			<div>
-			<span>Want to schedule a call with your account representative for a detailed walkthrough? 
-				<a href="#/menu/tab/contactUs" class="button button-small icon-left ion-ios-email button-positive">Request a Meeting </a></span>
-			</div>
-		</div>
-
-		
       </ion-content>
     </ion-view>
 	
