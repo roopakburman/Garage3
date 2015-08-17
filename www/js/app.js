@@ -713,8 +713,8 @@ $scope.login = function(email, password){
 			alert('Welcome Julie!');
 		}else if(authData.uid == 'simplelogin:27'){
 			alert('Welcome Matthew King!');
-		}else if(authData.uid == 'simplelogin:28'){
-			alert('Welcome Ponna!');
+		// }else if(authData.uid == 'simplelogin:28'){
+			// alert('Welcome Ponna!');
 		}else if(authData.uid == 'simplelogin:29'){
 			alert('Welcome Fletcher!');
 		}
@@ -753,15 +753,15 @@ $scope.login = function(email, password){
 		"userPhone" : "571-303-5510",
 		"userOffice" : "Washington DC",
 		"uPic" : "img/fletcher.jpg"
-	},{
-		"userID" : "simplelogin:28",
-		"userName" : "Ponna Arumugam",
-		"userEmail" : "PArumugam@cebglobal.com",
-		"userTitle" : "Chief Technology Officer",
-		"userDept" : "IT",
-		"userPhone" : "571-303-5510",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/ponna.jpg"
+	// },{
+		// "userID" : "simplelogin:28",
+		// "userName" : "Ponna Arumugam",
+		// "userEmail" : "PArumugam@cebglobal.com",
+		// "userTitle" : "Chief Technology Officer",
+		// "userDept" : "IT",
+		// "userPhone" : "571-303-5510",
+		// "userOffice" : "Washington DC",
+		// "uPic" : "img/ponna.jpg"
 	},
 	{
 		"userID" : "simplelogin:27",
