@@ -845,8 +845,6 @@ function PeopleCtrl($scope, $http) {
     };
 
 }
-
-
 })
 
 .controller('ListCtrl', function ($scope) {
