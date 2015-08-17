@@ -741,149 +741,12 @@ $scope.login = function(email, password){
 	// }
 
 })
-.controller('userProfileCtrl', function($scope){
+.controller('userProfileCtrl', function($scope, $http){
 	$scope.nameFilter = currentUser;
-	$scope.userData = [
-	{
-		"userID" : "simplelogin:29",
-		"userName" : "Fletcher Jones",
-		"userEmail" : "fjones@cebglobal.com",
-		"userTitle" : "Head of Product Marketing",
-		"userDept" : "BPDS",
-		"userPhone" : "571-303-5510",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/fletcher.jpg"
-	},{
-		"userID" : "simplelogin:28",
-		"userName" : "Ponna Arumugam",
-		"userEmail" : "PArumugam@cebglobal.com",
-		"userTitle" : "Chief Technology Officer",
-		"userDept" : "IT",
-		"userPhone" : "571-303-5510",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/ponna.jpg"
-	},
-	{
-		"userID" : "simplelogin:27",
-		"userName" : "Matthew King",
-		"userEmail" : "matt@king.com",
-		"userTitle" : "Chief Information Officer",
-		"userDept" : "IT",
-		"userPhone" : "571-303-4772",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/James_King.jpg"
-	},
-	{
-		"userID" : "simplelogin:14",
-		"userName" : "Price Jett",
-		"userEmail" : "jettp@cebglobal.com",
-		"userTitle" : "Chief Information Officer",
-		"userDept" : "IT",
-		"userPhone" : "571-303-4772",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/price.png"
-	},
-	{
-		"userID" : "simplelogin:18",
-		"userName" : "Haniel Lynn",
-		"userEmail" : "lynnh@cebglobal.com",
-		"userTitle" : "Group President",
-		"userDept" : "BPDS General/Central",
-		"userPhone" : "571-303-4015",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/haniel.jpg"
-	},
-	{
-		"userID" : "simplelogin:16",
-		"userName" : "Melody Jones",
-		"userEmail" : "melodyjones@cebglobal.com",
-		"userTitle" : "Chief Administrative Officer",
-		"userDept" : "Human Resources",
-		"userPhone" : "571-303-4003",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/melody.jpg"
-	},
-	{
-		"userID" : "simplelogin:17",
-		"userName" : "Warren Thune",
-		"userEmail" : "thunew@cebglobal.com",
-		"userTitle" : "Group President",
-		"userDept" : "TM General/Central",
-		"userPhone" : "571-303-4613",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/warren.jpg"
-	},
-	{
-		"userID" : "simplelogin:15",		
-		"userName" : "Tom Monahan",
-		"userEmail" : "MonahanT@cebglobal.com",
-		"userTitle" : "Chief Executive Officer",
-		"userDept" : "Office of the CEO",
-		"userPhone" : "571-303-4013",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/tom.jpg"
-	},
-	{
-		"userID" : "simplelogin:19",		
-		"userName" : "The Garage",
-		"userEmail" : "garage@cebglobal.com",
-		"userTitle" : "The Garage",
-		"userDept" : "Secret room on 10th floor",
-		"userPhone" : "571-303-6666",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/garage.jpg"
-	},
-	{
-		"userID" : "simplelogin:22",		
-		"userName" : "Rob Chen",
-		"userEmail" : "robchen@cebglobal.com",
-		"userTitle" : "Chief Marketing Officer",
-		"userDept" : "Marketing",
-		"userPhone" : "571-303-6666",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/rob.jpg"
-	},
-	{
-		"userID" : "simplelogin:23",		
-		"userName" : "Andrea Birdsong",
-		"userEmail" : "abirdsong@cebglobal.com",
-		"userTitle" : "Senior Digital Marketing Manager",
-		"userDept" : "Marketing",
-		"userPhone" : "571-303-6666",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/andrea.jpg"
-	},
-	{
-		"userID" : "simplelogin:24",		
-		"userName" : "Aaron Myers",
-		"userEmail" : "amyers@cebglobal.com",
-		"userTitle" : "Executive Assistant",
-		"userDept" : "IT",
-		"userPhone" : "571-303-6666",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/garage.jpg"
-	},
-	{
-		"userID" : "simplelogin:25",		
-		"userName" : "Eve Koopmann",
-		"userEmail" : "ekoopmann@cebglobal.com",
-		"userTitle" : "Market Director",
-		"userDept" : "Information Technology Practice",
-		"userPhone" : "571-303-6666",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/eve.jpg"
-	},
-	{
-		"userID" : "simplelogin:26",		
-		"userName" : "Julie Donahue",
-		"userEmail" : "jdonahue@cebglobal.com",
-		"userTitle" : "Senior Central L＆D Lead Senior Central L&D Lead",
-		"userDept" : "Human Resources",
-		"userPhone" : "571-303-4756",
-		"userOffice" : "Washington DC",
-		"uPic" : "img/julie.jpg"
-	}
-	];
+	$http.get('../json/userData.json')
+	.then(function(res){
+		$scope.userData = res.data;
+	});
 
 	if(currentUser == 'simplelogin:14'){
 			$scope.userName = "Price Jett";
@@ -953,81 +816,17 @@ $scope.login = function(email, password){
 	}
 
 })
-.controller("tickerCtrl",['$scope',function($scope){
-    $scope.iTicker = [
-	{
-		"prog" : "Government: ",
-		"newsFeed" : "The future of Government IT - Establishing IT as a broker, not a builder."
-	},
-	{
-		"prog" : "Financial Services: ",
-		"newsFeed" : "Generate the next level of breakthrough performance in the financial services industry."
-	},
-	{
-		"prog" : "Finance: ",
-		"newsFeed" : "75% of CxOs are unhappy with the talent mix of their teams."
-	},
-	{
-		"prog" : "Innovation & Strategy: ",
-		"newsFeed" : "Companies whose R&D workforces have high innovation potential see 75% greater new product sales than other companies."
-	},
-	{
-		"prog" : "Human Resources: ",
-		"newsFeed" : "Employees are 2X more likely to stay with their organization compared to five years ago. Access Q2 workforce trends."
-	}
-	];
-}])
-.controller('dataCtrl', function($scope){
+// .controller('userProfileCtrl', function($scope, $http){
+.controller('tickerCtrl',function($scope, $http){
+	$http.get('../json/iTicker.json').then(function(res){
+		$scope.iTicker = res.data;
+	});
+})
+.controller('dataCtrl', function($scope, $http){
 	$scope.nameFilter = '';
-    $scope.data = [
-    {
-  "clauseName" : "Critical capabilities",
-  	"details" : "These guidelines build on long-standing policies regarding employeesâ€™ personal interactions and upon the sound judgment that we expect our employees to use in their professional interactions.",
-	"infoGraphic" : "img/info1.png"
-  	},
-{
-  "clauseName" : "Customer Empathizer",
-  	"details" : "I cannot believe the indifference and inefficiency I have experienced. I needed a password to log in. I called and got a generic voicemail and no one called me back. Then I sent an email, and no one got back to me for two weeks. When they did, the password didn't work.",
-	"infoGraphic" : "img/info2.png"
-  		    
-},
-{
-  "clauseName" : "R&D",
-  	"details" :"Imagine a day in the life of a member. EO members are small-business owners in a down economy who are letting employees go and struggling with sales and who might be willing to drop a membership organization in an effort to save. We also recognize that our members are high energy, living with stress, and short on time, so we must respond accordingly.  The ability to empathize with members is critical for our front-line staff, and we seek it out in hiring.",
-	"infoGraphic" : "img/info3.png"
-},
-{
-  "clauseName" : "Team Composition",
-  	"details" : "You can limit them, but you can never completely control them. Here's the good news, though: You can control how you react to mistakes and how you train your team to react to them.  We send a short check-in survey to our new members about four months after they join.",
-"infoGraphic" : "img/info4.png"
-},
-{
-  "clauseName" : "Leardiship",
-  	"details" : "Is your phone system easy to navigate? What about that registration line at your big event? Can members quickly find what they need on your website? What happens if they send an email to a generic account? All of these tiny, seemingly insignificant interactions add up to create your members' overall perception of your service.",
-"infoGraphic" : "img/info5.png"
-},
-{
-  "clauseName" : "Unlock Innovative Potential",
-  	"details" : "The president of a chapter asks you for a list of members. But you know that what he really needs is a list of members by last name, with their emails, phone numbers, and years in the organization.",
-"infoGraphic" : "img/info6.png"
-},
-{
-  "clauseName" : "Retail Banking",
-  	"details" : "How do you demonstrate your commitment to service to your members? You can wait for those ugly problems and mistakes to pop up, or you can engage in systematic outreach to show you care. There are so many low-cost, high-impact ways to reach your members. (See sidebar Building Stronger Relationships.)",
-	"infoGraphic" : "img/info7.png"
-},
-{
-  "clauseName" : "Wealth Management",
-  	"details" : "How do you measure something as fuzzy as good member service? You might feel that you'll know when it improves and life is good. But without systematically creating short- and long-term goals and strategies to achieve them, plus metrics to support them, you'll never know where you really stand.",
-"infoGraphic" : "img/info8.png"
-},
-{
-  "clauseName" : "Retirement Services",
-  	"details" :"Google News Alerts can tell you when your members are in the news.You can set the search terms for your organization or names of particular members. Congratulate them with a handwritten note or even a framed copy of the article.",
-	"infoGraphic" : "img/info9.png"
-}
-
-	];
+	$http.get('../json/data.json').then(function(res){
+		$scope.data = res.data;
+	});
 
 function PeopleCtrl($scope, $http) {
 
@@ -1254,6 +1053,15 @@ function PeopleCtrl($scope, $http) {
 
 
 })
+.controller('feedCtrl', function($scope, $http){
+	$http.get('../json/feed.json').then(function(res){
+		$scope.feed = res.data;
+	});	
+	$http.get('../json/iNew.json').then(function(res){
+		$scope.iNew = res.data;
+	});	
+	
+})
 .controller('ButtonsTabCtrl', ['$scope', '$filter', function ($scope, $filter) {
 	$scope.chartMy = {
   "type": "BarChart",
@@ -1403,147 +1211,6 @@ function PeopleCtrl($scope, $http) {
 	$('.timeline-panel').click(function() {
     $('.timeline-body', this).toggle(); // p00f
 });
-$scope.feed = [
-    {
-		
-	"program" : "Recruiting Leadership Council",	
-	"content_type" : "images", 
-	"title" : "The Performance Transformation", 
-	"synopsis" : "HR focuses on motivation strategies to drive employee willingness to be enterprise contributors—employees who work with and through others, contributing and consuming ideas and input to improve their own performance and that of their peers. However, for 75% of them, their organizations get in their way of becoming enterprise contributors.",
-	"data" : "HR focuses on motivation strategies to drive employee willingness to be enterprise contributors—employees who work with and through others, contributing and consuming ideas and input to improve their own performance and that of their peers. However, for 75% of them, their organizations get in their way of becoming enterprise contributors.",
-	"icon" : "icon rb-images ion-images",
-	"path" : "#/menu/tab/feed7"
-	},
-	{
-	"program" : "CIO Leadership Council",
-	"content_type" : "images", 
-	"title" : "Digital Marketing Capabilities Roadmaps, 2013-2016", 
-	"synopsis" : "Digital marketing capabilities are changing fast. Marketers and their IT partners face difficult investment decisions or risk falling behind.",
-	"data" : "AdaptiveIT.png",
-	"icon" : "icon rb-images ion-images",
-	"path" : "#/menu/tab/feed1"
-	},
-	{
-	"program" : "CIO Leadership Council", 
-	"content_type" : "video", 
-	"title" : "The Digital Evolution in B2B Marketing", 
-	"synopsis" : "To be found by customers in a noisy digital environment demands that suppliers provide valuable, highly relevant content.",
-	"data" : "57%—that’s how far the average B2B buyer is through the purchase decision before engaging a supplier sales rep.",
-	"icon" : "icon rb-videos ion-ios-videocam",
-	"path" : "#/menu/tab/feed11"
-	},
-    {
-	"program" : "CIO Leadership Council",
-	"content_type" : "video", 
-	"title" : "What Are End-to-End IT Services?",
-	"synopsis" : "End-to-end IT services package all the technologies, processes, and resources across IT needed to deliver a specific business outcome while hiding technical complexity...",
-	"data" : "https://www.youtube.com/embed/G8pgmwo2FE0",
-	"icon" : "icon rb-videos ion-ios-videocam",
-	"path" : "#/menu/tab/feed3"
-	},
-    {
-	"program" : "CIO Leadership Council",	
-	"content_type" : "notes", 
-	"title" : "The Role of the Head of IT Finance", 
-	"synopsis" : "Wondering how other IT organizations design the role of the head of IT Finance? This research brief profiles five member organizations, detailing...",
-	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-notes ion-ios-paper",
-	"path" : "#/menu/tab/feed2"
-	},
-    {
-	"program" : "CIO Leadership Council",	
-	"content_type" : "notes", 
-	"title" : "Accelerating IT's Clock Speed", 
-	"synopsis" : "Learn tactics to make your IT team more responsive to the needs of business partners in an increasingly varied technology environment.",
-	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-notes ion-ios-paper",
-	"path" : "#/menu/tab/feed4"
-	},
-    {
-	"program" : "Legal Leadership Council",	
-	"content_type" : "images", 
-	"title" : "Engagement and Retention for In-House Legal Department Non-Lawyer Professionals", 
-	"synopsis" : "Engagement is neutral among in-house legal department non-lawyer professionals. Watch out for the negative impact of dissatisfaction with Opportunity on discretionary effort and retention. Review the key findings about engaging and retaining paralegals and other department staff from the latest Global Talent Trend Series data.",
-	"data" : "Corporate strategy at the world’s leading organizations increasingly depends on step-changes in how human capital is recruited, managed, deployed, and enabled. In the budgets and business plans of the 10,000 organizations we support, we see uniformly high expectations for gains in employee productivity, innovation, and ethical conduct. Decisions on talent are now among the principal determinants of an organization’s ability to execute strategy.",
-	"icon" : "icon rb-images ion-images",
-	"path" : "#/menu/tab/feed5"
-	},
-    {
-	"program" : "Legal Leadership Council",	
-	"content_type" : "images", 
-	"title" : "Executive Recruiting", 
-	"synopsis" : "With more than one-third of executives hired externally, the bar is higher for Recruiting to bring in leaders who can succeed by working with others and adapting to change. Improve executive quality of hire by hiring for network fit and enabling executive recruiters to use their Talent Advisor capabilities.",
-	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
-	"icon" : "icon rb-images ion-images",
-	"path" : "#/menu/tab/feed6"
-	},
-    {
-	"program" : "Recruiting Leadership Council",	
-	"content_type" : "images", 
-	"title" : "Reorient your executive recruting strategy from search savings to quality gains.", 
-	"synopsis" : "More than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful",
-	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
-	"icon" : "icon rb-images ion-images",
-	"path" : "#/menu/tab/feed6"
-	},
-    {
-	"program" : "Recruiting Leadership Council",	
-	"content_type" : "video", 
-	"title" : "The Performance Transformation", 
-	"synopsis" : "The new work environment is full of performance challenges, yet performance must improve by 27% to meet business goals over the next 12 months.",
-	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
-	"icon" : "icon rb-videos ion-ios-videocam",
-	"path" : "#/menu/tab/feed8"
-	},
-    {
-	"program" : "Recruiting Leadership Council",	
-	"content_type" : "video", 
-	"title" : "Take Your HR Team to the Next Level", 
-	"synopsis" : "Less than one-fifth of line leaders rates HR as an effective strategic partner to the line.",
-	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
-	"icon" : "icon rb-videos ion-ios-videocam",
-	"path" : "#/menu/tab/feed9"
-	},
-    {
-	"program" : "Recruiting Leadership Council",	
-	"content_type" : "video", 
-	"title" : "Legal Leadership Council", 
-	"synopsis" : "Given the changing impact of information, traditional monitoring processes and technology advancements alone no longer deliver effective identification, management, and prevention of business risks. This change demands the need for early detection and rootcause analysis.",
-	"data" : "Most organizations, seeking to minimize the cost of failure, are bringing executive search capabilities in-house. Although more than 75% of in-house teams have succeeded in reducing the cost of executive search, less than one-third have seen meaningful improvements in quality of hire.",
-	"icon" : "icon rb-videos ion-ios-videocam",
-	"path" : "#/menu/tab/feed10"
-	}
-    
-];
-$scope.iNew = [
-   {
-	"program" : "CIO Leadership Council",	
-	"content_type" : "notes", 
-	"title" : "Accelerating IT's Clock Speed", 
-	"synopsis" : "Learn tactics to make your IT team more responsive to the needs of business partners in an increasingly varied technology environment.",
-	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-notes ion-ios-paper",
-	"path" : "#/menu/tab/feed4"
-	},
-    {
-	"program" : "CIO Leadership Council",	
-	"content_type" : "notes", 
-	"title" : "RACI Chart for Service-Aligned Teams", 
-	"synopsis" : "This six-step guide includes 32 documents to help you: Create an effective budgeting process,",
-	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-notes ion-ios-paper",
-	"path" : "#/menu/tab/feed4"
-	},
-    {
-	"program" : "CIO Leadership Council",	
-	"content_type" : "notes", 
-	"title" : "CEB Ignition™ Guide to Creating the Annual Budget for IT", 
-	"synopsis" : "Use the sample RACI chart to plan which roles will be responsible for key service management activities.",
-	"data" : "An adaptive IT organization is capable of continuous change and can thrive in any environment, not just the environment for which it was designed. Rather than relying on dedicated teams, structures, or processes, an adaptive IT organization makes all resources (people, money, technology) and processes as fungible as possible. <p></p>Adaptive IT differs from other approaches today by not stipulating a specific end state but allowing organizations to thrive in any environment.",
-	"icon" : "icon rb-notes ion-ios-paper",
-	"path" : "#/menu/tab/feed4"
-	}
-];
 $scope.openDrawer = function(){
 
 	var openBtn = $('#searchBtn'),
