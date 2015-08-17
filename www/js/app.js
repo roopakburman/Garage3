@@ -843,7 +843,6 @@ function PeopleCtrl($scope, $http) {
         });
 
     };
-
 }
 })
 
