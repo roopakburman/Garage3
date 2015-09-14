@@ -14,9 +14,8 @@ ceb.run(function($ionicPlatform, $rootScope) {
     }
   });
 })
-.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-	$ionicConfigProvider.tabs.position('bottom');
-	
+.config(function ($stateProvider, $urlRouterProvider) {
+
   $stateProvider
     .state('menu', {
       url: "/menu",
