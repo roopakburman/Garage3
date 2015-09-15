@@ -14,8 +14,8 @@ ceb.run(function($ionicPlatform, $rootScope) {
     }
   });
 })
-.config(function ($stateProvider, $urlRouterProvider) {
-
+.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+  $ionicConfigProvider.tabs.position('bottom');
   $stateProvider
     .state('menu', {
       url: "/menu",
@@ -743,7 +743,7 @@ $scope.login = function(email, password){
 })
 .controller('userProfileCtrl', function($scope, $http){
 	$scope.nameFilter = currentUser;
-	$http.get('../json/userData.json')
+	$http.get('json/userData.json')
 	.then(function(res){
 		$scope.userData = res.data;
 	});
@@ -816,15 +816,15 @@ $scope.login = function(email, password){
 	}
 
 })
-// .controller('userProfileCtrl', function($scope, $http){
+
 .controller('tickerCtrl',function($scope, $http){
-	$http.get('../json/iTicker.json').then(function(res){
+	$http.get('json/iTicker.json').then(function(res){
 		$scope.iTicker = res.data;
 	});
 })
 .controller('dataCtrl', function($scope, $http){
 	$scope.nameFilter = '';
-	$http.get('../json/data.json').then(function(res){
+	$http.get('json/data.json').then(function(res){
 		$scope.data = res.data;
 	});
 
@@ -1051,10 +1051,10 @@ function PeopleCtrl($scope, $http) {
 
 })
 .controller('feedCtrl', function($scope, $http){
-	$http.get('../json/feed.json').then(function(res){
+	$http.get('json/feed.json').then(function(res){
 		$scope.feed = res.data;
 	});	
-	$http.get('../json/iNew.json').then(function(res){
+	$http.get('json/iNew.json').then(function(res){
 		$scope.iNew = res.data;
 	});	
 	
@@ -1187,7 +1187,7 @@ function PeopleCtrl($scope, $http) {
 	
 	/* Google Chart End*/	
 	
-	$('.clickMe1').click(function(){
+	/*$('.clickMe1').click(function(){
 		$('.panel1').toggle();
 	});
 	$('.clickMe2').click(function(){
@@ -1207,7 +1207,7 @@ function PeopleCtrl($scope, $http) {
 	});
 	$('.timeline-panel').click(function() {
     $('.timeline-body', this).toggle(); // p00f
-});
+});*/
 $scope.openDrawer = function(){
 
 	var openBtn = $('#searchBtn'),

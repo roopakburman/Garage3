@@ -4,9 +4,9 @@
 	  <div class="slide_container">       
         <nav id="searchMenu">
 		<div class="row navRb">	
-		<a ng-href ="#" class="button button-small button-outline button-energized navBtn" !liked">What's Trending</a>
+		<a ng-href = "#menu/tab/buttons" class="button button-small button-outline button-energized navBtn !liked">What's Trending</a>
 		<a ng-href ="#menu/tab/buttons1" class="button button-small button-positive navBtn" ng-click="openDrawer(); !liked">What's New</a>
-<!-- 		<a href ="#" class="button button-small  button-positive navBtn" ng-click="reverse=!reverse;order('program',reverse); openDrawer()">Sort by Topic</a> -->
+
 		<a href ="#" class="button button-small  button-positive navBtn" ng-click="reverse=!reverse;order('order',reverse); openDrawer()">Sort by Category</a>
                 <select id="pSelector" class="ion-input-select" ng-model="sProg">
 				  <option selected="selected" value="">All</option>
@@ -20,7 +20,8 @@
 			<i id="like" ng-class="{'icon ion-arrow-up-b srch': liked, 'icon ion-arrow-down-b srch': !liked}" ng-click="liked=!liked; openDrawer()"></i>
 		</div>
     </div>
-	
+	<!-- popover end -->
+
 		<div class="Card" ng-controller="feedCtrl">
           <div class="row item item-divider card-bk2 ">
 			<div class="col col-25"><img class="logo title" src="img/logo-white-sm.png" /></div>
@@ -41,12 +42,5 @@
 			</span>
 		</marquee>
 		</div>
-<!-- 		<div id="overlay">
-			 <div>
-				  <p>Content you want the user to see goes here.</p>
-			 </div>
-		</div> -->
-		
-		
 	  </ion-content>
     </ion-view>
